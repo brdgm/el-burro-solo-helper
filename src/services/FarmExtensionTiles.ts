@@ -51,18 +51,18 @@ farmExtensionTiles.forEach(item => farmExtensionTilesMap.set(item.id, item))
 export default {
 
   /**
-   * Get transport bonus tile by ID
+   * Get farm extension tile by ID
    * @param id ID
-   * @returns Transport bonus tile
+   * @returns Farm extension tile
    */
   get(id: string) : FarmExtensionTile {
     return findMandatory(farmExtensionTilesMap, id)
   },
 
   /**
-   * Get alle transport bonus tiles
+   * Get farm extension tiles by shape
    * @param shape Shape
-   * @returns Transport bonus tiles
+   * @returns Farm extension tiles
    */
   getByShape(shape: FarmExtensionShape) : FarmExtensionTile[] {
     return farmExtensionTiles.filter(tile => tile.shape === shape)

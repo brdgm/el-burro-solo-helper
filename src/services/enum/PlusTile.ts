@@ -2,7 +2,7 @@
  * Plus tile
  */
 enum PlusTile {
-  ONE = 1,
-  TWO = 2
+  SINGLE = 1,
+  DOUBLE = 2
 }
 export default PlusTile
