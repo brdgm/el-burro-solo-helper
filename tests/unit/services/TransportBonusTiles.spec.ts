@@ -1,7 +1,7 @@
 import TransportBonusTiles from '@/services/TransportBonusTiles'
 import { expect } from 'chai'
 
-describe('services/TransportBonusTiles.spec', () => {
+describe('services/TransportBonusTiles', () => {
   it('get', () => {
     const tile = TransportBonusTiles.get(1)
 
