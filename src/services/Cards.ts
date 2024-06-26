@@ -217,12 +217,11 @@ export default {
   },
 
   /**
-   * Get cards by difficulty level
-   * @param difficultyLevel Difficulty level
+   * Get all cards
    * @returns Cards
    */
-  getByDifficultyLevel(difficultyLevel: DifficultyLevel) : Card[] {
-    return cards.filter(card => card.difficultyLevel === difficultyLevel)
+  getAll() : Card[] {
+    return cards
   }
 
 }

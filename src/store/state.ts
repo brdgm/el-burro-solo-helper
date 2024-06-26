@@ -1,5 +1,7 @@
 import { defineStore } from 'pinia'
 import { name } from '@/../package.json'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import Player from '@/services/enum/Player'
 
 export const useStateStore = defineStore(`${name}.state`, {
   state: () => {
@@ -7,9 +9,7 @@ export const useStateStore = defineStore(`${name}.state`, {
       language: 'en',
       baseFontSize: 1.0,
       setup: {
-        mission: 1,
-        level: 1,
-        campaignOptions: []
+        difficultyLevel: DifficultyLevel.EASY
       },
       turns: []
     } as State
@@ -33,6 +33,11 @@ export interface State {
   turns: Turn[]
 }
 export interface Setup {
+  difficultyLevel: DifficultyLevel,
+  transportBonusTiles?: number[],
+  startPlayer?: Player,
+  gameRoundTiles?: string[],
+  farmExtensionTiles?: string[]
   debugMode?: boolean
 }
 

@@ -7,7 +7,18 @@
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
-    "title": "Spielaufbau"
+    "title": "Spielaufbau",
+    "difficultyLevel": {
+      "title": "Schwierigkeitsgrad",
+      "easy": "Leicht",
+      "hard": "Schwer"
+    }
+  },
+  "difficultyLevel": {
+    "1": "Leichter Schwierigkeitsgrad",
+    "2": "Mittlerer Schwierigkeitsgrad",
+    "3": "Anspruchsvoller Schwierigkeitsgrad",
+    "4": "Zufälliger Schwierigkeitsgrad"
   },
   "action": {
     "playGame": "Spielen",

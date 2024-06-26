@@ -1,5 +1,4 @@
 import Cards from '@/services/Cards'
-import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import { expect } from 'chai'
 
 describe('services/Cards', () => {
@@ -10,9 +9,7 @@ describe('services/Cards', () => {
     expect(card?.id).to.eq('R01')
   })
 
-  it('getByDifficultyLevel', () => {
-    Object.values(DifficultyLevel).forEach(difficultyLevel => {
-      expect(Cards.getByDifficultyLevel(difficultyLevel).length).to.eq(4)
-    });
+  it('getAll', () => {
+    expect(Cards.getAll().length).to.eq(12)
   })
 })
