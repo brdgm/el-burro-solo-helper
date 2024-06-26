@@ -1,11 +1,11 @@
-import DeliveryTarget from "./enum/DeliveryTarget"
-import DeliveryType from "./enum/DeliveryType"
-import DiceModification from "./enum/DiceModification"
-import DifficultyLevel from "./enum/DifficultyLevel"
-import DonkeySelection from "./enum/DonkeySelection"
-import JunctionSelection from "./enum/JunctionSelection"
-import PlusTile from "./enum/PlusTile"
-import SpecialFarmCardSelection from "./enum/SpecialFarmCardSelection"
+import DeliveryTarget from './enum/DeliveryTarget'
+import DeliveryType from './enum/DeliveryType'
+import DiceModification from './enum/DiceModification'
+import DifficultyLevel from './enum/DifficultyLevel'
+import DonkeySelection from './enum/DonkeySelection'
+import JunctionSelection from './enum/JunctionSelection'
+import PlusTile from './enum/PlusTile'
+import SpecialFarmCardSelection from './enum/SpecialFarmCardSelection'
 
 export default interface Card {
   id: string

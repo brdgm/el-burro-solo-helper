@@ -9,6 +9,9 @@ import DeliveryTarget from './enum/DeliveryTarget'
 import PlusTile from './enum/PlusTile'
 import DifficultyLevel from './enum/DifficultyLevel'
 
+/**
+ * Solo game round cards.
+ */
 const cards : Card[] = [
   {
     id: 'R01',
