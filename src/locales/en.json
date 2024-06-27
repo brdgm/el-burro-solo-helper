@@ -11,7 +11,8 @@
     "difficultyLevel": {
       "title": "Difficulty Level",
       "easy": "Easy",
-      "hard": "Hard"
+      "hard": "Hard",
+      "cardsWith": "cards with"
     }
   },
   "difficultyLevel": {

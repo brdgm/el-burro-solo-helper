@@ -12,14 +12,20 @@ enum Action {
   TRAVEL_ROAD_2 = 'travel-road-2',
   TRAVEL_ROAD_3 = 'travel-road-3',
   DONKEY_OR_GOAT_DELIVERY = 'donkey-or-goat-delivery',
+  DONKEY_DELIVERY = 'donkey-delivery',
+  GOAT_DELIVERY = 'goat-delivery',
   COMMUNITY_DELIVERY = 'community-delivery',
   PAY_SILVER_1_DONKEY_DELIVERY_1 = 'pay-silver-1-donkey-delivery-1',
+  /*
   PAY_SILVER_1_DONKEY_DELIVERY_2 = 'pay-silver-1-donkey-delivery-2',
   PAY_SILVER_1_GOAT_DELIVERY_1 = 'pay-silver-1-goat-delivery-1',
   PAY_SILVER_1_GOAT_DELIVERY_2 = 'pay-silver-1-goat-delivery-2',
+  */
   HIRE_WORKER = 'hire-worker',
   FILL_TROUGH_1 = 'fill-trough-1',
-  FILL_TROUGH_2 = 'fill-trough-2',
+  /*
+  FILL_TROUGH_2 = 'fill-trough-2',  
   REWARD_MARKER_MOVE_1 = 'reward-marker-move-1'
+  */
 }
 export default Action
