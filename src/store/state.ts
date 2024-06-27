@@ -16,6 +16,10 @@ export const useStateStore = defineStore(`${name}.state`, {
   },
   actions: {
     resetGame() {
+      this.setup.transportBonusTiles = undefined
+      this.setup.startPlayer = undefined
+      this.setup.gameRoundTiles = undefined
+      this.setup.farmExtensionTiles = undefined
       this.turns = []
     },
     storeTurn(turn : Turn) {

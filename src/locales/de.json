@@ -8,11 +8,23 @@
   },
   "setup": {
     "title": "Spielaufbau",
+    "randomize": "Neu wählen",
     "difficultyLevel": {
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
       "hard": "Schwer",
       "cardsWith": "Karten mit"
+    },
+    "gameRoundTiles": {
+      "title": "Spielplan",
+      "setupGameBoard": "Bereite den Spielplan wie üblich für 2 Spieler vor. Verwende diese Rundenplättchen:"
+    },
+    "farmExtensionTiles": {
+      "title": "Belohnungstableau",
+      "placeTiles": "Platziere die Solo-Hofausbauten in dieser Reihenfolge auf das jeweils erste Feld der Belohnungsleisten:"
+    },
+    "startPlayer": {
+      "title": "Startspieler"
     }
   },
   "difficultyLevel": {
@@ -20,6 +32,10 @@
     "2": "Mittlerer Schwierigkeitsgrad",
     "3": "Anspruchsvoller Schwierigkeitsgrad",
     "4": "Zufälliger Schwierigkeitsgrad"
+  },
+  "player": {
+    "player": "Spieler",
+    "bot": "Leon"
   },
   "action": {
     "playGame": "Spielen",

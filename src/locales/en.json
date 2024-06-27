@@ -8,11 +8,23 @@
   },
   "setup": {
     "title": "Setup Game",
+    "randomize": "Randomize",
     "difficultyLevel": {
       "title": "Difficulty Level",
       "easy": "Easy",
       "hard": "Hard",
       "cardsWith": "cards with"
+    },
+    "gameRoundTiles": {
+      "title": "Game Board",
+      "setupGameBoard": "Setup the game board as usual for 2 players. Use these game round tiles:"
+    },
+    "farmExtensionTiles": {
+      "title": "Reward Board",
+      "placeTiles": "Place the solo farm extension tiles in this order on the first spaces of the reward board:"
+    },
+    "startPlayer": {
+      "title": "Start Player"
     }
   },
   "difficultyLevel": {
@@ -20,6 +32,10 @@
     "2": "Medium difficulty",
     "3": "Ambitious difficulty",
     "4": "Random difficulty"
+  },
+  "player": {
+    "player": "Player",
+    "bot": "Leon"
   },
   "action": {
     "playGame": "Play Game",

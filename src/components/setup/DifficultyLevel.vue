@@ -19,11 +19,11 @@
         {{t('difficultyLevel.' + difficultyLevel)}} -
         {{t('setup.difficultyLevel.cardsWith')}}
         <template v-if="difficultyLevel <= 3">
-          <AppIcon type="difficulty-level" :name="difficultyLevel" class="icon"/>
+          <AppIcon type="difficulty-level" :name="difficultyLevel.toString()" class="icon"/>
         </template>
         <template v-else>
           <template v-for="i of 3" :key="i">
-            <AppIcon type="difficulty-level" :name="i" class="icon"/>
+            <AppIcon type="difficulty-level" :name="i.toString()" class="icon"/>
             <span v-if="i < 3">/</span>
           </template>
         </template>
