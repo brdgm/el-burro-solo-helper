@@ -9,7 +9,8 @@ export const useStateStore = defineStore(`${name}.state`, {
       language: 'en',
       baseFontSize: 1.0,
       setup: {
-        difficultyLevel: DifficultyLevel.EASY
+        difficultyLevel: DifficultyLevel.EASY,
+        rewardDifficultyLevel: DifficultyLevel.EASY
       },
       turns: []
     } as State
@@ -38,6 +39,7 @@ export interface State {
 }
 export interface Setup {
   difficultyLevel: DifficultyLevel,
+  rewardDifficultyLevel: DifficultyLevel,
   transportBonusTiles?: number[],
   startPlayer?: Player,
   gameRoundTiles?: string[],

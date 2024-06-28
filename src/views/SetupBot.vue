@@ -36,17 +36,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
-import FarmExtensionTiles from '@/components/setup/FarmExtensionTiles.vue'
 
 export default defineComponent({
   name: 'SetupBot',
   components: {
-    FooterButtons,
-    FarmExtensionTiles
+    FooterButtons
   },
   setup() {
     const { t } = useI18n()

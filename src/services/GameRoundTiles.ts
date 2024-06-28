@@ -7,79 +7,79 @@ import Phase from './enum/Phase'
  */
 const gameRoundTiles : GameRoundTile[] = [
   {
-    id: 'community-die-bonus',
+    id: '1-community-die-bonus',
     round: 1,
     phase: [Phase.II_REVENUE]
   },
   {
-    id: 'double-plus-cheaper',
+    id: '1-double-plus-cheaper',
     round: 1,
     phase: [Phase.III_TRANSPORT]
   },
   {
-    id: 'siesta-markers-reduce-2',
+    id: '1-siesta-markers-reduce-2',
     round: 1,
     phase: [Phase.IV_SCORING]
   },
   {
-    id: 'market-barrow-scoring-move-road',
+    id: '1-market-barrow-scoring-move-road',
     round: 1,
     phase: [Phase.II_REVENUE,Phase.III_TRANSPORT]
   },
   {
-    id: 'goat-delivery-prestige',
+    id: '2-goat-delivery-prestige',
     round: 2
   },
   {
-    id: 'trough-harvest-good',
+    id: '2-trough-harvest-good',
     round: 2
   },
   {
-    id: 'additional-farm-card',
+    id: '2-additional-farm-card',
     round: 2,
     phase: [Phase.I_FARM]
   },
   {
-    id: 'market-barrow-scoring-gain-prestige',
+    id: '2-market-barrow-scoring-gain-prestige',
     round: 2,
     phase: [Phase.II_REVENUE,Phase.III_TRANSPORT]
   },
   {
-    id: 'income-twice',
+    id: '3-income-twice',
     round: 3,
     phase: [Phase.I_FARM]
   },
   {
-    id: 'first-die-double-income',
+    id: '3-first-die-double-income',
     round: 3,
     phase: [Phase.II_REVENUE]
   },
   {
-    id: 'prestige-paid-workers',
+    id: '3-prestige-paid-workers',
     round: 3,
     phase: [Phase.IV_SCORING]
   },
   {
-    id: 'local-market-scoring-prestige',
+    id: '3-local-market-scoring-prestige',
     round: 3,
     phase: [Phase.II_REVENUE,Phase.III_TRANSPORT]
   },
   {
-    id: 'siesta-space-9-prestige',
+    id: '4-siesta-space-9-prestige',
     round: 4
   },
   {
-    id: 'stable-scoring-prestige',
+    id: '4-stable-scoring-prestige',
     round: 4,
     phase: [Phase.IV_SCORING]
   },
   {
-    id: 'harbor-prestige',
+    id: '4-harbor-prestige',
     round: 4,
     phase: [Phase.II_REVENUE,Phase.III_TRANSPORT]
   },
   {
-    id: 'final-scoring-play-farm-card',
+    id: '4-final-scoring-play-farm-card',
     round: 4,
     phase: [Phase.FINAL_SCORING]
   }

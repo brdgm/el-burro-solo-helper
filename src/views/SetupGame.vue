@@ -26,6 +26,7 @@ import StartPlayer from '@/components/setup/StartPlayer.vue'
 import randomEnum from '@brdgm/brdgm-commons/src/util/random/randomEnum'
 import randomGameRoundTiles from '@/util/randomGameRoundTiles'
 import randomFarmExtensionTiles from '@/util/randomFarmExtensionTiles'
+import randomTransportBonusTiles from '@/util/randomTransportBonusTiles'
 
 export default defineComponent({
   name: 'SetupGame',
@@ -52,6 +53,7 @@ export default defineComponent({
       this.state.setup.startPlayer = this.startPlayer
       this.state.setup.gameRoundTiles = this.gameRoundTiles?.map(tile => tile.id) ?? []
       this.state.setup.farmExtensionTiles = this.farmExtensionTiles?.map(tile => tile.id) ?? []
+      this.state.setup.transportBonusTiles = randomTransportBonusTiles().map(tile => tile.id)
       this.$router.push('/setupBot')
     }
   }

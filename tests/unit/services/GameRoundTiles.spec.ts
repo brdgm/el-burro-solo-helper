@@ -3,10 +3,10 @@ import { expect } from 'chai'
 
 describe('services/GameRoundTiles', () => {
   it('get', () => {
-    const tile = GameRoundTiles.get('community-die-bonus')
+    const tile = GameRoundTiles.get('1-community-die-bonus')
 
     expect(tile).not.undefined
-    expect(tile?.id).to.eq('community-die-bonus')
+    expect(tile?.id).to.eq('1-community-die-bonus')
   })
 
   it('getByShape', () => {
