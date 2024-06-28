@@ -50,3 +50,10 @@ export interface Setup {
 export interface Turn {
   turn: number
 }
+
+export interface CardDeckPersistence {
+  roundPile: string[]
+  roundDiscard: string[]
+  auxiliaryPile: string[]
+  auxiliaryDiscard: string[]
+}
