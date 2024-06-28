@@ -1,4 +1,6 @@
 <template>
+  <SideBar :navigationState="navigationState"/>
+
   <h1>
     <AppIcon type="phase" name="1" class="phase"/>
     Farm Phase
@@ -14,6 +16,8 @@
     {{t('action.next')}}
   </button>
 
+  <DebugInfo :navigationState="navigationState"/>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
 
@@ -26,12 +30,16 @@ import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import Phase from '@/services/enum/Phase'
+import SideBar from '@/components/round/SideBar.vue'
+import DebugInfo from '@/components/round/DebugInfo.vue'
 
 export default defineComponent({
   name: 'RoundPhaseFarm',
   components: {
     FooterButtons,
-    AppIcon
+    AppIcon,
+    SideBar,
+    DebugInfo
   },
   setup() {
     const { t } = useI18n()

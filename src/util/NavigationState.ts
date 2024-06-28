@@ -5,12 +5,15 @@ import GameRoundTile from '@/services/GameRoundTile'
 import GameRoundTiles from '@/services/GameRoundTiles'
 import Phase from '@/services/enum/Phase'
 import CardDeck from '@/services/CardDeck'
+import TransportBonusTile from '@/services/TransportBonusTile'
+import TransportBonusTiles from '@/services/TransportBonusTiles'
 
 export default class NavigationState {
 
   readonly round : number
   readonly phase : Phase
   readonly gameRoundTile? : GameRoundTile
+  readonly transportBonusTile: TransportBonusTile
   readonly cardDeck : CardDeck
 
   public constructor(route: RouteLocation, phase: Phase, state: State) {
@@ -19,6 +22,7 @@ export default class NavigationState {
 
     const setup = state.setup
     this.gameRoundTile = getGameRoundTile(setup, this.round, this.phase)
+    this.transportBonusTile = getTransportBonusTile(setup, this.round)
     this.cardDeck = getCardDeck(state, this.round, this.phase)
   }
 
@@ -43,6 +47,26 @@ function getGameRoundTile(setup: Setup, round: number, phase: Phase) : GameRound
     }
   }
   return undefined
+}
+
+/**
+ * Get transport the matching transport bonus tile for the current round.
+ */
+function getTransportBonusTile(setup: Setup, round: number) : TransportBonusTile {
+  let tileId
+  if (round < 3) {
+    tileId = setup.transportBonusTiles?.[0]
+  }
+  else {
+    tileId = setup.transportBonusTiles?.[1]
+  }
+  if (tileId) {
+    return TransportBonusTiles.get(tileId)
+  }
+  else {
+    // should never happen
+    return TransportBonusTiles.getAll()[0]
+  }
 }
 
 /**

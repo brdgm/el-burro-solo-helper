@@ -56,6 +56,9 @@
       "soloRewardOverview": "Solo-Belohnungsübersicht"
     }
   },
+  "sideBar": {
+    "round": "Runde"
+  },
   "difficultyLevel": {
     "1": "Leicht",
     "2": "Mittel",

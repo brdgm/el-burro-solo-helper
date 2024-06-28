@@ -36,6 +36,18 @@ describe('util/NavigationSTate', () => {
     expect(navigationState.gameRoundTile).to.undefined
   })
 
+  it('transport-bonus-round-1', () => {
+    const navigationState = new NavigationState(mockRouteLocation({params:{'round':'1'}}),Phase.I_FARM,
+      mockState({transportBonusTiles:[1,2]}))
+    expect(navigationState.transportBonusTile.id).to.eq(1)
+  })
+
+  it('transport-bonus-round-3', () => {
+    const navigationState = new NavigationState(mockRouteLocation({params:{'round':'3'}}),Phase.I_FARM,
+      mockState({transportBonusTiles:[1,2]}))
+    expect(navigationState.transportBonusTile.id).to.eq(2)
+  })
+
   const CARD_STATE = mockState({
     initialCardDeck: mockCardDeck({auxiliaryPile:['R01','R02','R03','R04']}),
     rounds: [

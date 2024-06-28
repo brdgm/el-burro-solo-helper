@@ -1,4 +1,6 @@
 <template>
+  <SideBar :navigationState="navigationState"/>
+
   <h1>
     <AppIcon type="phase" name="2" class="phase"/>
     Revenue Phase
@@ -7,6 +9,8 @@
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
   </button>
+
+  <DebugInfo :navigationState="navigationState"/>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
@@ -20,12 +24,16 @@ import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import Phase from '@/services/enum/Phase'
+import SideBar from '@/components/round/SideBar.vue'
+import DebugInfo from '@/components/round/DebugInfo.vue'
 
 export default defineComponent({
   name: 'RoundPhaseRevenue',
   components: {
     FooterButtons,
-    AppIcon
+    AppIcon,
+    SideBar,
+    DebugInfo
   },
   setup() {
     const { t } = useI18n()

@@ -1,4 +1,6 @@
 <template>
+  <SideBar :navigationState="navigationState"/>
+
   <h1>
     <AppIcon type="phase" name="5" class="phase"/>
     Final Scoring
@@ -12,6 +14,8 @@
     <li>Loss of prestige points for striking workers</li>
   </ul>
 
+  <DebugInfo :navigationState="navigationState"/>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="endGame"/>
 </template>
 
@@ -24,12 +28,16 @@ import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import Phase from '@/services/enum/Phase'
+import SideBar from '@/components/round/SideBar.vue'
+import DebugInfo from '@/components/round/DebugInfo.vue'
 
 export default defineComponent({
   name: 'PhaseFinalScoring',
   components: {
     FooterButtons,
-    AppIcon
+    AppIcon,
+    SideBar,
+    DebugInfo
   },
   setup() {
     const { t } = useI18n()

@@ -1,4 +1,6 @@
 <template>
+  <SideBar :navigationState="navigationState"/>
+
   <h1>
     <AppIcon type="phase" name="4" class="phase"/>
     Scoring Phase
@@ -16,6 +18,8 @@
     {{t('action.next')}}
   </button>
 
+  <DebugInfo :navigationState="navigationState"/>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
 
@@ -28,12 +32,16 @@ import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import Phase from '@/services/enum/Phase'
+import SideBar from '@/components/round/SideBar.vue'
+import DebugInfo from '@/components/round/DebugInfo.vue'
 
 export default defineComponent({
   name: 'RoundPhaseScoring',
   components: {
     FooterButtons,
-    AppIcon
+    AppIcon,
+    SideBar,
+    DebugInfo
   },
   setup() {
     const { t } = useI18n()

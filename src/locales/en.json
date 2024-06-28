@@ -59,6 +59,9 @@
       "soloRewardOverview": "Solo reward overview"
     }
   },
+  "sideBar": {
+    "round": "Round"
+  },
   "difficultyLevel": {
     "1": "Simple",
     "2": "Medium",
