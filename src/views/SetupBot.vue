@@ -64,7 +64,7 @@ export default defineComponent({
   },
   methods: {
     startGame() : void {
-      this.$router.push('/turn/1')
+      this.$router.push('/round/1/phase/farm')
     }
   }
 })
