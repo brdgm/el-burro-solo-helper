@@ -1,6 +1,6 @@
 <template>
   <div v-if="navigationState.round >= 3">
-    <a data-bs-toggle="modal" href="#playCardModal" class="rule" v-html="t('playFarmCard.special')"></a>
+    <a data-bs-toggle="modal" href="#playCardModal" class="rule"><span v-html="t('playFarmCard.special')"></span></a>
     <div class="mt-1">
       <AppIcon type="special-farm-card-selection" :name="navigationState.roundCard.specialFarmCardSelection" class="cardPlacement"/>
       <span class="otherwise" v-html="t('playFarmCard.otherwiseNormal')"></span>
@@ -9,7 +9,7 @@
     </div>
   </div>
   <div v-else>
-    <a data-bs-toggle="modal" href="#playCardModal" class="rule" v-html="t('playFarmCard.normal')"></a>
+    <a data-bs-toggle="modal" href="#playCardModal" class="rule"><span v-html="t('playFarmCard.normal')"></span></a>
     <div class="mt-1">
       <AppIcon type="card-placement" name="same-number" class="cardPlacement"/>
       <AppIcon type="card-placement" :name="navigationState.roundCard.cardPlacement" class="cardPlacement"/>
