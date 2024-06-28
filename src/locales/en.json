@@ -15,6 +15,9 @@
       "hard": "Hard",
       "cardsWith": "cards with"
     },
+    "rewardDifficultyLevel": {
+      "title": "Solo Reward Overview"
+    },
     "gameRoundTiles": {
       "title": "Game Board",
       "setupGameBoard": "Setup the game board as usual for 2 players. Use these game round tiles:"
@@ -44,14 +47,15 @@
     "unusedMaterial": {
       "title": "Unused material (managed by the application):",
       "soloGameRoundCards": "Solo game round cards",
-      "soloTransportBonusTiles": "Solo transport bonus tiles"
+      "soloTransportBonusTiles": "Solo transport bonus tiles",
+      "soloRewardOverview": "Solo reward overview"
     }
   },
   "difficultyLevel": {
-    "1": "Simple difficulty",
-    "2": "Medium difficulty",
-    "3": "Ambitious difficulty",
-    "4": "Random difficulty"
+    "1": "Simple",
+    "2": "Medium",
+    "3": "Ambitious",
+    "4": "Random"
   },
   "player": {
     "player": "Player",

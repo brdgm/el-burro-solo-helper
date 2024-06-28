@@ -44,14 +44,15 @@
     "unusedMaterial": {
       "title": "Ungenutztes Material (durch die Applikation verwaltet):",
       "soloGameRoundCards": "Solo-Rundenkarten",
-      "soloTransportBonusTiles": "Solo-Transportbonusplättchen"
+      "soloTransportBonusTiles": "Solo-Transportbonusplättchen",
+      "soloRewardOverview": "Solo-Belohnungsübersicht"
     }
   },
   "difficultyLevel": {
-    "1": "Leichter Schwierigkeitsgrad",
-    "2": "Mittlerer Schwierigkeitsgrad",
-    "3": "Anspruchsvoller Schwierigkeitsgrad",
-    "4": "Zufälliger Schwierigkeitsgrad"
+    "1": "Leicht",
+    "2": "Mittel",
+    "3": "Anspruchsvoll",
+    "4": "Zufällig"
   },
   "player": {
     "player": "Spieler",

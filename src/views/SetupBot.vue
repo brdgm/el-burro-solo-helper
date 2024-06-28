@@ -25,6 +25,7 @@
     <ul>
       <li v-html="t('setupBot.unusedMaterial.soloGameRoundCards')"></li>
       <li v-html="t('setupBot.unusedMaterial.soloTransportBonusTiles')"></li>
+      <li v-html="t('setupBot.unusedMaterial.soloRewardOverview')"></li>
     </ul>
   </div>
 

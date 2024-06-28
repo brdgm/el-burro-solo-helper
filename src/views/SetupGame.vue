@@ -2,6 +2,7 @@
   <h1>{{t('setup.title')}}</h1>
 
   <DifficultyLevel/>
+  <RewardDifficultyLevel/>
   <StartPlayer v-model="startPlayer"/>
   <GameRoundTiles v-model="gameRoundTiles"/>
   <FarmExtensionTiles v-model="farmExtensionTiles"/>
@@ -27,12 +28,14 @@ import randomEnum from '@brdgm/brdgm-commons/src/util/random/randomEnum'
 import randomGameRoundTiles from '@/util/randomGameRoundTiles'
 import randomFarmExtensionTiles from '@/util/randomFarmExtensionTiles'
 import randomTransportBonusTiles from '@/util/randomTransportBonusTiles'
+import RewardDifficultyLevel from '@/components/setup/RewardDifficultyLevel.vue'
 
 export default defineComponent({
   name: 'SetupGame',
   components: {
     FooterButtons,
     DifficultyLevel,
+    RewardDifficultyLevel,
     GameRoundTiles,
     FarmExtensionTiles,
     StartPlayer

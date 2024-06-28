@@ -4,7 +4,7 @@
   <div>
     <div class="form-check-inline" v-for="player of playerOptions" :key="player">
       <label class="form-check-label">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" v-model="startPlayer" :value="player">
+        <input class="form-check-input" type="radio" name="setupStartPlayer" v-model="startPlayer" :value="player">
         {{t(`player.${player}`)}}
       </label>
     </div>
