@@ -17,7 +17,10 @@
       <li v-html="t('setupBot.specialSoloFarmCards')"></li>
       <li>
         <span v-html="t('setupBot.startingSpace')"></span><br/>
-        <button class="btn btn-secondary mt-2">{{t('setupBot.determineStartingSpace')}}</button>
+        <button class="btn btn-secondary mt-2" @click="showStartingSpace = true" v-if="!showStartingSpace">
+          {{t('setupBot.determineStartingSpace')}}
+        </button>
+        <BotStartingPlace v-else/>
       </li>
     </ol>
 
@@ -41,17 +44,23 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
+import BotStartingPlace from '@/components/setup/BotStartingPlace.vue'
 
 export default defineComponent({
   name: 'SetupBot',
   components: {
-    FooterButtons
+    FooterButtons,
+    BotStartingPlace
   },
   setup() {
     const { t } = useI18n()
     const state = useStateStore()
-
     return { t, state }
+  },
+  data() {
+    return {
+      showStartingSpace: false
+    }
   },
   methods: {
     startGame() : void {

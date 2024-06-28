@@ -42,8 +42,16 @@
     "stableBoard": "Place Leon’s <b>stable board</b> next to the farm. Place the <b>trough</b> and <b>milestone marker</b> on the appropriate spaces. Leon starts with the trough marker on space “1”.",
     "soloFarmGoods": "Place the <b>6 solo farm goods</b> tiles on the spaces of the stable.",
     "specialSoloFarmCards": "Shuffle the <b>special solo farm cards</b> and place them in a facedown draw stack next to the farm. Draw 3 cards and place them in a faceup row.",
-    "startingSpace": "When it is Leon’s turn to choose a starting space for their donkeys and gain the respective reward:",
+    "startingSpace": "When it is Leon’s turn to choose a starting space for their donkeys:",
     "determineStartingSpace": "Determine starting space",
+    "spaceBlocked": "Space blocked",
+    "startingSpaceOption": {
+      "1": "<b>Place 1</b>: Leon places 1 goods token and 1 silver on their storage spaces.",
+      "2": "<b>Place 2</b>: Leon places 2 goods tokens on their storage space.",
+      "3": "<b>Place 3</b>: Leon takes 3 silver from the supply.",
+      "4": "<b>Place 4</b>: Leon moves their siesta marker 2 space forward on the siesta track.",
+      "5": "<b>Place 5</b>: Leon moves one of their donkeys 2 spaces forward on the road."
+    },
     "unusedMaterial": {
       "title": "Unused material (managed by the application):",
       "soloGameRoundCards": "Solo game round cards",

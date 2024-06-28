@@ -44,6 +44,7 @@ export interface Setup {
   startPlayer?: Player,
   gameRoundTiles?: string[],
   farmExtensionTiles?: string[]
+  initialCardDeck?: CardDeckPersistence
   debugMode?: boolean
 }
 

@@ -29,6 +29,7 @@ import randomGameRoundTiles from '@/util/randomGameRoundTiles'
 import randomFarmExtensionTiles from '@/util/randomFarmExtensionTiles'
 import randomTransportBonusTiles from '@/util/randomTransportBonusTiles'
 import RewardDifficultyLevel from '@/components/setup/RewardDifficultyLevel.vue'
+import CardDeck from '@/services/CardDeck'
 
 export default defineComponent({
   name: 'SetupGame',
@@ -57,6 +58,12 @@ export default defineComponent({
       this.state.setup.gameRoundTiles = this.gameRoundTiles?.map(tile => tile.id) ?? []
       this.state.setup.farmExtensionTiles = this.farmExtensionTiles?.map(tile => tile.id) ?? []
       this.state.setup.transportBonusTiles = randomTransportBonusTiles().map(tile => tile.id)
+
+      const cardDeck = CardDeck.new(this.state.setup.difficultyLevel)
+      // draw auxiliary card for bot starting space
+      cardDeck.drawAuxiliary()
+      this.state.setup.initialCardDeck = cardDeck.toPersistence()
+
       this.$router.push('/setupBot')
     }
   }

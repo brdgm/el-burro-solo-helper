@@ -1,4 +1,5 @@
 import CardDeck from '@/services/CardDeck'
+import Card from '@/services/Card'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import { expect } from 'chai'
 import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValues'
@@ -56,9 +57,10 @@ describe('services/CardDeck', () => {
   it('drawAuxiliary', () => {
     const deck = CardDeck.new(DifficultyLevel.RANDOM)
 
-    const lastCards = []
+    const lastCards : Card[] = []
+    let card : Card
     for (let i=0; i<8; i++) {
-      const card = deck.drawAuxiliary()
+      card = deck.drawAuxiliary()
       // ensure unique cards
       expect(lastCards.filter(item => item.id == card.id).length).to.eq(0)
       lastCards.push(card)
@@ -66,7 +68,7 @@ describe('services/CardDeck', () => {
     }
 
     // draw after reshuffle
-    const card = deck.drawAuxiliary()
+    card = deck.drawAuxiliary()
     expect(card).to.not.undefined
     expect(deck.currentAuxiliaryCard).to.not.undefined
   })
