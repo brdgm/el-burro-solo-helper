@@ -14,7 +14,7 @@ import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
 import GameRoundTile from '@/services/GameRoundTile'
-import randomGameRoundTiles from '@/util/randomGameRoundTiles';
+import randomGameRoundTiles from '@/util/randomGameRoundTiles'
 
 export default defineComponent({
   name: 'GameRoundTiles',
@@ -52,7 +52,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .icon {
-  height: 8rem;
+  height: 6rem;
   margin-right: 1rem;
   filter: drop-shadow(2px 2px 3px #888);
 }

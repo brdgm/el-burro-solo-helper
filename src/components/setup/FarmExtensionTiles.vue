@@ -13,8 +13,8 @@
 import { PropType, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
-import FarmExtensionTile from '@/services/FarmExtensionTile';
-import randomFarmExtensionTiles from '@/util/randomFarmExtensionTiles';
+import FarmExtensionTile from '@/services/FarmExtensionTile'
+import randomFarmExtensionTiles from '@/util/randomFarmExtensionTiles'
 
 export default defineComponent({
   name: 'FarmExtensionTiles',
@@ -53,6 +53,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .icon {
-  height: 10rem;
+  height: 7.5rem;
 }
 </style>

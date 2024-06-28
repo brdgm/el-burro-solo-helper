@@ -12,10 +12,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Player from '@/services/enum/Player';
-import { PropType } from 'vue';
+import Player from '@/services/enum/Player'
 
 export default defineComponent({
   name: 'StartPlayer',

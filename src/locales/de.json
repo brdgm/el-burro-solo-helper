@@ -21,10 +21,30 @@
     },
     "farmExtensionTiles": {
       "title": "Belohnungstableau",
-      "placeTiles": "Platziere die Solo-Hofausbauten in dieser Reihenfolge auf das jeweils erste Feld der Belohnungsleisten:"
+      "placeTiles": "Platziere die Solo-Hofausbauten für Leon in dieser Reihenfolge auf das jeweils erste Feld der Belohnungsleisten:"
     },
     "startPlayer": {
       "title": "Startspieler"
+    }
+  },
+  "setupBot": {
+    "title": "Leon vorbereiten",
+    "soloFarmBoard": "Lege Leons <b>Solo-Hoftableau</b> in deiner Reichweite bereit. Lass wie üblich rundherum ein wenig Platz, um Hofkarten anlegen zu können. Lege Leons <b>Gütermarker</b> als seinen persönlichen Vorrat neben dessen Hof.",
+    "goodsTokenSilver": "Lege 1 <b>Gütermarker</b> und 2 <b>Silber</b> auf die entsprechenden Lagerfelder auf Leons Hof.",
+    "farmCards": "Ziehe <b>Hofkarten</b>, um Leons Startauslage zu bilden. Ziehe die Karten einzeln und lege sie folgendermaßen an seinen Hof an:",
+    "farmCard1": "1. Karte als Acker (stelle 1 Gütermarker auf das Lagerfeld für Gütermarker).",
+    "farmCard23": "2. und 3. Karte als Marktkarren (in den linken und den mittleren Kartenslot).",
+    "farmCard4": "4. Karte als Hofverwaltung.",
+    "supportMarker": "Lege 1 <b>Unterstützungsmarker</b> mit der Ansehensseite nach oben neben Leons Hof.",
+    "stableBoard": "Lege Leons <b>Solo-Stalltableau</b> bereit. Lege neben <b>Tränken</b>- und <b>Meilensteinmarker</b> auf die entsprechenden Ablagefelder. Leon startet mit dem Tränkenmarker auf Feld „1“.",
+    "soloFarmGoods": "Lege die 6 <b>Solo-Hofgutplättchen</b> auf die Ablagefelder des Stalls.",
+    "specialSoloFarmCards": "Mische die speziellen <b>Solo-Hofkarten</b> und lege sie als verdeckten Stapel neben den Hof. Ziehe 3 Karten und lege sie offen in eine Reihe.",
+    "startingSpace": "Wenn Leon an die Reihe kommt, um ein Startfeld für seine Esel zu bestimmen:",
+    "determineStartingSpace": "Startfeld bestimmen",
+    "unusedMaterial": {
+      "title": "Ungenutztes Material (durch die Applikation verwaltet):",
+      "soloGameRoundCards": "Solo-Rundenkarten",
+      "soloTransportBonusTiles": "Solo-Transportbonusplättchen"
     }
   },
   "difficultyLevel": {

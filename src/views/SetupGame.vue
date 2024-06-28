@@ -6,8 +6,8 @@
   <GameRoundTiles v-model="gameRoundTiles"/>
   <FarmExtensionTiles v-model="farmExtensionTiles"/>
 
-  <button class="btn btn-primary btn-lg mt-4" @click="startGame()">
-    {{t('action.startGame')}}
+  <button class="btn btn-primary btn-lg mt-4" @click="setupBot()">
+    {{t('setupBot.title')}}
   </button>
 
   <FooterButtons endGameButtonType="abortGame"/>
@@ -47,12 +47,12 @@ export default defineComponent({
     return { t, state, startPlayer, gameRoundTiles, farmExtensionTiles }
   },
   methods: {
-    startGame() : void {
+    setupBot() : void {
+      this.state.resetGame()
       this.state.setup.startPlayer = this.startPlayer
       this.state.setup.gameRoundTiles = this.gameRoundTiles?.map(tile => tile.id) ?? []
       this.state.setup.farmExtensionTiles = this.farmExtensionTiles?.map(tile => tile.id) ?? []
-      this.state.resetGame()
-      this.$router.push('/turn/1')
+      this.$router.push('/setupBot')
     }
   }
 })

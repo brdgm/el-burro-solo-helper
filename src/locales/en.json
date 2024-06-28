@@ -21,10 +21,30 @@
     },
     "farmExtensionTiles": {
       "title": "Reward Board",
-      "placeTiles": "Place the solo farm extension tiles in this order on the first spaces of the reward board:"
+      "placeTiles": "Place the solo farm extension tiles for Leon in this order on the first spaces of the reward board:"
     },
     "startPlayer": {
       "title": "Start Player"
+    }
+  },
+  "setupBot": {
+    "title": "Setup Leon",
+    "soloFarmBoard": "Place Leon’s <b>solo farm board</b> next to your play area. As usual, leave some space around it to place farm cards at the farm. Place Leon’s <b>goods tokens</b> as their supply next to their farm.",
+    "goodsTokenSilver": "Place 1 <b>goods token</b> and 2 <b>silver</b> on the matching storage spaces of Leon’s farm.",
+    "farmCards": "Draw <b>farm cards</b> to create Leon’s starting display. Draw cards one by one and place them as follows at their farm:",
+    "farmCard1": "Place the 1<sup>st</sup> card as a field (place 1 goods token on the storage space for goods tokens).",
+    "farmCard23": "Place the 2<sup>nd</sup> and 3<sup>rd</sup> cards as market barrows (in the left and center card slots).",
+    "farmCard4": "Place the 4<sup>th</sup> card as farm administration.",
+    "supportMarker": "Place <b>1 support marker</b> with the prestige side face up next to Leon’s farm.",
+    "stableBoard": "Place Leon’s <b>stable board</b> next to the farm. Place the <b>trough</b> and <b>milestone marker</b> on the appropriate spaces. Leon starts with the trough marker on space “1”.",
+    "soloFarmGoods": "Place the <b>6 solo farm goods</b> tiles on the spaces of the stable.",
+    "specialSoloFarmCards": "Shuffle the <b>special solo farm cards</b> and place them in a facedown draw stack next to the farm. Draw 3 cards and place them in a faceup row.",
+    "startingSpace": "When it is Leon’s turn to choose a starting space for their donkeys and gain the respective reward:",
+    "determineStartingSpace": "Determine starting space",
+    "unusedMaterial": {
+      "title": "Unused material (managed by the application):",
+      "soloGameRoundCards": "Solo game round cards",
+      "soloTransportBonusTiles": "Solo transport bonus tiles"
     }
   },
   "difficultyLevel": {
