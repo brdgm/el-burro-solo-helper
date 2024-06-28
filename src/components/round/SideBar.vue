@@ -1,6 +1,7 @@
 <template>
   <div class="sidebar">
     <p>{{t('sideBar.round')}} <strong>{{round}}</strong> / 4</p>
+    <GameRoundTile :navigationState="navigationState"/>
   </div>
 </template>
 
@@ -9,9 +10,13 @@ import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
+import GameRoundTile from './GameRoundTile.vue'
 
 export default defineComponent({
-  name: "SideBar",
+  name: 'SideBar',
+  components: {
+    GameRoundTile
+  },
   setup() {
     const { t } = useI18n()
     const state = useStateStore()
