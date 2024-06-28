@@ -1,8 +1,16 @@
 <template>
   <h1>
-    <AppIcon type="phase" name="4-scoring" class="phase"/>
+    <AppIcon type="phase" name="4" class="phase"/>
     Scoring Phase
   </h1>
+
+  <ol>
+    <li>Score Milestones</li>
+    <li>Stable Scoring</li>
+    <li>Score Support Markers</li>
+    <li>Pay workers</li>
+    <li>Prepare for next round</li>
+  </ol>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -19,6 +27,7 @@ import { useRoute } from 'vue-router'
 import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
+import Phase from '@/services/enum/Phase'
 
 export default defineComponent({
   name: 'RoundPhaseScoring',
@@ -30,7 +39,7 @@ export default defineComponent({
     const { t } = useI18n()
     const route = useRoute()
     const state = useStateStore()
-    const navigationState = new NavigationState(route, state)
+    const navigationState = new NavigationState(route, Phase.IV_SCORING, state)
     const round = navigationState.round
     return { t, state, navigationState, round }
   },

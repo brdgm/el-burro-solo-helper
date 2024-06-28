@@ -1,8 +1,15 @@
 <template>
   <h1>
-    <AppIcon type="phase" name="3-transport" class="phase"/>
+    <AppIcon type="phase" name="3" class="phase"/>
     Transport Phase
   </h1>
+
+  <ol>
+    <li>Choose donkey cards</li>
+    <li>Have a siesta</li>
+    <li>Goat delivery</li>
+    <li>Donkey delivery</li>
+  </ol>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -19,6 +26,7 @@ import { useRoute } from 'vue-router'
 import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
+import Phase from '@/services/enum/Phase'
 
 export default defineComponent({
   name: 'RoundPhaseTransport',
@@ -30,7 +38,7 @@ export default defineComponent({
     const { t } = useI18n()
     const route = useRoute()
     const state = useStateStore()
-    const navigationState = new NavigationState(route, state)
+    const navigationState = new NavigationState(route, Phase.III_TRANSPORT, state)
     const round = navigationState.round
     return { t, state, navigationState, round }
   },

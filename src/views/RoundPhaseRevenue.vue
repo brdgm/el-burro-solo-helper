@@ -1,6 +1,6 @@
 <template>
   <h1>
-    <AppIcon type="phase" name="2-revenue" class="phase"/>
+    <AppIcon type="phase" name="2" class="phase"/>
     Revenue Phase
   </h1>
 
@@ -19,6 +19,7 @@ import { useRoute } from 'vue-router'
 import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
+import Phase from '@/services/enum/Phase'
 
 export default defineComponent({
   name: 'RoundPhaseRevenue',
@@ -30,7 +31,7 @@ export default defineComponent({
     const { t } = useI18n()
     const route = useRoute()
     const state = useStateStore()
-    const navigationState = new NavigationState(route, state)
+    const navigationState = new NavigationState(route, Phase.II_REVENUE, state)
     const round = navigationState.round
     return { t, state, navigationState, round }
   },

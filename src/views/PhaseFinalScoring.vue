@@ -1,8 +1,16 @@
 <template>
   <h1>
-    <AppIcon type="phase" name="s-final-scoring" class="phase"/>
+    <AppIcon type="phase" name="5" class="phase"/>
     Final Scoring
   </h1>
+
+  <ul>
+    <li>Reward Tracks</li>
+    <li>Special Farm Cards</li>
+    <li>Boats in the Harbor</li>
+    <li>Trough Track</li>
+    <li>Loss of prestige points for striking workers</li>
+  </ul>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="endGame"/>
 </template>
@@ -15,6 +23,7 @@ import { useRoute } from 'vue-router'
 import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
+import Phase from '@/services/enum/Phase'
 
 export default defineComponent({
   name: 'PhaseFinalScoring',
@@ -26,7 +35,7 @@ export default defineComponent({
     const { t } = useI18n()
     const route = useRoute()
     const state = useStateStore()
-    const navigationState = new NavigationState(route, state)
+    const navigationState = new NavigationState(route, Phase.FINAL_SCORING, state)
     const round = navigationState.round
     return { t, state, navigationState, round }
   },
