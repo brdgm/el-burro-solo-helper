@@ -34,13 +34,11 @@ export default defineComponent({
           this.startingPosition++
         }
       }
+      else if (this.startingPosition == 1) {
+        this.startingPosition = 5
+      }
       else {
-        if (this.startingPosition == 1) {
-          this.startingPosition = 5
-        }
-        else {
-          this.startingPosition--
-        }
+        this.startingPosition--
       }
     }
   }
