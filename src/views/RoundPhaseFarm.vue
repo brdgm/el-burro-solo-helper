@@ -3,13 +3,26 @@
 
   <h1>
     <AppIcon type="phase" name="1" class="phase"/>
-    Farm Phase
+    {{t('roundPhaseFarm.title')}}
   </h1>
 
   <ol>
-    <li>Check Game Round Tile</li>
-    <li>Expand the farm</li>
-    <li>Increase the farm</li>
+    <li v-html="t('roundPhaseFarm.gameRoundTile.title')"></li>
+    <ul>
+      <li v-html="t('roundPhaseFarm.gameRoundTile.appliesBot')"></li>
+    </ul>
+    <li v-html="t('roundPhaseFarm.expandFarm.title')"></li>
+    <ul>
+      <li>
+        <PlayFarmCard :navigationState="navigationState"/>
+      </li>
+    </ul>
+    <li v-html="t('roundPhaseFarm.increaseFarm.title')"></li>
+    <ul>
+      <li v-html="t('roundPhaseFarm.increaseFarm.gainIncome')"></li>
+      <li v-html="t('roundPhaseFarm.increaseFarm.harvest')"></li>
+      <li v-html="t('roundPhaseFarm.increaseFarm.gainOffspring')"></li>
+    </ul>
   </ol>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
@@ -32,11 +45,13 @@ import AppIcon from '@/components/structure/AppIcon.vue'
 import Phase from '@/services/enum/Phase'
 import SideBar from '@/components/round/SideBar.vue'
 import DebugInfo from '@/components/round/DebugInfo.vue'
+import PlayFarmCard from '@/components/round/PlayFarmCard.vue'
 
 export default defineComponent({
   name: 'RoundPhaseFarm',
   components: {
     FooterButtons,
+    PlayFarmCard,
     AppIcon,
     SideBar,
     DebugInfo
@@ -71,5 +86,8 @@ export default defineComponent({
 .phase {
   height: 3rem;
   margin-top: -0.5rem
+}
+ol > li {
+  margin-top: 1rem;
 }
 </style>

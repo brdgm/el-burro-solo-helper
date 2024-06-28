@@ -1,6 +1,6 @@
 <template>
   <div v-if="gameRoundTile">
-    <AppIcon type="game-round-tile" :name="gameRoundTile.id" class="icon"/>
+    <AppIcon type="game-round-tile" :name="gameRoundTile.id" class="icon mb-3 mt-2"/>
   </div>
 </template>
 

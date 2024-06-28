@@ -149,4 +149,10 @@ export default defineComponent({
   border-right: 1px solid #dee2e6;
   padding: 10px;
 }
+
+a.rule {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  color: #333;
+}
 </style>

@@ -42,7 +42,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStateStore } from '@/store/state'
+import { Round, useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import BotStartingPlace from '@/components/setup/BotStartingPlace.vue'
 
@@ -64,6 +64,11 @@ export default defineComponent({
   },
   methods: {
     startGame() : void {
+      const round : Round = {
+        round: 1,
+        phases: []
+      }
+      this.state.storeRound(round)
       this.$router.push('/round/1/phase/farm')
     }
   }

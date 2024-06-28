@@ -1,3 +1,4 @@
+import CardPlacement from './enum/CardPlacement'
 import DeliveryTarget from './enum/DeliveryTarget'
 import DeliveryType from './enum/DeliveryType'
 import DiceModification from './enum/DiceModification'
@@ -9,6 +10,7 @@ import SpecialFarmCardSelection from './enum/SpecialFarmCardSelection'
 
 export default interface Card {
   id: string
+  cardPlacement: CardPlacement
   diceValue: number
   diceModification: DiceModification
   specialFarmCardSelection: SpecialFarmCardSelection

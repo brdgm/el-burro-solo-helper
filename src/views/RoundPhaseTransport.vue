@@ -68,4 +68,7 @@ export default defineComponent({
   height: 3rem;
   margin-top: -0.5rem
 }
+ol > li {
+  margin-top: 1rem;
+}
 </style>

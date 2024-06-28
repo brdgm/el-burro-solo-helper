@@ -59,8 +59,54 @@
       "soloRewardOverview": "Solo reward overview"
     }
   },
+  "roundPhaseFarm": {
+    "title": "Farm Phase",
+    "gameRoundTile": {
+      "title": "Check Game Round Tile",
+      "appliesBot": "Also used by Leon."
+    },
+    "expandFarm": {
+      "title": "Expand the farm"
+    },
+    "increaseFarm": {
+      "title": "Increase the farm",
+      "gainIncome": "Gain income: Leon takes an amount of silver as shown at their farm administration.",
+      "harvest": "Harvest: Leon places 1 goods token on the storage space for each field at their farm.",
+      "gainOffspring": "Gain offspring: When Leon has empty pig stable markings, they cover <b>one</b> of these markings with 1 goods token. Leon places 1 goods token and 1 silver on their storage spaces."
+    }
+  },
+  "playFarmCard": {
+    "normal": "Leon plays a <b>normal</b> farm card.",
+    "special": "Leon prefers to play a <b>special solo</b> farm card.",
+    "otherwiseNormal": "otherwise normal:"
+  },
   "sideBar": {
     "round": "Round"
+  },
+  "rules": {
+    "playCard": {
+      "title": "Play Farm Card",
+      "normal": {
+        "title": "Play normal farm card",
+        "intro": "Game round 1 and 2 - Leon plays only normal farm cards (drawn from the stack):",
+        "marketBarrowSlotEmpty": "If one of the two slots for market barrows is empty, they automatically play the card as a market barrow (rightmost slot is reserved for a “game end” market barrow).",
+        "marketBarrowSlotsFilled": "If all relevant slots for market barrows are filled, Leon follows the instructions:",
+        "sameNumber": "Most important for Leon is the same number of farm cards to the left and right at their farm. When they have more fields than cards in the farm administration, they place the card in the administration, and vice versa.",
+        "leftOrRight": "If Leon has the same number of cards to the left and right of their farm, they follow the arrow: When the arrow points from the left on the farm board, Leon plays a farm. They immediately place 1 goods token on the storage space. When the arrow points from the right on the farm board, Leon places the card in the farm administration.",
+        "noAcquisitions": "Important: Leon never plays acquisitions!"
+      },
+      "special": {
+        "title": "Play special solo farm card",
+        "intro": "Game round 3 and 4 - Leon prefers to play their special solo farm cards:",
+        "cardLimit": "Leon follows other rules regarding the card limit. While it determines the number of cards you can have in your hand, it limits Leon’s number of special solo farm cards they can play at their farm. Each normal farm card they play in the farm administration showing the matching symbol increases that number.",
+        "paySilver": "Leon must pay for these cards with silver and first checks their amount of silver in the storage. If they have enough silver, they play the special solo farm card. When Leon does not have enough silver, they check if they can get enough silver by a single trade. If they cannot, Leon passes on the trade and instead plays a normal farm card. Otherwise they close the trade and play the special solo farm card.",
+        "pickCard": "They pick the special solo farm card as indicated.",
+        "gameEndMarketBarrow": "They place their first special solo farm as a “game end” market barrow in the right slot at the top of the farm.",
+        "additionalCards": "They push each additional special solo farm card below the bottom side of the farm, so they completely cover the market barrow.",
+        "hotVariant": "When playing the \"Hot!\" variant, keep the \"Hot!\"-instruction visible, otherwise hide it.",
+        "drawNew": "Leon draws a new special solo farm card from the stack and places it at the empty position of the row of cards."
+      }
+    }
   },
   "difficultyLevel": {
     "1": "Simple",

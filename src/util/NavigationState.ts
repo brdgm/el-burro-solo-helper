@@ -7,6 +7,7 @@ import Phase from '@/services/enum/Phase'
 import CardDeck from '@/services/CardDeck'
 import TransportBonusTile from '@/services/TransportBonusTile'
 import TransportBonusTiles from '@/services/TransportBonusTiles'
+import Card from '@/services/Card'
 
 export default class NavigationState {
 
@@ -15,6 +16,7 @@ export default class NavigationState {
   readonly gameRoundTile? : GameRoundTile
   readonly transportBonusTile: TransportBonusTile
   readonly cardDeck : CardDeck
+  readonly roundCard : Card
 
   public constructor(route: RouteLocation, phase: Phase, state: State) {
     this.round = getRound(route, phase)
@@ -24,6 +26,13 @@ export default class NavigationState {
     this.gameRoundTile = getGameRoundTile(setup, this.round, this.phase)
     this.transportBonusTile = getTransportBonusTile(setup, this.round)
     this.cardDeck = getCardDeck(state, this.round, this.phase)
+
+    if (this.cardDeck.currentRoundCard) {
+      this.roundCard = this.cardDeck.currentRoundCard
+    }
+    else {
+      this.roundCard = this.cardDeck.drawRound()
+    }
   }
 
 }

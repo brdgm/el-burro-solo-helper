@@ -8,6 +8,7 @@ import JunctionSelection from './enum/JunctionSelection'
 import DeliveryTarget from './enum/DeliveryTarget'
 import PlusTile from './enum/PlusTile'
 import DifficultyLevel from './enum/DifficultyLevel'
+import CardPlacement from './enum/CardPlacement'
 
 /**
  * Solo game round cards.
@@ -15,6 +16,7 @@ import DifficultyLevel from './enum/DifficultyLevel'
 const cards : Card[] = [
   {
     id: 'R01',
+    cardPlacement: CardPlacement.RIGHT,
     diceValue: 5,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.LEFT,
@@ -31,6 +33,7 @@ const cards : Card[] = [
   },
   {
     id: 'R02',
+    cardPlacement: CardPlacement.RIGHT,
     diceValue: 3,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.RIGHT,
@@ -46,6 +49,7 @@ const cards : Card[] = [
   },
   {
     id: 'R03',
+    cardPlacement: CardPlacement.LEFT,
     diceValue: 4,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.LEFT,
@@ -61,6 +65,7 @@ const cards : Card[] = [
   },
   {
     id: 'R04',
+    cardPlacement: CardPlacement.LEFT,
     diceValue: 6,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.RIGHT,
@@ -78,6 +83,7 @@ const cards : Card[] = [
   },
   {
     id: 'R05',
+    cardPlacement: CardPlacement.LEFT,
     diceValue: 2,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.MIDDLE,
@@ -93,6 +99,7 @@ const cards : Card[] = [
   },
   {
     id: 'R06',
+    cardPlacement: CardPlacement.RIGHT,
     diceValue: 5,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.MIDDLE,
@@ -109,6 +116,7 @@ const cards : Card[] = [
   },
   {
     id: 'R07',
+    cardPlacement: CardPlacement.RIGHT,
     diceValue: 1,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.LEFT,
@@ -124,6 +132,7 @@ const cards : Card[] = [
   },
   {
     id: 'R08',
+    cardPlacement: CardPlacement.LEFT,
     diceValue: 4,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.LEFT,
@@ -140,6 +149,7 @@ const cards : Card[] = [
   },
   {
     id: 'R09',
+    cardPlacement: CardPlacement.RIGHT,
     diceValue: 3,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.RIGHT,
@@ -157,6 +167,7 @@ const cards : Card[] = [
   },
   {
     id: 'R10',
+    cardPlacement: CardPlacement.LEFT,
     diceValue: 2,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.MIDDLE,
@@ -172,6 +183,7 @@ const cards : Card[] = [
   },
   {
     id: 'R11',
+    cardPlacement: CardPlacement.RIGHT,
     diceValue: 1,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.MIDDLE,
@@ -187,6 +199,7 @@ const cards : Card[] = [
   },
   {
     id: 'R12',
+    cardPlacement: CardPlacement.LEFT,
     diceValue: 6,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.RIGHT,

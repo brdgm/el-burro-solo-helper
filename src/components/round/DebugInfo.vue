@@ -2,9 +2,10 @@
   <div class="mt-4" v-if="state.setup.debugMode">
     <hr/>
     <p class="debug">
-      gameRoundTile: {{navigationState.gameRoundTile}}<br/>
-      transportBonusTile: {{navigationState.transportBonusTile}}<br/>
-      cardDeck: {{navigationState.cardDeck.toPersistence()}}<br/>
+      <b>gameRoundTile</b>: {{navigationState.gameRoundTile}}<br/>
+      <b>transportBonusTile</b>: {{navigationState.transportBonusTile}}<br/>
+      <b>cardDeck</b>: {{navigationState.cardDeck.toPersistence()}}<br/>
+      <b>roundCard</b>: {{navigationState.roundCard}}
     </p>
   </div>
 </template>
