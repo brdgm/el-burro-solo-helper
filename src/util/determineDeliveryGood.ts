@@ -20,25 +20,27 @@ export default function determineDeliveryGood(goodTokens: GoodTokens, cardDeck: 
   // otherwise search next good up or down in list based on auxiliary card direction
   const diceModification = cardDeck.drawAuxiliary().diceModification
   while (goodTokens.reserve.length > 0) {
-    if (diceModification == DiceModification.UP) {
-      if (good == 6) {
-        good = 1
-      }
-      else {
-        good++
-      }
-    }
-    else {
-      if (good == 1) {
-        good = 6
-      }
-      else {
-        good--
-      }
-    }
+    good = nextGood(good, diceModification)
     if (useGood(goodTokens, good)) {
       return
     }
+  }
+}
+
+function nextGood(good: Good, diceModification: DiceModification) : Good {
+  if (diceModification == DiceModification.UP) {
+    if (good == 6) {
+      return 1
+    }
+    else {
+      return good + 1
+    }
+  }
+  else if (good == 1) {
+    return 6
+  }
+  else {
+    return good - 1
   }
 }
 
