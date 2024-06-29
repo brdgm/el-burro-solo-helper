@@ -39,7 +39,7 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
-import { useStateStore } from '@/store/state'
+import { PhasePersistence, useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import Phase from '@/services/enum/Phase'
@@ -76,6 +76,12 @@ export default defineComponent({
   },
   methods: {
     next() : void {
+      const phase : PhasePersistence = {
+        round: this.round,
+        phase: this.navigationState.phase,
+        cardDeck: this.navigationState.cardDeck.toPersistence()
+      }
+      this.state.storePhase(phase)
       this.$router.push(`/round/${this.round}/phase/revenue`)
     }
   }

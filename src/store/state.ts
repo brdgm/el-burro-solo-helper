@@ -24,16 +24,15 @@ export const useStateStore = defineStore(`${name}.state`, {
       this.setup.farmExtensionTiles = undefined
       this.rounds = []
     },
-    storeRound(round : Round) {
-      this.rounds = this.rounds.filter(item => item.round < round.round)
-      this.rounds.push(round)
-    },
     storePhase(phase : PhasePersistence) {
-      const round = this.rounds.find(item => item.round == phase.round)
-      if (round) {
-        round.phases = round.phases.filter(item => item.phase < phase.phase)
-        round.phases.push(phase)
+      let round = this.rounds.find(item => item.round == phase.round)
+      if (!round) {
+        round = { round: phase.round, phases: [] }
+        this.rounds = this.rounds.filter(item => item.round < phase.round)
+        this.rounds.push(round)
       }
+      round.phases = round.phases.filter(item => item.phase < phase.phase)
+      round.phases.push(phase)
     }
   },
   persist: true

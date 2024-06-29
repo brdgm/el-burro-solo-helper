@@ -49,17 +49,17 @@ describe('util/NavigationSTate', () => {
   })
 
   const CARD_STATE = mockState({
-    initialCardDeck: mockCardDeck({roundDiscard:['R12'],auxiliaryPile:['R01','R02','R03','R04']}),
+    initialCardDeck: mockCardDeck({roundPile:['R09','R10','R11','R12'],auxiliaryPile:['R01','R02','R03','R04']}),
     rounds: [
       mockRound({round:1,phases:[
-        mockPhase({round:1,phase:1,cardDeck:mockCardDeck({roundDiscard:['R12'],auxiliaryPile:['R02','R03','R04'],auxiliaryDiscard:['R01']})}),
-        mockPhase({round:1,phase:2,cardDeck:mockCardDeck({roundDiscard:['R12'],auxiliaryPile:['R03','R04'],auxiliaryDiscard:['R02','R01']})}),
-        mockPhase({round:1,phase:3,cardDeck:mockCardDeck({roundDiscard:['R12'],auxiliaryPile:['R04'],auxiliaryDiscard:['R03','R02','R01']})}),
-        mockPhase({round:1,phase:4,cardDeck:mockCardDeck({roundDiscard:['R12'],auxiliaryDiscard:['R04','R03','R02','R01']})})
+        mockPhase({round:1,phase:1,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryPile:['R02','R03','R04'],auxiliaryDiscard:['R01']})}),
+        mockPhase({round:1,phase:2,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryPile:['R03','R04'],auxiliaryDiscard:['R02','R01']})}),
+        mockPhase({round:1,phase:3,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryPile:['R04'],auxiliaryDiscard:['R03','R02','R01']})}),
+        mockPhase({round:1,phase:4,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryDiscard:['R04','R03','R02','R01']})})
       ]}),
       mockRound({round:2,phases:[
-        mockPhase({round:1,phase:1,cardDeck:mockCardDeck({roundDiscard:['R12'],auxiliaryPile:['R04','R01','R03'],auxiliaryDiscard:['R02']})}),
-        mockPhase({round:1,phase:2,cardDeck:mockCardDeck({roundDiscard:['R12'],auxiliaryPile:['R01','R03'],auxiliaryDiscard:['R04','R02']})})
+        mockPhase({round:1,phase:1,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R04','R01','R03'],auxiliaryDiscard:['R02']})}),
+        mockPhase({round:1,phase:2,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R01','R03'],auxiliaryDiscard:['R04','R02']})})
       ]})
     ]
   })
@@ -77,6 +77,7 @@ describe('util/NavigationSTate', () => {
   it('card-deck-previous-round-previous-phase', () => {
     const navigationState = new NavigationState(mockRouteLocation({params:{'round':'4'}}),Phase.I_FARM,CARD_STATE)
     expect(navigationState.cardDeck.toPersistence().auxiliaryPile).to.eql(['R01','R03'])
+    expect(navigationState.cardDeck.toPersistence().roundDiscard).to.eql(['R12','R11','R10','R09'])
   })
 
   it('card-deck-initial', () => {

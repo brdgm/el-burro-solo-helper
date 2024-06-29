@@ -94,11 +94,15 @@ function getCardDeck(state: State, round: number, phase: Phase) : CardDeck {
   }
   if (round > 1) {
     // get from previous round
-    return getCardDeck(state, round-1, Phase.IV_SCORING)
+    const cardDeck = getCardDeck(state, round-1, Phase.IV_SCORING)
+    cardDeck.drawRound()
+    return cardDeck
   }
   // get from initial card state
   if (state.setup.initialCardDeck) {
-    return CardDeck.fromPersistence(state.setup.initialCardDeck)
+    const cardDeck = CardDeck.fromPersistence(state.setup.initialCardDeck)
+    cardDeck.drawRound()
+    return cardDeck
   }
   // should never happen
   return CardDeck.new(state.setup.difficultyLevel)
