@@ -1,5 +1,5 @@
 <template>
-  <span>Leon makes a community delivery.</span>
+  <a data-bs-toggle="modal" href="#communityDeliveryModal" class="rule"><span v-html="t('communityDelivery.title')"></span></a>
 </template>
 
 <script lang="ts">

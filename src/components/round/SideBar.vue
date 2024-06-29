@@ -14,6 +14,8 @@
   <PlayCardModal :navigationState="navigationState"/>
   <TravelRoadModal :navigationState="navigationState"/>
   <DonkeyDeliveryModal :navigationState="navigationState"/>
+  <GoatDeliveryModal :navigationState="navigationState"/>
+  <CommunityDeliveryModal :navigationState="navigationState"/>
 </template>
 
 <script lang="ts">
@@ -26,6 +28,8 @@ import GameRoundCardModal from './GameRoundCardModal.vue'
 import PlayCardModal from '../rules/PlayCardModal.vue'
 import TravelRoadModal from '../rules/TravelRoadModal.vue'
 import DonkeyDeliveryModal from '../rules/DonkeyDeliveryModal.vue'
+import GoatDeliveryModal from '../rules/GoatDeliveryModal.vue'
+import CommunityDeliveryModal from '../rules/CommunityDeliveryModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
@@ -34,7 +38,9 @@ export default defineComponent({
     GameRoundCardModal,
     PlayCardModal,
     TravelRoadModal,
-    DonkeyDeliveryModal
+    DonkeyDeliveryModal,
+    GoatDeliveryModal,
+    CommunityDeliveryModal
   },
   setup() {
     const { t } = useI18n()

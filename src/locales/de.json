@@ -101,6 +101,12 @@
   "donkeyDelivery": {
     "title":"Leon führt eine Esellieferung aus."
   },
+  "goatDelivery": {
+    "title":"Leon führt eine Ziegenlieferung aus."
+  },
+  "communityDelivery": {
+    "title":"Leon führt eine Gemeinschaftslieferung aus."
+  },
   "sideBar": {
     "round": "Runde",
     "turn": "Zug"
@@ -161,6 +167,12 @@
     },
     "donkeyDelivery": {
       "title": "Esellieferung"
+    },
+    "goatDelivery": {
+      "title": "Ziegenlieferung"
+    },
+    "communityDelivery": {
+      "title": "Gemeinschaftslieferung"
     }
   },
   "difficultyLevel": {

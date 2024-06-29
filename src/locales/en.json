@@ -104,6 +104,12 @@
   "donkeyDelivery": {
     "title":"Leon makes a donkey delivery."
   },
+  "goatDelivery": {
+    "title":"Leon makes a goat delivery."
+  },
+  "communityDelivery": {
+    "title":"Leon makes a community delivery."
+  },
   "sideBar": {
     "round": "Round",
     "turn": "Turn"
@@ -167,6 +173,12 @@
     },
     "donkeyDelivery": {
       "title": "Donkey Delivery"
+    },
+    "goatDelivery": {
+      "title": "Goat Delivery"
+    },
+    "communityDelivery": {
+      "title": "Community Delivery"
     }
   },
   "difficultyLevel": {
