@@ -12,10 +12,10 @@
 
   <template v-else>
     <ul>
-      <li v-html="t('roundPhaseTransport.siesta.moveSiesta', {value:roundCard.siestaValue})"></li>
+      <li v-html="t('roundPhaseTransport.siesta.moveSiesta', {value:roundCard.siestaValue}, roundCard.siestaValue)"></li>
       <li v-if="roundCard.siestaPlusTile">
-        <AppIcon v-if="roundCard.siestaPlusTile" type="plus-tile" :name="roundCard.siestaPlusTile.toString()" class="plusTile"/>
-        <span v-html="t('roundPhaseTransport.siesta.plusTile', {value:roundCard.siestaPlusTile})"></span>
+        <AppIcon type="plus-tile" :name="roundCard.siestaPlusTile.toString()" class="plusTile"/>
+        <span v-html="t('roundPhaseTransport.siesta.plusTile', {value:roundCard.siestaPlusTile}, roundCard.siestaPlusTile)"></span>
       </li>
       <li v-html="t('roundPhaseTransport.siesta.travelGainPrestige')"></li>
       <li v-if="transportBonus">

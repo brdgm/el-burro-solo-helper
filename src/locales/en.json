@@ -120,7 +120,10 @@
       "additionalDelivery": "If Leon can spend a worker from their farmhouse, make a second goat delivery. Otherwise hire one worker."
     },
     "donkeyDelivery": {
-      "title": "Donkey delivery"
+      "title": "Donkey delivery",
+      "deliver": "Make <b>{value} donkey delivery</b>. | Make <b>{value} donkey deliveries</b>.",
+      "plusTile": "If possible, move back the through marker to make {value} additional delivery. | If possible, move back the through marker to make {value} additional deliveries.",
+      "transportBonus": "Gain transport bonus."
     }
   },
   "roundPhaseScoring": {

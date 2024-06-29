@@ -117,7 +117,10 @@
       "additionalDelivery": "Wenn Leon eine Arbeitskraft abgeben kann, führt er eine weitere Ziegenlieferung aus. Anderenfalls nimmt er 1 Arbeitskraft."
     },
     "donkeyDelivery": {
-      "title": "Mit Esel liefern"
+      "title": "Mit Esel liefern",
+      "deliver": "Führe <b>{value} Esellieferung</b> aus. | Führe <b>{value} Esellieferungen</b> aus.",
+      "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferung auszuführen. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferungen auszuführen",
+      "transportBonus": "Erhalte den Transportbonus."
     }
   },
   "roundPhaseScoring": {
