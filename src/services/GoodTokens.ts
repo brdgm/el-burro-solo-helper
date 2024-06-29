@@ -25,7 +25,7 @@ export default class GoodTokens {
   }
 
   /**
-   * @param good Uses a good for goat/community delivery
+   * Uses a good for goat/community delivery
    */
   public use(good : Good) : void {
     if (!this._reserve.includes(good)) {
@@ -33,6 +33,18 @@ export default class GoodTokens {
     }
     this._reserve = this._reserve.filter(g => g != good)
     this._used.push(good)
+  }
+
+  /**
+   * Removes a good from the list of used goods - it will be ignored in future deliveries.
+   */
+  public remove(good : Good) : void {
+    if (this._used.includes(good)) {
+      this._used = this._used.filter(g => g != good)
+    }
+    else {
+      throw new Error(`Good is not in use.`)
+    }
   }
 
   /**

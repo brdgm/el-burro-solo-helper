@@ -46,6 +46,9 @@
         <li>
           <AppIcon type="market-bonus-tile" name="reward-track-step" class="icon marketBonus"/>
           <span v-html="t('rules.deliveryTargetScoring.marketBonusTiles.rewardTrackStep')"></span>
+          <div class="mt-2">
+            <DeliveryGoodSelection :navigationState="navigationState"/>
+          </div>
         </li>
       </ul>
     </template>
@@ -59,12 +62,14 @@ import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDial
 import AppIcon from '../structure/AppIcon.vue'
 import NavigationState from '@/util/NavigationState'
 import Card from '@/services/Card'
+import DeliveryGoodSelection from '../round/DeliveryGoodSelection.vue'
 
 export default defineComponent({
   name: 'DeliveryTargetScoringModal',
   components: {
     ModalDialog,
-    AppIcon
+    AppIcon,
+    DeliveryGoodSelection
   },
   setup() {
     const { t } = useI18n()

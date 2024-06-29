@@ -37,7 +37,6 @@
     "farmCard4": "4. Karte als Hofverwaltung.",
     "supportMarker": "Lege 1 <b>Unterstützungsmarker</b> mit der Ansehensseite nach oben neben Leons Hof.",
     "stableBoard": "Lege Leons <b>Solo-Stalltableau</b> bereit. Lege neben <b>Tränken</b>- und <b>Meilensteinmarker</b> auf die entsprechenden Ablagefelder. Leon startet mit dem Tränkenmarker auf Feld „1“.",
-    "soloFarmGoods": "Lege die 6 <b>Solo-Hofgutplättchen</b> auf die Ablagefelder des Stalls.",
     "specialSoloFarmCards": "Mische die speziellen <b>Solo-Hofkarten</b> und lege sie als verdeckten Stapel neben den Hof. Ziehe 3 Karten und lege sie offen in eine Reihe.",
     "startingSpace": "Wenn Leon an die Reihe kommt, um ein Startfeld für seine Esel zu bestimmen:",
     "determineStartingSpace": "Startfeld bestimmen",
@@ -53,6 +52,7 @@
       "title": "Ungenutztes Material (durch die Applikation verwaltet):",
       "soloGameRoundCards": "Solo-Rundenkarten",
       "soloTransportBonusTiles": "Solo-Transportbonusplättchen",
+      "soloFarmGoods": "Solo-Hofgutplättchen",
       "soloRewardOverview": "Solo-Belohnungsübersicht"
     }
   },
@@ -106,6 +106,15 @@
   },
   "communityDelivery": {
     "title":"Leon führt eine Gemeinschaftslieferung aus."
+  },
+  "deliveryGoodSelection": {
+    "firstGood": "Liefergut bestimmen",
+    "nextGood": "Nächstes Liefergut",
+    "remove": {
+      "title": "Gut entfernen",
+      "confirmation": "Möchtest du dieses Liefergut entfernen?",
+      "ignored": "Es wird bei zukünftigen Lieferungen ignoriert."
+    }
   },
   "sideBar": {
     "round": "Runde",

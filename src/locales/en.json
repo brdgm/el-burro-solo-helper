@@ -40,7 +40,6 @@
     "farmCard4": "Place the 4<sup>th</sup> card as farm administration.",
     "supportMarker": "Place <b>1 support marker</b> with the prestige side face up next to Leon’s farm.",
     "stableBoard": "Place Leon’s <b>stable board</b> next to the farm. Place the <b>trough</b> and <b>milestone marker</b> on the appropriate spaces. Leon starts with the trough marker on space “1”.",
-    "soloFarmGoods": "Place the <b>6 solo farm goods</b> tiles on the spaces of the stable.",
     "specialSoloFarmCards": "Shuffle the <b>special solo farm cards</b> and place them in a facedown draw stack next to the farm. Draw 3 cards and place them in a faceup row.",
     "startingSpace": "When it is Leon’s turn to choose a starting space for their donkeys:",
     "determineStartingSpace": "Determine starting space",
@@ -56,6 +55,7 @@
       "title": "Unused material (managed by the application):",
       "soloGameRoundCards": "Solo game round cards",
       "soloTransportBonusTiles": "Solo transport bonus tiles",
+      "soloFarmGoods": "Solo farm goods",
       "soloRewardOverview": "Solo reward overview"
     }
   },
@@ -109,6 +109,15 @@
   },
   "communityDelivery": {
     "title":"Leon makes a community delivery."
+  },
+  "deliveryGoodSelection": {
+    "firstGood": "Determine Delivery Good",
+    "nextGood": "Next Delivery Good",
+    "remove": {
+      "title": "Remove Good",
+      "confirmation": "Do you want to remove this delivery good?",
+      "ignored": "It will be ignored for future deliveries."
+    }
   },
   "sideBar": {
     "round": "Round",

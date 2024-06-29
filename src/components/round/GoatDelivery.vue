@@ -4,6 +4,9 @@
     <a data-bs-toggle="modal" href="#goatDeliveryModal">
       <AppIcon type="delivery-target" :name="roundCard.deliveryTarget" class="icon"/>
     </a>
+    <span class="ms-2">
+      <DeliveryGoodSelection :navigationState="navigationState"/>
+    </span>
   </div>
 </template>
 
@@ -12,12 +15,14 @@ import Card from '@/services/Card';
 import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import AppIcon from '../structure/AppIcon.vue';
+import AppIcon from '../structure/AppIcon.vue'
+import DeliveryGoodSelection from './DeliveryGoodSelection.vue';
 
 export default defineComponent({
   name: 'GoatDelivery',
   components: {
-    AppIcon
+    AppIcon,
+    DeliveryGoodSelection
   },
   setup() {
     const { t } = useI18n()
