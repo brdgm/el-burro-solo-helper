@@ -11,12 +11,12 @@
 </template>
 
 <script lang="ts">
-import Card from '@/services/Card';
+import Card from '@/services/Card'
 import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
-import DeliveryGoodSelection from './DeliveryGoodSelection.vue';
+import DeliveryGoodSelection from './DeliveryGoodSelection.vue'
 
 export default defineComponent({
   name: 'GoatDelivery',

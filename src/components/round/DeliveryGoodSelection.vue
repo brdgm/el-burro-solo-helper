@@ -1,7 +1,9 @@
 <template>
   <AppIcon v-for="good of goodTokens.used" :key="good" type="good" :name="good.toString()" class="icon removable" @click="removeGoodConfirm(good)"/>
-  <button v-if="goodTokens.used.length == 0" class="btn btn-secondary btn-sm" @click="determineGood">{{t('deliveryGoodSelection.firstGood')}}</button>
-  <button v-else-if="goodTokens.reserve.length > 0" class="btn btn-secondary btn-sm" @click="determineGood">{{t('deliveryGoodSelection.nextGood')}}</button>
+  <template v-if="allowAdd">
+    <button v-if="goodTokens.used.length == 0" class="btn btn-secondary btn-sm" @click="determineGood">{{t('deliveryGoodSelection.firstGood')}}</button>
+    <button v-else-if="goodTokens.reserve.length > 0" class="btn btn-secondary btn-sm" @click="determineGood">{{t('deliveryGoodSelection.nextGood')}}</button>
+  </template>
 
   <ModalDialog :id="modalId" :title="t('deliveryGoodSelection.remove.title')">
     <template #body>
@@ -17,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import Card from '@/services/Card';
+import Card from '@/services/Card'
 import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -44,6 +46,10 @@ export default defineComponent({
       type: NavigationState,
       required: true
     },
+    allowAdd: {
+      type: Boolean,
+      default: true
+    }
   },
   data() {
     return {

@@ -49,6 +49,7 @@
           <div class="mt-2">
             <DeliveryGoodSelection :navigationState="navigationState"/>
           </div>
+          <p class="mt-1"><a data-bs-toggle="modal" href="#rewardTracksModal" class="rule"><span v-html="t('rules.communityDelivery.rewardTracks')"></span></a></p>
         </li>
       </ul>
     </template>

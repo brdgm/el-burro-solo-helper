@@ -255,6 +255,60 @@
         "takeFarmGoodPigAmbitious": "<i>Anspruchsvoller Schwierigkeitsgrad</i>: Suchst du eine größere Herausforderung, gilt Folgendes: Leon erhält stattdessen 2 Gütermarker.",
         "rewardTrackStep": "Soforteffekt - „1 kostenfreier Schritt auf 1 Belohnungsleiste“: Leon zieht den Belohnungsmarker 1 Feld auf der Belohnungsleiste vorwärts, deren Hofgut auf dem obersten Hofgutplättchen des Ziegenbereichs angezeigt wird."
       }
+    },
+    "rewardTracks": {
+      "title": "Belohnungsleisten",
+      "tracks": {
+        "title": "Die Belohnungsleisten",
+        "intro": "Leon bekommt auf den Feldern des Belohnungstableaus folgende Belohnungen:",
+        "space1": "<b>1. Feld</b>: Leon bekommt den Hofausbau, der auf dem jeweiligen Feld liegt. Er legt diesen Hofausbau auf das Hoffeld, das demselben Hofgut zugeordnet ist.",
+        "space2": "<b>2. Feld</b>: Leon zieht seinen Tränkenmarker 1 Feld auf der Tränkenleiste weiter.",
+        "space3": "<b>3. Feld</b>: Leon wertet den Hofausbau auf dem Hoffeld auf, das demselben Hofgut zugeordnet ist, indem er ihn auf die Seite mit Ziegeldach dreht.",
+        "space4": "<b>4. Feld</b>: Kommt Leon auf dem obersten Feld einer Leiste an und du hast die Wertungsoption noch nicht besetzt, zieht Leon seinen Marker auf das Feld und blockiert es somit. Hast du das Feld bereits besetzt, zieht Leon seinen Marker in den unteren Bereich. Er spielt in beiden Fällen 1 spezielle Solo-Hofkarte kostenfrei aus! Danach dreht er das entsprechende Hofgutplättchen im Ziegenbereich um und ignoriert es zukünftig bei Ziegenlieferungen.",
+        "gainPrestige": "Leon erhält <b>{prestige} Ansehen</b>."
+      },
+      "extensions": {
+        "title": "Leons Hofausbauten",
+        "intro": "Zieht Leon auf den Belohnungsleisten vor, bekommt er die dort ausliegenden Solo-Hofausbauten bzw. wertet sie später auf.",
+        "activation": "In beiden Fällen aktiviert Leon einmalig den Soforteffekt des Hofausbaus. Es können zwei unterschiedliche Dinge passieren:",
+        "hasWorker": "Leon hat eine Arbeitskraft zur Verfügung. Er stellt sie auf den Hofausbau und führt den oberen Soforteffekt aus. Die Arbeitskraft verbleibt dort bis zum Rundenende. Hat Leon keine Arbeitskraft aber genügend Silber, um eine zu tauschen, verwendet er die eingetauschte Arbeitskraft.",
+        "noWorker": "Leon hat keine Arbeitskraft und kann keine tauschen. Statt den oberen Effekt des Hofausbaus zu aktivieren, nimmt er 1 Arbeitskraft aus dem Vorrat und stellt sie auf das kleine Bauernhaus.",
+        "extensionsIntro": "Die Hofausbauten haben folgende Soforteffekte:",
+        "thatchedRoof": "Strohdach",
+        "tiledRoof": "Ziegeldach",
+        "farmExtension": {
+          "donkey-delivery-with-costs": {
+            "title": "Kostenpflichtig mit dem Esel liefern",
+            "thatchedRoof": "Leon zahlt 1 Silber, um 1 Lieferung an einen eigenen Lieferauftrag auszuführen.",
+            "tiledRoof": "Leon erhält 1 Ansehen und zahlt 1 Silber, um bis zu 2 Lieferungen an eigene Lieferaufträge auszuführen."
+          },
+          "travel-on-the-road": {
+            "title": "Auf der Straße reisen",
+            "thatchedRoof": "Leon setzt den Esel auf der Straße um 1 Feld vorwärts, der auf der aktuellen Rundenkarte vorgegeben ist.",
+            "tiledRoof": "Leon erhält 1 Ansehen und setzt den Esel auf der Straße um 2 Felder vorwärts, der auf der aktuellen Rundenkarte vorgegeben ist."
+          },
+          "fill-through": {
+            "title": "Tränke auffüllen",
+            "thatchedRoof": "Leon zieht den Tränkenmarker um 1 Feld auf der Tränkenleiste weiter.",
+            "tiledRoof": "Leon erhält 1 Ansehen und zieht den Tränkenmarker um 2 Felder auf der Tränkenleiste weiter."
+          },
+          "play-a-farm-card": {
+            "title": "Hofkarte spielen",
+            "thatchedRoof": "Leon spielt 1 Hofkarte an seinen Hof.",
+            "tiledRoof": "Leon erhält 1 Ansehen und spielt 1 Hofkarte an seinen Hof."
+          },
+          "goat-delivery-with-costs": {
+            "title": "Kostenpflichtig mit der Ziege liefern",
+            "thatchedRoof": "Leon zahlt 1 Silber, um 1 Lieferung an einen deiner Lieferaufträge auszuführen.",
+            "tiledRoof": "Leon erhält 1 Ansehen und zahlt 1 Silber, um bis zu 2 Lieferungen an deine Lieferaufträge auszuführen."
+          },
+          "community-delivery-free-step-reward-track": {
+            "title": "Gemeinschaftslieferung“/„1 kostenfreier Schritt auf 1 Belohnungsleiste",
+            "thatchedRoof": "Leon legt 1 Gütermarker vom Hof zurück in seinen Vorrat und zieht den Belohnungsmarker 1 Feld auf der Belohnungsleiste vorwärts, deren Hofgut auf dem obersten Hofgutplättchen des Ziegenbereichs angezeigt wird.",
+            "tiledRoof": "Leon erhält 1 Ansehen und zieht den Belohnungsmarker 1 Feld auf der Belohnungsleiste vorwärts, deren Hofgut auf dem obersten Hofgutplättchen des Ziegenbereichs angezeigt wird."
+          }
+        }
+      }
     }
   },
   "difficultyLevel": {

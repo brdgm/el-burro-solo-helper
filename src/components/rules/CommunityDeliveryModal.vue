@@ -10,6 +10,7 @@
       <p v-html="t('rules.communityDelivery.deliveryGoods.trackTopSpace')"></p>
       <h5 v-html="t('rules.communityDelivery.title')"></h5>
       <p v-html="t('rules.communityDelivery.firstFarmGood')"></p>
+      <p><a data-bs-toggle="modal" href="#rewardTracksModal" class="rule"><span v-html="t('rules.communityDelivery.rewardTracks')"></span></a></p>
     </template>
   </ModalDialog>
 </template>

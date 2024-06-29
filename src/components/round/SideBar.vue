@@ -18,6 +18,7 @@
   <GoatDeliveryModal :navigationState="navigationState"/>
   <CommunityDeliveryModal :navigationState="navigationState"/>
   <DeliveryTargetScoringModal :navigationState="navigationState"/>
+  <RewardTracksModal :navigationState="navigationState"/>
 </template>
 
 <script lang="ts">
@@ -33,6 +34,7 @@ import DonkeyDeliveryModal from '../rules/DonkeyDeliveryModal.vue'
 import GoatDeliveryModal from '../rules/GoatDeliveryModal.vue'
 import CommunityDeliveryModal from '../rules/CommunityDeliveryModal.vue'
 import DeliveryTargetScoringModal from '../rules/DeliveryTargetScoringModal.vue'
+import RewardTracksModal from '../rules/RewardTracksModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
@@ -44,7 +46,8 @@ export default defineComponent({
     DonkeyDeliveryModal,
     GoatDeliveryModal,
     CommunityDeliveryModal,
-    DeliveryTargetScoringModal
+    DeliveryTargetScoringModal,
+    RewardTracksModal
   },
   setup() {
     const { t } = useI18n()

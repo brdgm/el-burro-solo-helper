@@ -16,6 +16,9 @@
           <span v-html="t(`rules.goatDelivery.firstDelivery.deliveryTarget.${roundCard.deliveryTarget}`)"></span>
         </li>
         <li v-html="t('rules.goatDelivery.firstDelivery.gainRewards')"></li>
+        <ul>
+          <li><a data-bs-toggle="modal" href="#rewardTracksModal" class="rule"><span v-html="t('rules.communityDelivery.rewardTracks')"></span></a></li>
+        </ul>
         <li v-html="t('rules.goatDelivery.firstDelivery.communityDelivery')"></li>
       </ol>
       <h5 v-html="t('rules.goatDelivery.subsequentDelivery.title')"></h5>
