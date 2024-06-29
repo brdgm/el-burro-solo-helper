@@ -2,7 +2,31 @@
   <ModalDialog id="donkeyDeliveryModal" :size-lg="true" :fullscreen-lg-down="true" :scrollable="true"
       :title="t('rules.donkeyDelivery.title')">
     <template #body>
-      <p v-html="t('rules.donkeyDelivery.intro')"></p>
+      <h5 v-html="t('rules.donkeyDelivery.delivery.title')"></h5>
+      <p v-html="t('rules.donkeyDelivery.delivery.startedDelivery')"></p>
+      <p>
+        <AppIcon type="delivery-target" :name="roundCard.deliveryTarget" class="icon"/>
+        <span v-html="t(`rules.donkeyDelivery.delivery.deliveryTarget.${roundCard.deliveryTarget}`)"></span>
+      </p>
+      <hr/>
+      <h5>
+        <AppIcon type="delivery-target" name="market-barrow" class="icon"/>
+        <span v-html="t('rules.donkeyDelivery.marketBarrow.title')"></span>
+      </h5>
+      <ol>
+        <li v-html="t('rules.donkeyDelivery.marketBarrow.slotOrder')"></li>
+        <li v-html="t('rules.donkeyDelivery.marketBarrow.markingOrder')"></li>
+        <li v-html="t('rules.donkeyDelivery.marketBarrow.fallback')"></li>
+      </ol>
+      <h5>
+        <AppIcon type="delivery-target" name="local-market" class="icon"/>
+        <span v-html="t('rules.donkeyDelivery.localMarket.title')"></span>
+      </h5>
+      <ol>
+        <li v-html="t('rules.donkeyDelivery.localMarket.marketOrder')"></li>
+        <li v-html="t('rules.donkeyDelivery.localMarket.markingOrder')"></li>
+        <li v-html="t('rules.donkeyDelivery.localMarket.fallback')"></li>
+      </ol>
     </template>
   </ModalDialog>
 </template>

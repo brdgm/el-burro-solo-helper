@@ -172,7 +172,27 @@
       "harbor": "<b>Harbor</b>: When Leon’s donkeys reach the harbor, they remain on the harbor spaces, as they later continue to move forward. When the leading donkey reaches the end of the harbor, Leon only moves the rear donkey forward until the end of the game. Leon claims harbor spaces at the final scoring."
     },
     "donkeyDelivery": {
-      "title": "Donkey Delivery"
+      "title": "Donkey Delivery",
+      "delivery": {
+        "title": "How does Leon deliver goods with their donkey?",
+        "startedDelivery": "If Leon has already started a delivery of a market barrow or local market (or you made a goat delivery to one of them), they continue to deliver that current delivery target, until they have completely delivered it.",
+        "deliveryTarget": {
+          "market-barrow": "When Leon has no current delivery target, or a choice of multiple targets with a started delivery, they follow the instructions: They prefer a <b>market barrow</b>.",
+          "local-market": "When Leon has no current delivery target, or a choice of multiple targets with a started delivery, they follow the instructions: They prefer a <b>local market</b>."
+        }
+      },
+      "marketBarrow": {
+        "title": "Market barrow",
+        "slotOrder": "Leon prefers the market barrow in the left slot, then in the center slot.",
+        "markingOrder": "First, they fill the top markings from left to right, then the bottom markings.",
+        "fallback": "If there are no market barrows at Leon’s farm, instead they deliver a local market."
+      },
+      "localMarket": {
+        "title": "Local market",
+        "marketOrder": "Leon delivers to the local market that they unlocked with their donkeys furthest down the road.",
+        "markingOrder": "They fill the markings from left to right.",
+        "fallback": "If Leon has currently completely delivered all unlocked local markets, instead they deliver a market barrow."
+      }
     },
     "goatDelivery": {
       "title": "Goat Delivery"

@@ -166,7 +166,27 @@
       "harbor": "<b>Hafen</b>: Erreichen Leons Esel die Hafenfelder, belässt er sie vorerst auf den Feldern und zieht sie später weiter. Erreicht der vordere Esel das Ende des Hafens, zieht Leon ab jetzt bis zum Ende der Partie nur noch den hinteren Esel. Er beansprucht erst in der Schlusswertung ein Hafenfeld."
     },
     "donkeyDelivery": {
-      "title": "Esellieferung"
+      "title": "Esellieferung",
+      "delivery": {
+        "title": "Wie liefert Leon per Esel?",
+        "startedDelivery": "Hat Leon bereits mit der Lieferung eines Marktkarrens oder lokalen Markts begonnen (oder hast du per Ziegenlieferung einen beliefert), führt er Esellieferungen an dieses aktuelle Lieferziel aus, bis er es komplett beliefert hat.",
+        "deliveryTarget": {
+          "market-barrow": "Hat Leon aktuell kein Lieferziel, oder stehen mehrere Lieferziele mit angefangener Lieferung zur Auswahl, folgt er der Anweisung: Er bevorzugt <b>Marktkarren</b>.",
+          "local-market": "Hat Leon aktuell kein Lieferziel, oder stehen mehrere Lieferziele mit angefangener Lieferung zur Auswahl, folgt er der Anweisung: Er bevorzugt <b>lokale Märkte</b>."
+        }
+      },
+      "marketBarrow": {
+        "title": "Marktkarren",
+        "slotOrder": "Leon beliefert bevorzugt den Marktkarren im linken Slot, dann den in der Mitte.",
+        "markingOrder": "Er füllt zuerst die oberen Markierungen des Marktkarrens von links nach rechts, dann die unteren Markierungen.",
+        "fallback": "Liegt aktuell kein Marktkarren an Leons Hof, beliefert er stattdessen einen lokalen Markt."
+      },
+      "localMarket": {
+        "title": "Lokaler Markt",
+        "marketOrder": "Leon beliefert den lokalen Markt, den er mit seinen Eseln am weitesten hinten auf der Straße freigeschaltet hat.",
+        "markingOrder": "Er füllt die Markierungen von links nach rechts.",
+        "fallback": "Hat Leon aktuell alle freigeschalteten lokalen Märkte komplett beliefert, beliefert er stattdessen einen Marktkarren."
+      }
     },
     "goatDelivery": {
       "title": "Ziegenlieferung"
