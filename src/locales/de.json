@@ -99,6 +99,20 @@
     "round": "Runde",
     "turn": "Zug"
   },
+  "gameRoundCard": {
+    "title": "Rundenkarte",
+    "farmCard": "Hofkarte",
+    "dice": "Würfel",
+    "delivery": "Lieferung",
+    "road": "Straße",
+    "transport": "Transport",
+    "siesta": "Siesta",
+    "goatDelivery": "Ziegenlieferung",
+    "donkey": "Esel",
+    "stable": "Stall",
+    "yes": "ja",
+    "no": "nein"
+  },
   "rules": {
     "playCard": {
       "title": "Hofkarte spielen",

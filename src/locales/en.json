@@ -102,6 +102,20 @@
     "round": "Round",
     "turn": "Turn"
   },
+  "gameRoundCard": {
+    "title": "Round Card",
+    "farmCard": "Farm Card",
+    "dice": "Dice",
+    "delivery": "Delivery",
+    "road": "Road",
+    "transport": "Transport",
+    "siesta": "Siesta",
+    "goatDelivery": "Goat Delivery",
+    "donkey": "Donkey",
+    "stable": "Stable",
+    "yes": "yes",
+    "no": "no"
+  },
   "rules": {
     "playCard": {
       "title": "Play Farm Card",

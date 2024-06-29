@@ -5,11 +5,12 @@
       <span v-if="turn > 0">{{t('sideBar.turn')}} {{turn}}</span>
     </p>
     <ul class="rules">
-      <li><a data-bs-toggle="modal" href="#playCardModal" class="rule">{{t('rules.playCard.title')}}</a></li>
+      <li><a data-bs-toggle="modal" href="#roundCardModal" class="rule">{{t('gameRoundCard.title')}}</a></li>
     </ul>
     <GameRoundTile :navigationState="navigationState"/>
   </div>
 
+  <GameRoundCardModal :navigationState="navigationState"/>
   <PlayCardModal :navigationState="navigationState"/>
 </template>
 
@@ -19,12 +20,14 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import GameRoundTile from './GameRoundTile.vue'
+import GameRoundCardModal from './GameRoundCardModal.vue'
 import PlayCardModal from '../rules/PlayCardModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
   components: {
     GameRoundTile,
+    GameRoundCardModal,
     PlayCardModal
   },
   setup() {
