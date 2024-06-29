@@ -3,7 +3,7 @@
   <button v-if="goodTokens.used.length == 0" class="btn btn-secondary btn-sm" @click="determineGood">{{t('deliveryGoodSelection.firstGood')}}</button>
   <button v-else-if="goodTokens.reserve.length > 0" class="btn btn-secondary btn-sm" @click="determineGood">{{t('deliveryGoodSelection.nextGood')}}</button>
 
-  <ModalDialog id="removeDeliveryGoodModal" :title="t('deliveryGoodSelection.remove.title')">
+  <ModalDialog :id="modalId" :title="t('deliveryGoodSelection.remove.title')">
     <template #body>
       <p v-html="t('deliveryGoodSelection.remove.confirmation')"></p>
       <p><AppIcon v-if="goodToRemove" type="good" :name="goodToRemove.toString()" class="icon"/></p>
@@ -27,6 +27,7 @@ import determineDeliveryGood from '@/util/determineDeliveryGood'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import Good from '@/services/enum/Good'
 import showModal from '@brdgm/brdgm-commons/src/util/modal/showModal'
+import { uniqueId } from 'lodash'
 
 export default defineComponent({
   name: 'DeliveryGoodSelection',
@@ -56,6 +57,9 @@ export default defineComponent({
     goodTokens() : GoodTokens {
       return this.navigationState.goodTokens
     },
+    modalId() : string {
+      return `communityDeliveryModal-${uniqueId()}`
+    }
   },
   methods: {
     determineGood() {
@@ -64,7 +68,7 @@ export default defineComponent({
     },
     removeGoodConfirm(good: Good) {
       this.goodToRemove = good
-      showModal('removeDeliveryGoodModal')
+      showModal(this.modalId)
     },
     removeGood() {
       if (this.goodToRemove) {

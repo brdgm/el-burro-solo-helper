@@ -198,10 +198,33 @@
       }
     },
     "goatDelivery": {
-      "title": "Ziegenlieferung"
+      "title": "Ziegenlieferung",
+      "firstDelivery": {
+        "title": "Erste Lieferung",
+        "intro": "Führt Leon seine erste Ziegen- oder Gemeinschaftslieferung der Partie durch, folgt er diesen Schritten in der genannten Reihenfolge:",
+        "deliveryTarget": {
+          "market-barrow": "Leon führt nun eine Ziegenlieferung an dich aus. Er bevorzugt <b>Marktkarren</b>. Sollte kein Marktkarren das Hofgut benötigen, beliefert Leon anstelle dessen lokale Märkte.",
+          "local-market": "Leon führt nun eine Ziegenlieferung an dich aus. Er bevorzugt <b>lokale Märkte</b>. Sollte kein lokaler Markt das Hofgut benötigen, beliefert Leon anstelle dessen Marktkarren."
+        },
+        "gainRewards": "Leon bekommt die üblichen Belohnungen für die Ziegenlieferung: Für die erste Ziegenlieferung der Spielrunde erhält deinen Unterstützungsmarker. Außerdem zieht er seinen Belohnungsmarker 1 Feld auf der entsprechenden Belohnungsleiste vor.",
+        "communityDelivery": "Gibt es weder Marktkarren noch lokale Märkte für das auf dem Plättchen geforderte Hofgut, macht Leon eine Gemeinschaftslieferung und darf nur auf der Belohnungsleiste vorziehen."
+      },
+      "subsequentDelivery": {
+        "title": "Weitere Lieferungen",
+        "intro": "Für jede weitere Ziegenlieferung folgt Leon diesen Schritten in der genannten Reihenfolge:",
+        "goodPriority": "Leon versucht zuerst das erste Hofgut aus der Liste zu liefern. Gibt es kein Lieferziel für dieses Hofgut und es gibt weitere Hofgüter in der Liste, kontrolliert er auch diese Hofgüter eins nach dem anderen.",
+        "goodSelection": "Findet Leon weiterhin kein Lieferziel, wählt er ein weiteres Liefergut. Dann versucht er, dieses zu liefern. Sollte er wieder nicht liefern können, führt er eine Gemeinschaftslieferung aus.",
+        "selectionPriority": "Wenn bereits mehrere Liefergüter in der Liste sind, beginnt Leon den Suchprozess immer beim ersten. Er sucht nur nach einem neuen Lieferziel, wenn alle Liefergüter aus der Liste keinen Erfolg bringen."
+      }
     },
     "communityDelivery": {
-      "title": "Gemeinschaftslieferung"
+      "title": "Gemeinschaftslieferung",
+      "deliveryGoods": {
+        "title": "Liefergüter",
+        "preferredGoods": "Leon liefert Güterarten priorisiert nach dieser Reihenfolge:",
+        "trackTopSpace": "Kommt Leon auf dem obersten Feld eine Belohnungsleiste an, entferne das entsprechende Gut aus dieser List (durch anklicken)."
+      },
+      "firstFarmGood": "Leon always delivers the first farm good in the list. They place the goods token in their supply and move forward on the matching reward track."
     },
     "deliveryTargetScoring": {
       "title": "Lieferziele",

@@ -2,7 +2,14 @@
   <ModalDialog id="communityDeliveryModal" :size-lg="true" :fullscreen-lg-down="true" :scrollable="true"
       :title="t('rules.communityDelivery.title')">
     <template #body>
-      <p v-html="t('rules.communityDelivery.intro')"></p>
+      <h5 v-html="t('rules.communityDelivery.deliveryGoods.title')"></h5>
+      <p v-html="t('rules.communityDelivery.deliveryGoods.preferredGoods')"></p>
+      <p>
+        <DeliveryGoodSelection :navigationState="navigationState"/>
+      </p>
+      <p v-html="t('rules.communityDelivery.deliveryGoods.trackTopSpace')"></p>
+      <h5 v-html="t('rules.communityDelivery.title')"></h5>
+      <p v-html="t('rules.communityDelivery.firstFarmGood')"></p>
     </template>
   </ModalDialog>
 </template>
@@ -11,15 +18,15 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
-import AppIcon from '../structure/AppIcon.vue'
 import NavigationState from '@/util/NavigationState'
 import Card from '@/services/Card'
+import DeliveryGoodSelection from '../round/DeliveryGoodSelection.vue'
 
 export default defineComponent({
   name: 'CommunityDeliveryModal',
   components: {
     ModalDialog,
-    AppIcon
+    DeliveryGoodSelection
   },
   setup() {
     const { t } = useI18n()

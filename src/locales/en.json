@@ -204,10 +204,33 @@
       }
     },
     "goatDelivery": {
-      "title": "Goat Delivery"
+      "title": "Goat Delivery",
+      "firstDelivery": {
+        "title": "First Delivery",
+        "intro": "When Leon makes their first goat or community delivery of the game, they follow these steps in the given order:",
+        "deliveryTarget": {
+          "market-barrow": "Leon makes a goat delivery to you. They prefer to deliver to <b>market barrows</b>. If none of your market barrows needs that farm good, Leon delivers to local markets instead.",
+          "local-market": "Leon makes a goat delivery to you. They prefer to deliver to <b>local markets</b>. If none of your local markets needs that farm good, Leon delivers to market barrows instead."
+        },
+        "gainRewards": "Leon gains the usual rewards for the goat delivery: They obtain your support marker for the first goat delivery of a game round. They move the reward marker 1 space forward on the appropriate reward track.",
+        "communityDelivery": "If neither your market barrows nor local markets need the stated farm good, Leon makes a community delivery and only moves forward on the reward track."
+      },
+      "subsequentDelivery": {
+        "title": "Subsequent deliveries",
+        "intro": "For each further goat delivery, Leon follows these steps in the given order:",
+        "goodPriority": "Leon tries to deliver the farm good displayed fist in the list of delivery goods. If there is no demand for that farm good, and there are additional farm goods in the list, Leon checks them as well one after another.",
+        "goodSelection": "If Leon still does not find a delivery target, they choose another farm good. Then they try to deliver that farm good. If that fails again, they make a community delivery.",
+        "selectionPriority": "If there are several farm goods in the list, Leon always starts the search with the first good. They only look for a new farm goods tile if all listed goods turn out to be not deliverable."
+      }
     },
     "communityDelivery": {
-      "title": "Community Delivery"
+      "title": "Community Delivery",
+      "deliveryGoods": {
+        "title": "Delivery Goods",
+        "preferredGoods": "Leon prefers to delivery goods in this order of priority:",
+        "trackTopSpace": "When Leon reaches the top space of a reward track, remove the corresponding good from this list (by clicking on it)."
+      },
+      "firstFarmGood": "Leon always delivers the first farm good in the list. They place the goods token in their supply and move forward on the matching reward track."
     },
     "deliveryTargetScoring": {
       "title": "Delivery Targets",

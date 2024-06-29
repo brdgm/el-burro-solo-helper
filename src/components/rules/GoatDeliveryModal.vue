@@ -2,7 +2,29 @@
   <ModalDialog id="goatDeliveryModal" :size-lg="true" :fullscreen-lg-down="true" :scrollable="true"
       :title="t('rules.goatDelivery.title')">
     <template #body>
-      <p v-html="t('rules.goatDelivery.intro')"></p>
+      <h5 v-html="t('rules.communityDelivery.deliveryGoods.title')"></h5>
+      <p v-html="t('rules.communityDelivery.deliveryGoods.preferredGoods')"></p>
+      <p>
+        <DeliveryGoodSelection :navigationState="navigationState"/>
+      </p>
+      <p v-html="t('rules.communityDelivery.deliveryGoods.trackTopSpace')"></p>
+      <h5 v-html="t('rules.goatDelivery.firstDelivery.title')"></h5>
+      <p v-html="t('rules.goatDelivery.firstDelivery.intro')"></p>
+      <ol>
+        <li>
+          <AppIcon type="delivery-target" :name="roundCard.deliveryTarget" class="icon"/>
+          <span v-html="t(`rules.goatDelivery.firstDelivery.deliveryTarget.${roundCard.deliveryTarget}`)"></span>
+        </li>
+        <li v-html="t('rules.goatDelivery.firstDelivery.gainRewards')"></li>
+        <li v-html="t('rules.goatDelivery.firstDelivery.communityDelivery')"></li>
+      </ol>
+      <h5 v-html="t('rules.goatDelivery.subsequentDelivery.title')"></h5>
+      <p v-html="t('rules.goatDelivery.subsequentDelivery.intro')"></p>
+      <ol>
+        <li v-html="t('rules.goatDelivery.subsequentDelivery.goodPriority')"></li>
+        <li v-html="t('rules.goatDelivery.subsequentDelivery.goodSelection')"></li>
+        <li v-html="t('rules.goatDelivery.subsequentDelivery.selectionPriority')"></li>
+      </ol>
     </template>
   </ModalDialog>
 </template>
@@ -14,12 +36,14 @@ import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDial
 import AppIcon from '../structure/AppIcon.vue'
 import NavigationState from '@/util/NavigationState'
 import Card from '@/services/Card'
+import DeliveryGoodSelection from '../round/DeliveryGoodSelection.vue'
 
 export default defineComponent({
   name: 'GoatDeliveryModal',
   components: {
     ModalDialog,
-    AppIcon
+    AppIcon,
+    DeliveryGoodSelection
   },
   setup() {
     const { t } = useI18n()
