@@ -41,12 +41,12 @@
     <h4 v-html="t('roundPhaseTransport.siesta.updateTurnOrder.title')"></h4>
     <p>
       <span class="me-3" v-html="t('roundPhaseTransport.siesta.updateTurnOrder.newStartPlayer')"></span>
-      <div class="form-check-inline" v-for="player of playerOptions" :key="player">
+      <span class="form-check-inline" v-for="player of playerOptions" :key="player">
         <label class="form-check-label">
           <input class="form-check-input" type="radio" name="setupStartPlayer" v-model="startPlayer" :value="player">
           {{t(`player.${player}`)}}
         </label>
-      </div>
+      </span>
     </p>
   </template>
 </template>

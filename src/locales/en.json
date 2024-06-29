@@ -115,7 +115,9 @@
       }
     },
     "goatDelivery": {
-      "title": "Goat delivery"
+      "title": "Goat delivery",
+      "makeDelivery": "Make goat delivery.",
+      "additionalDelivery": "If Leon can spend a worker from their farmhouse, make a second goat delivery. Otherwise hire one worker."
     },
     "donkeyDelivery": {
       "title": "Donkey delivery"

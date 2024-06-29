@@ -11,7 +11,19 @@
   </template>
 
   <template v-else>
-
+    <ul>
+      <li>
+        <AppIcon type="action" name="goat-delivery" class="icon"/>
+        <span v-html="t('roundPhaseTransport.goatDelivery.makeDelivery')"></span>
+        <div>
+          <GoatDelivery :navigationState="navigationState"/>          
+        </div>
+      </li>
+      <li class="mt-4" v-if="roundCard.additionalGoatDelivery">
+        <AppIcon name="transport-additional-goat-delivery" class="icon float-start"/>
+        <span v-html="t('roundPhaseTransport.goatDelivery.additionalDelivery')"></span>
+      </li>
+    </ul>
   </template>
 </template>
 
@@ -22,11 +34,13 @@ import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import Player from '@/services/enum/Player'
 import Card from '@/services/Card'
+import GoatDelivery from './GoatDelivery.vue'
 
 export default defineComponent({
   name: 'TransportGoatDelivery',
   components: {
-    AppIcon
+    AppIcon,
+    GoatDelivery
   },
   setup(props) {
     const { t } = useI18n()
@@ -58,6 +72,10 @@ export default defineComponent({
 .phase-step {
   height: 1.5rem;
   margin-top: -0.4rem
+}
+.icon {
+  height: 3rem;
+  margin-right: 0.5rem;
 }
 ul > li {
   margin-top: 1rem;

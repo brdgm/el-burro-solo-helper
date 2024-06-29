@@ -112,7 +112,9 @@
       }
     },
     "goatDelivery": {
-      "title": "Mit Ziege liefern"
+      "title": "Mit Ziege liefern",
+      "makeDelivery": "Ziegenlieferung ausführen.",
+      "additionalDelivery": "Wenn Leon eine Arbeitskraft abgeben kann, führt er eine weitere Ziegenlieferung aus. Anderenfalls nimmt er 1 Arbeitskraft."
     },
     "donkeyDelivery": {
       "title": "Mit Esel liefern"
