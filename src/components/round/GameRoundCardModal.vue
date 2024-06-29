@@ -5,11 +5,13 @@
       <AppIcon type="difficulty-level" :name="roundCard.difficultyLevel.toString()" class="difficultyLevel"/>
       <table>
         <tr>
-          <td v-html="t('gameRoundCard.farmCard')"></td>
+          <td><a data-bs-toggle="modal" href="#playCardModal" class="rule"><span v-html="t('gameRoundCard.farmCard')"></span></a></td>
           <td>
-            <AppIcon type="special-farm-card-selection" :name="roundCard.specialFarmCardSelection" class="icon"/> /
-            <AppIcon type="card-placement" name="same-number" class="icon"/>
-            <AppIcon type="card-placement" :name="roundCard.cardPlacement" class="icon"/>
+            <a data-bs-toggle="modal" href="#playCardModal">
+              <AppIcon type="card-placement" name="same-number" class="icon"/>
+              <AppIcon type="card-placement" :name="roundCard.cardPlacement" class="icon"/>
+              <AppIcon type="special-farm-card-selection" :name="roundCard.specialFarmCardSelection" class="icon"/>
+            </a>
           </td>
         </tr>
         <tr>
@@ -27,10 +29,12 @@
           </td>
         </tr>
         <tr>
-          <td v-html="t('gameRoundCard.road')"></td>
+          <td><a data-bs-toggle="modal" href="#travelRoadModal" class="rule"><span v-html="t('gameRoundCard.road')"></span></a></td>
           <td>
-            <AppIcon type="donkey-selection" :name="roundCard.donkeySelection" class="icon"/>
-            <AppIcon type="junction-selection" :name="roundCard.junctionSelection" class="icon"/>
+            <a data-bs-toggle="modal" href="#travelRoadModal">
+              <AppIcon type="donkey-selection" :name="roundCard.donkeySelection" class="icon"/>
+              <AppIcon type="junction-selection" :name="roundCard.junctionSelection" class="icon"/>
+            </a>
           </td>
         </tr>
         <tr>
@@ -73,9 +77,9 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
-import AppIcon from '../structure/AppIcon.vue';
-import NavigationState from '@/util/NavigationState';
-import Card from '@/services/Card';
+import AppIcon from '../structure/AppIcon.vue'
+import NavigationState from '@/util/NavigationState'
+import Card from '@/services/Card'
 
 export default defineComponent({
   name: 'GameRoundCardModal',

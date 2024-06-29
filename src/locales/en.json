@@ -98,6 +98,9 @@
     "special": "Leon prefers to play a <b>special solo</b> farm card.",
     "otherwiseNormal": "otherwise normal:"
   },
+  "travelRoad": {
+    "title": "Leon travels on the road."
+  },
   "sideBar": {
     "round": "Round",
     "turn": "Turn"
@@ -125,7 +128,10 @@
         "marketBarrowSlotEmpty": "If one of the two slots for market barrows is empty, they automatically play the card as a market barrow (rightmost slot is reserved for a “game end” market barrow).",
         "marketBarrowSlotsFilled": "If all relevant slots for market barrows are filled, Leon follows the instructions:",
         "sameNumber": "Most important for Leon is the same number of farm cards to the left and right at their farm. When they have more fields than cards in the farm administration, they place the card in the administration, and vice versa.",
-        "leftOrRight": "If Leon has the same number of cards to the left and right of their farm, they follow the arrow: When the arrow points from the left on the farm board, Leon plays a farm. They immediately place 1 goods token on the storage space. When the arrow points from the right on the farm board, Leon places the card in the farm administration.",
+        "cardPlacement": {
+          "left": "If Leon has the same number of cards to the left and right of their farm, Leon plays <b>a farm</b>. They immediately place 1 goods token on the storage space.",
+          "right": "If Leon has the same number of cards to the left and right of their farm, Leon places the card in the <b>farm administration</b>."
+        },        
         "noAcquisitions": "Important: Leon never plays acquisitions!"
       },
       "special": {
@@ -140,6 +146,21 @@
         "drawNew": "Leon draws a new special solo farm card from the stack and places it at the empty position of the row of cards.",
         "notPossible": "If Leon cannot play a special solo farm card, they play a normal farm card instead."
       }
+    },
+    "travelRoad": {
+      "title": "Road to Port de Palma",
+      "intro": "Leon moves their donkeys forward as usual along the spaces of the road. The following terms apply for Leon:",
+      "donkeySelection": {
+        "leading": "<b>Donkey selection</b>: Leon moves the <b>leading donkey</b>.",
+        "rear": "<b>Donkey selection</b>: Leon moves the <b>rear donkey</b>."
+      },
+      "troughsMilestones": "<b>Troughs and milestones</b>: When Leon’s donkeys reach or pass troughs and milestones, Leon moves the appropriate markers forward on the tracks of their stable.",
+      "barriers": "<b>Barriers</b>: The barriers are no obstacles for Leon. They know the surroundings well enough to find a way around them, and simply move their donkeys forward. Still, Leon was not born yesterday: when they pass a barrier before you fulfill its achievement, they place a goods token on the first marking and gain the corresponding prestige.",
+      "junctionSelection": {
+        "short-way": "<b>Junctions</b>: Leon follows the instruction at each junction: Choose the <b>short section</b>. This is also true for the junction at the barriers.",
+        "long-way": "<b>Junctions</b>: Leon follows the instruction at each junction: Choose the <b>long section</b>. This is also true for the junction at the barriers."
+      },
+      "harbor": "<b>Harbor</b>: When Leon’s donkeys reach the harbor, they remain on the harbor spaces, as they later continue to move forward. When the leading donkey reaches the end of the harbor, Leon only moves the rear donkey forward until the end of the game. Leon claims harbor spaces at the final scoring."
     }
   },
   "difficultyLevel": {

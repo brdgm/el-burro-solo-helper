@@ -13,8 +13,8 @@
             <span v-html="t('rules.playCard.normal.sameNumber')"></span>
           </li>
           <li>
-            <AppIcon type="card-placement" :name="navigationState.roundCard.cardPlacement" class="cardPlacement"/>
-            <span v-html="t('rules.playCard.normal.leftOrRight')"></span>
+            <AppIcon type="card-placement" :name="roundCard.cardPlacement" class="cardPlacement"/>
+            <span v-html="t(`rules.playCard.normal.cardPlacement.${roundCard.cardPlacement}`)"></span>
           </li>
         </ul>
         <li v-html="t('rules.playCard.normal.noAcquisitions')"></li>
@@ -29,7 +29,7 @@
         <li v-html="t('rules.playCard.special.paySilver')"></li>
         <ul>
           <li>
-            <AppIcon type="special-farm-card-selection" :name="navigationState.roundCard.specialFarmCardSelection" class="cardPlacement"/>
+            <AppIcon type="special-farm-card-selection" :name="roundCard.specialFarmCardSelection" class="cardPlacement"/>
             <span v-html="t('rules.playCard.special.pickCard')"></span>
           </li>
           <li v-html="t('rules.playCard.special.gameEndMarketBarrow')"></li>
@@ -50,8 +50,10 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
-import AppIcon from '../structure/AppIcon.vue';
-import NavigationState from '@/util/NavigationState';
+import AppIcon from '../structure/AppIcon.vue'
+import NavigationState from '@/util/NavigationState'
+import Card from '@/services/Card'
+import CardPlacement from '@/services/enum/CardPlacement'
 
 export default defineComponent({
   name: 'PlayCardModal',
@@ -67,6 +69,14 @@ export default defineComponent({
     navigationState: {
       type: NavigationState,
       required: true
+    }
+  },
+  computed: {
+    roundCard() : Card {
+      return this.navigationState.roundCard
+    },
+    isFarmPlacement() : boolean {
+      return this.roundCard.cardPlacement == CardPlacement.LEFT
     }
   }
 })
@@ -93,5 +103,6 @@ export default defineComponent({
 }
 li {
   clear: both;
+  margin-bottom: 0.5rem;
 }
 </style>
