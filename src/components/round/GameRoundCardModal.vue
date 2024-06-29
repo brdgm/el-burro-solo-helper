@@ -22,10 +22,12 @@
           </td>
         </tr>
         <tr>
-          <td v-html="t('gameRoundCard.delivery')"></td>
+          <td><a data-bs-toggle="modal" :href="deliveryModal" class="rule"><span v-html="t('gameRoundCard.delivery')"></span></a></td>
           <td>
-            <AppIcon type="action" :name="roundCard.deliveryAction" class="icon"/>
-            <AppIcon type="delivery-target" :name="roundCard.deliveryTarget" class="icon"/>
+            <a data-bs-toggle="modal" :href="deliveryModal">
+              <AppIcon type="action" :name="roundCard.deliveryAction" class="icon"/>
+              <AppIcon type="delivery-target" :name="roundCard.deliveryTarget" class="icon"/>
+            </a>
           </td>
         </tr>
         <tr>
@@ -80,6 +82,7 @@ import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDial
 import AppIcon from '../structure/AppIcon.vue'
 import NavigationState from '@/util/NavigationState'
 import Card from '@/services/Card'
+import Action from '@/services/enum/Action'
 
 export default defineComponent({
   name: 'GameRoundCardModal',
@@ -100,6 +103,14 @@ export default defineComponent({
   computed: {
     roundCard() : Card {
       return this.navigationState.roundCard
+    },
+    deliveryModal() : string {
+      if (this.roundCard.deliveryAction == Action.DONKEY_DELIVERY) {
+        return '#donkeyDeliveryModal'
+      }
+      else {
+        return '#goatDeliveryModal'
+      }
     }
   }
 })

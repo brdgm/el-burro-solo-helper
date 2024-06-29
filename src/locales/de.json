@@ -98,6 +98,9 @@
   "travelRoad": {
     "title": "Leon reist auf der Straße."
   },
+  "donkeyDelivery": {
+    "title":"Leon führt eine Esellieferung aus."
+  },
   "sideBar": {
     "round": "Runde",
     "turn": "Zug"
@@ -155,6 +158,9 @@
         "long-way": "<b>Abzweigungen</b>: An jeder Abzweigung folgt Leon der Anweisung: Er wählt den <b>langen Weg</b>. Dies gilt auch für die Abzweigung an den Barrieren."
       },
       "harbor": "<b>Hafen</b>: Erreichen Leons Esel die Hafenfelder, belässt er sie vorerst auf den Feldern und zieht sie später weiter. Erreicht der vordere Esel das Ende des Hafens, zieht Leon ab jetzt bis zum Ende der Partie nur noch den hinteren Esel. Er beansprucht erst in der Schlusswertung ein Hafenfeld."
+    },
+    "donkeyDelivery": {
+      "title": "Esellieferung"
     }
   },
   "difficultyLevel": {

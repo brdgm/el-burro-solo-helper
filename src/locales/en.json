@@ -101,6 +101,9 @@
   "travelRoad": {
     "title": "Leon travels on the road."
   },
+  "donkeyDelivery": {
+    "title":"Leon makes a donkey delivery."
+  },
   "sideBar": {
     "round": "Round",
     "turn": "Turn"
@@ -161,6 +164,9 @@
         "long-way": "<b>Junctions</b>: Leon follows the instruction at each junction: Choose the <b>long section</b>. This is also true for the junction at the barriers."
       },
       "harbor": "<b>Harbor</b>: When Leon’s donkeys reach the harbor, they remain on the harbor spaces, as they later continue to move forward. When the leading donkey reaches the end of the harbor, Leon only moves the rear donkey forward until the end of the game. Leon claims harbor spaces at the final scoring."
+    },
+    "donkeyDelivery": {
+      "title": "Donkey Delivery"
     }
   },
   "difficultyLevel": {
