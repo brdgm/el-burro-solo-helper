@@ -127,7 +127,32 @@
     }
   },
   "roundPhaseScoring": {
-    "title": "Scoring"
+    "title": "Scoring",
+    "milestones": {
+      "title": "Milestones",
+      "gainPrestige": "Leon gains prestige matching the position of their milestone marker on the milestone track."
+    },
+    "stable": {
+      "title": "Stable",
+      "totalValue": "Leon counts a <b>total value of {value}</b> from {count} game round card. | Leon counts a <b>total value of {value}</b> from {count} game round cards.",
+      "compareTotalValue": "Compare the total value of your donkey cards face up below your stable with Leon’s total value:",
+      "gainPrestigePlace1": "<b>1<sup>st</sup> place</b>: {value} prestige",
+      "gainPrestigePlace2": "<b>2<sup>nd</sup> place</b>: {value} prestige",
+      "tieBreaker": "In case of a tie check your current positions on the siesta track."
+    },
+    "supportMarkers": {
+      "title": "Support Marker",
+      "gainPrestige": "If Leon’s support marker is still showing the prestige side, Leon gains 1 prestige. Otherwise, they turn it back from the basket side to the prestige side."
+    },
+    "payWorkers": {
+      "title": "Pay workers",
+      "paySilver": "Leon pays 1 silver for each assigned worker on their farm extensions. When Leon cannot pay, they make as many trades as needed to pay as many workers as possible. Leon places the paid worker in the supply.",
+      "losePrestige": "If workers remain on the farm extensions, Leon places them back in the supply, and loses 1 prestige for each of these workers."
+    },
+    "prepareNextRound": {
+      "title": "Prepare for next round",
+      "performSteps": "Perform the usual steps to prepare the next round."
+    }
   },
   "phaseFinalScoring": {
     "title": "Final Scoring"
@@ -251,7 +276,7 @@
           "market-barrow": "Leon makes a goat delivery to you. They prefer to deliver to <b>market barrows</b>. If none of your market barrows needs that farm good, Leon delivers to local markets instead.",
           "local-market": "Leon makes a goat delivery to you. They prefer to deliver to <b>local markets</b>. If none of your local markets needs that farm good, Leon delivers to market barrows instead."
         },
-        "gainRewards": "Leon gains the usual rewards for the goat delivery: They obtain your support marker for the first goat delivery of a game round. They move the reward marker 1 space forward on the appropriate reward track.",
+        "gainRewards": "Leon gains the usual rewards for the goat delivery: They gain 1 prestige for the first goat delivery of a game round. They move the reward marker 1 space forward on the appropriate reward track.",
         "communityDelivery": "If neither your market barrows nor local markets need the stated farm good, Leon makes a community delivery and only moves forward on the reward track."
       },
       "subsequentDelivery": {

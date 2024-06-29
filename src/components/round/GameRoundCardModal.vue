@@ -70,6 +70,9 @@
           <td v-html="t('gameRoundCard.stable')"></td>
           <td>
             <b>{{roundCard.stableScoringValue}}</b>
+            <span v-for="previousCard of previousGameRoundCards" :key="previousCard.id">
+              + {{previousCard.stableScoringValue}}
+            </span>
           </td>
         </tr>
       </table>
@@ -119,6 +122,9 @@ export default defineComponent({
     },
     donkeyTransportBonus() : Action|undefined {
       return this.navigationState.transportBonusTile.action[this.roundCard.donkeyValue]
+    },
+    previousGameRoundCards() : Card[] {
+      return this.navigationState.cardDeck.roundDiscard.slice(1)
     }
   }
 })

@@ -124,7 +124,32 @@
     }
   },
   "roundPhaseScoring": {
-    "title": "Wertung"
+    "title": "Wertung",
+    "milestones": {
+      "title": "Meilensteine",
+      "gainPrestige": "Leon erhält Ansehen gemäß des Meilensteinmarkers auf der Leiste."
+    },
+    "stable": {
+      "title": "Stall",
+      "totalValue": "Leon zählt einen <b>Gesamtwert von {value}</b> für {count} Rundenkarte. | Leon zählt einen <b>Gesamtwert von {value}</b> für {count} Rundenkarten.",
+      "compareTotalValue": "Vergleiche die Werte deiner Eselkarten mit dem Gesamtwert von Leon:",
+      "gainPrestigePlace1": "<b>1. Platz</b>: {value} Ansehen",
+      "gainPrestigePlace2": "<b>2. Platz</b>: {value} Ansehen",
+      "tieBreaker": "Einen Gleichstand der Werte löst ihr gemäß der Positionen eurer Siestamarker auf der Siestaleiste auf."
+    },
+    "supportMarkers": {
+      "title": "Unterstützungsmarker",
+      "gainPrestige": "Liegt Leons Unterstützungsmarker mit der Ansehensseite nach oben neben seinem Hof, erhält er 1 Ansehen. Andernfalls dreht den Marker wieder von der Korb- auf die Ansehensseite um.."
+    },
+    "payWorkers": {
+      "title": "Arbeitskräfte bezahlen",
+      "paySilver": "Leon muss pro Arbeitskraft auf seinen Hofausbauten 1 Silber bezahlen. Kann Leon nicht alle Arbeiter bezahlen, führt er so viele Täusche wie möglich aus, um möglichst viele Arbeiter zu bezahlen. Leon legt alle bezahlten Arbeitskräfte in den Vorrat zurück.",
+      "losePrestige": "Bleiben Arbeitskräfte auf den Hofausbauten stehen, legt Leon diese übrigen Arbeitskräfte ersatzlos in den Vorrat zurück und verliert 1 Ansehen pro unbezahlt zurückgelegter Arbeitskraft."
+    },
+    "prepareNextRound": {
+      "title": "Nächsten Runde vorbereiten",
+      "performSteps": "Bereite die nächste Spielrunde wie gewohnt vor."
+    }
   },
   "phaseFinalScoring": {
     "title": "Schlusswertung"
@@ -245,7 +270,7 @@
           "market-barrow": "Leon führt nun eine Ziegenlieferung an dich aus. Er bevorzugt <b>Marktkarren</b>. Sollte kein Marktkarren das Hofgut benötigen, beliefert Leon anstelle dessen lokale Märkte.",
           "local-market": "Leon führt nun eine Ziegenlieferung an dich aus. Er bevorzugt <b>lokale Märkte</b>. Sollte kein lokaler Markt das Hofgut benötigen, beliefert Leon anstelle dessen Marktkarren."
         },
-        "gainRewards": "Leon bekommt die üblichen Belohnungen für die Ziegenlieferung: Für die erste Ziegenlieferung der Spielrunde erhält deinen Unterstützungsmarker. Außerdem zieht er seinen Belohnungsmarker 1 Feld auf der entsprechenden Belohnungsleiste vor.",
+        "gainRewards": "Leon bekommt die üblichen Belohnungen für die Ziegenlieferung: Für die erste Ziegenlieferung der Spielrunde erhält er 1 Ansehen für deinen Unterstützungsmarker. Außerdem zieht er seinen Belohnungsmarker 1 Feld auf der entsprechenden Belohnungsleiste vor.",
         "communityDelivery": "Gibt es weder Marktkarren noch lokale Märkte für das auf dem Plättchen geforderte Hofgut, macht Leon eine Gemeinschaftslieferung und darf nur auf der Belohnungsleiste vorziehen."
       },
       "subsequentDelivery": {

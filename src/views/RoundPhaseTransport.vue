@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
@@ -37,7 +37,6 @@ import TransportSiesta from '@/components/round/TransportSiesta.vue'
 import TransportDonkeyCards from '@/components/round/TransportDonkeyCards.vue'
 import TransportGoatDelivery from '@/components/round/TransportGoatDelivery.vue'
 import TransportDonkeyDelivery from '@/components/round/TransportDonkeyDelivery.vue'
-import { ref } from 'vue'
 import Player from '@/services/enum/Player'
 
 export default defineComponent({
