@@ -2,7 +2,7 @@ import FarmExtensionShape from '@/services/enum/FarmExtensionShape'
 import randomFarmExtensionTiles from '@/util/randomFarmExtensionTiles'
 import { expect } from 'chai'
 
-describe('util/randomGameRoundTiles', () => {
+describe('util/randomFarmExtensionTiles', () => {
   it('tiles', () => {
     const tiles = randomFarmExtensionTiles()
 

@@ -28,12 +28,13 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
-import { PhasePersistence, useStateStore } from '@/store/state'
+import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import Phase from '@/services/enum/Phase'
 import SideBar from '@/components/round/SideBar.vue'
 import DebugInfo from '@/components/round/DebugInfo.vue'
+import storePhase from '@/util/storePhase'
 
 export default defineComponent({
   name: 'RoundPhaseScoring',
@@ -58,12 +59,7 @@ export default defineComponent({
   },
   methods: {
     next() : void {
-      const phase : PhasePersistence = {
-        round: this.round,
-        phase: this.navigationState.phase,
-        cardDeck: this.navigationState.cardDeck.toPersistence()
-      }
-      this.state.storePhase(phase)
+      storePhase(this.navigationState)
       if (this.round == 4) {
         this.$router.push(`/finalScoring`)
       }

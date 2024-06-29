@@ -3,6 +3,7 @@ import { name } from '@/../package.json'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Player from '@/services/enum/Player'
 import Phase from '@/services/enum/Phase'
+import Good from '@/services/enum/Good'
 
 export const useStateStore = defineStore(`${name}.state`, {
   state: () => {
@@ -64,6 +65,8 @@ export interface PhasePersistence {
   round: number
   phase: Phase
   cardDeck: CardDeckPersistence
+  rewardTracks: RewardTracksPersistence
+  goodTokens: GoodTokensPersistence
 }
 
 export interface CardDeckPersistence {
@@ -71,4 +74,13 @@ export interface CardDeckPersistence {
   roundDiscard: string[]
   auxiliaryPile: string[]
   auxiliaryDiscard: string[]
+}
+
+export interface RewardTracksPersistence {
+  [track: number]: number
+}
+
+export interface GoodTokensPersistence {
+  reserve: Good[]
+  used: Good[]
 }

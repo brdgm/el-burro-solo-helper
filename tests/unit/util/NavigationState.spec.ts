@@ -58,8 +58,8 @@ describe('util/NavigationSTate', () => {
         mockPhase({round:1,phase:4,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryDiscard:['R04','R03','R02','R01']})})
       ]}),
       mockRound({round:2,phases:[
-        mockPhase({round:1,phase:1,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R04','R01','R03'],auxiliaryDiscard:['R02']})}),
-        mockPhase({round:1,phase:2,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R01','R03'],auxiliaryDiscard:['R04','R02']})})
+        mockPhase({round:2,phase:1,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R04','R01','R03'],auxiliaryDiscard:['R02']})}),
+        mockPhase({round:2,phase:2,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R01','R03'],auxiliaryDiscard:['R04','R02']})})
       ]})
     ]
   })
