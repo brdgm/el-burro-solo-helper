@@ -2,6 +2,7 @@ import Phase from '@/services/enum/Phase'
 import { CardDeckPersistence, GoodTokensPersistence, PhasePersistence, RewardTracksPersistence } from '@/store/state'
 import mockCardDeck from './mockCardDeck'
 import mockGoodTokens from './mockGoodTokens'
+import Player from '@/services/enum/Player'
 
 export default function (params?: MockPhaseParams) : PhasePersistence {
   return {
@@ -9,7 +10,8 @@ export default function (params?: MockPhaseParams) : PhasePersistence {
     phase: params?.phase ?? 1,
     cardDeck: params?.cardDeck ?? mockCardDeck(),
     rewardTracks: params?.rewardTracks ?? [],
-    goodTokens: params?.goodTokens ?? mockGoodTokens()
+    goodTokens: params?.goodTokens ?? mockGoodTokens(),
+    startPlayer: params?.startPlayer ?? Player.PLAYER
   }
 }
 
@@ -19,4 +21,5 @@ export interface MockPhaseParams {
   cardDeck? : CardDeckPersistence
   rewardTracks? : RewardTracksPersistence
   goodTokens?: GoodTokensPersistence
+  startPlayer?: Player
 }

@@ -67,6 +67,7 @@ export interface PhasePersistence {
   cardDeck: CardDeckPersistence
   rewardTracks: RewardTracksPersistence
   goodTokens: GoodTokensPersistence
+  startPlayer: Player
 }
 
 export interface CardDeckPersistence {

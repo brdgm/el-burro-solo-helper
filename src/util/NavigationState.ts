@@ -10,6 +10,7 @@ import TransportBonusTiles from '@/services/TransportBonusTiles'
 import Card from '@/services/Card'
 import RewardTracks from '@/services/RewardTracks'
 import GoodTokens from '@/services/GoodTokens'
+import Player from '@/services/enum/Player'
 
 export default class NavigationState {
 
@@ -21,6 +22,7 @@ export default class NavigationState {
   readonly roundCard : Card
   readonly rewardTracks : RewardTracks
   readonly goodTokens : GoodTokens
+  readonly startPlayer : Player
 
   public constructor(route: RouteLocation, phase: Phase, state: State) {
     this.round = getRound(route, phase)
@@ -38,8 +40,17 @@ export default class NavigationState {
       this.roundCard = this.cardDeck.drawRound()
     }
 
-    this.rewardTracks = getRewardTracks(state, this.round, this.phase)
-    this.goodTokens = getGoodTokens(state, this.round, this.phase)
+    const phasePersistence = getPhasePersistence(state, this.round, this.phase)
+    if (phasePersistence) {
+      this.rewardTracks = RewardTracks.fromPersistence(phasePersistence.rewardTracks)
+      this.goodTokens = GoodTokens.fromPersistence(phasePersistence.goodTokens)
+      this.startPlayer = phasePersistence.startPlayer
+    }
+    else {
+      this.rewardTracks = RewardTracks.new()
+      this.goodTokens = GoodTokens.new()
+      this.startPlayer = state.setup.startPlayer ?? Player.PLAYER
+    }
   }
 
 }
@@ -125,20 +136,4 @@ function getPhasePersistence(state: State, round: number, phase: Phase) : PhaseP
     return getPhasePersistence(state, round-1, Phase.IV_SCORING)
   }
   return undefined
-}
-
-function getRewardTracks(state: State, round: number, phase: Phase) : RewardTracks {
-  const phasePersistence = getPhasePersistence(state, round, phase)
-  if (phasePersistence) {
-    return RewardTracks.fromPersistence(phasePersistence.rewardTracks)
-  }
-  return RewardTracks.new()
-}
-
-function getGoodTokens(state: State, round: number, phase: Phase) : GoodTokens {
-  const phasePersistence = getPhasePersistence(state, round, phase)
-  if (phasePersistence) {
-    return GoodTokens.fromPersistence(phasePersistence.goodTokens)
-  }
-  return GoodTokens.new()
 }
