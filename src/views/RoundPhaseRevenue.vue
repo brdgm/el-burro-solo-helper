@@ -3,8 +3,60 @@
 
   <h1>
     <AppIcon type="phase" name="2" class="phase"/>
-    Revenue Phase
+    {{t('roundPhaseRevenue.title')}} {{t(`player.${navigationState.turnPlayer}`)}}
   </h1>
+
+  <ul>
+    <li v-if="turn == 1">Roll the revenue dice.</li>
+    
+    <template v-if="isPlayer">
+      <li v-if="isRevenueDie">Take 1 revenue die and execute the action, execute the bonus action.</li>
+      <li v-else>Execute the revenue action from the community die.</li>
+    </template>
+
+    <template v-else>
+      <template v-if="isRevenueDie">
+        <li>
+          <span>Leon takes 1 revenue die and executes the action.</span><br/>
+          <AppIcon type="dice-value" :name="roundCard.diceValue.toString()" class="dice"/>
+          <AppIcon type="dice-modification" :name="roundCard.diceModification" class="dice"/>
+        </li>
+        <li>Leon executes the bonus action.</li>
+      </template>
+      <li v-else>Leon executes the revenue action from the community die.</li>
+    </template>
+
+  </ul>
+
+  <div class="actionDetails" v-if="isBot">
+    <h5>Action Details</h5>
+    <p>If Leon executes any these actions:</p>
+    <table>
+      <tr>
+        <td><AppIcon type="dice-value" name="2" class="dice"/></td>
+        <td><AppIcon type="action" name="play-farm-card" class="action"/></td>
+        <td><PlayFarmCard :navigationState="navigationState"/></td>
+      </tr>
+      <tr>
+        <td><AppIcon type="dice-value" name="5" class="dice"/></td>
+        <td><AppIcon type="action" name="travel-road-2" class="action travel"/></td>
+        <td><TravelRoad :navigationState="navigationState"/></td>
+      </tr>
+      <tr>
+        <td><AppIcon type="dice-value" name="6" class="dice"/></td>
+        <td><AppIcon type="action" :name="roundCard.deliveryAction" class="action"/></td>
+        <td>
+          <DonkeyDelivery v-if="isDonkeyDelivery" :navigationState="navigationState"/>
+          <GoatDelivery v-else :navigationState="navigationState"/>
+        </td>
+      </tr>
+      <tr v-if="isRevenueDie">
+        <td></td>
+        <td><AppIcon type="action" name="community-delivery" class="action"/></td>
+        <td><CommunityDelivery :navigationState="navigationState"/></td>
+      </tr>
+    </table>
+  </div>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -27,6 +79,14 @@ import Phase from '@/services/enum/Phase'
 import SideBar from '@/components/round/SideBar.vue'
 import DebugInfo from '@/components/round/DebugInfo.vue'
 import storePhase from '@/util/storePhase'
+import Player from '@/services/enum/Player'
+import Card from '@/services/Card'
+import PlayFarmCard from '@/components/round/PlayFarmCard.vue'
+import TravelRoad from '@/components/round/TravelRoad.vue'
+import Action from '@/services/enum/Action'
+import DonkeyDelivery from '@/components/round/DonkeyDelivery.vue'
+import GoatDelivery from '@/components/round/GoatDelivery.vue'
+import CommunityDelivery from '@/components/round/CommunityDelivery.vue'
 
 export default defineComponent({
   name: 'RoundPhaseRevenue',
@@ -34,7 +94,12 @@ export default defineComponent({
     FooterButtons,
     AppIcon,
     SideBar,
-    DebugInfo
+    DebugInfo,
+    PlayFarmCard,
+    TravelRoad,
+    DonkeyDelivery,
+    GoatDelivery,
+    CommunityDelivery
   },
   setup() {
     const { t } = useI18n()
@@ -53,6 +118,21 @@ export default defineComponent({
       else {
         return `/round/${this.round}/phase/farm`
       }
+    },
+    isPlayer() : boolean {
+      return this.navigationState.turnPlayer == Player.PLAYER
+    },
+    isBot() : boolean {
+      return this.navigationState.turnPlayer == Player.BOT
+    },
+    roundCard() : Card {
+      return this.navigationState.roundCard
+    },
+    isDonkeyDelivery() : boolean {
+      return this.roundCard.deliveryAction == Action.DONKEY_DELIVERY
+    },
+    isRevenueDie() : boolean {
+      return this.turn < 5
     }
   },
   methods: {
@@ -73,5 +153,30 @@ export default defineComponent({
 .phase {
   height: 3rem;
   margin-top: -0.5rem
+}
+ul > li {
+  margin-top: 1rem;
+}
+.dice {
+  height: 3rem;
+  margin-right: 0.25rem;
+}
+.actionDetails {
+  tr {
+    border-top: 1px solid #ccc;
+  }
+  td {
+    padding: 0.25rem;
+  }
+  .dice {
+    height: 2rem;
+  }
+  .action {
+    height: 2.5rem;
+    margin-right: 0.25rem;
+    &.travel {
+      height: 1.5rem;
+    }
+  }
 }
 </style>

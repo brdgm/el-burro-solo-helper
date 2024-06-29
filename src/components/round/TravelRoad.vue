@@ -1,6 +1,7 @@
 <template>
-  <div v-if="gameRoundTile">
-    <AppIcon type="game-round-tile" :name="gameRoundTile.id" class="icon mb-3 mt-2"/>
+  <span>Leon travels on the road.</span>
+  <div class="mt-1">
+    <AppIcon type="junction-selection" :name="navigationState.roundCard.junctionSelection" class="junction"/>
   </div>
 </template>
 
@@ -9,10 +10,9 @@ import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
-import GameRoundTile from '@/services/GameRoundTile'
 
 export default defineComponent({
-  name: 'GameRoundTile',
+  name: 'TravelRoad',
   components: {
     AppIcon
   },
@@ -25,21 +25,12 @@ export default defineComponent({
       type: NavigationState,
       required: true
     }
-  },
-  computed: {
-    gameRoundTile() : GameRoundTile|undefined {
-      return this.navigationState.gameRoundTile
-    }
   }
 })
 </script>
 
 <style lang="scss" scoped>
-.icon {
-  height: 8rem;
-  filter: drop-shadow(2px 2px 3px #888);
-  @media (max-width: 600px) {
-    height: 6rem;
-  }
+.junction {
+  height: 1.8rem;
 }
 </style>

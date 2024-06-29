@@ -60,7 +60,7 @@
     }
   },
   "roundPhaseFarm": {
-    "title": "Farm Phase",
+    "title": "Farm",
     "gameRoundTile": {
       "title": "Check Game Round Tile",
       "appliesBot": "Also used by Leon."
@@ -75,13 +75,17 @@
       "gainOffspring": "Gain offspring: When Leon has empty pig stable markings, they cover <b>one</b> of these markings with 1 goods token. Leon places 1 goods token and 1 silver on their storage spaces."
     }
   },
+  "roundPhaseRevenue": {
+    "title": "Revenue:"
+  },
   "playFarmCard": {
     "normal": "Leon plays a <b>normal</b> farm card.",
     "special": "Leon prefers to play a <b>special solo</b> farm card.",
     "otherwiseNormal": "otherwise normal:"
   },
   "sideBar": {
-    "round": "Round"
+    "round": "Round",
+    "turn": "Turn"
   },
   "rules": {
     "playCard": {
@@ -104,7 +108,8 @@
         "gameEndMarketBarrow": "They place their first special solo farm as a “game end” market barrow in the right slot at the top of the farm.",
         "additionalCards": "They push each additional special solo farm card below the bottom side of the farm, so they completely cover the market barrow.",
         "hotVariant": "When playing the \"Hot!\" variant, keep the \"Hot!\"-instruction visible, otherwise hide it.",
-        "drawNew": "Leon draws a new special solo farm card from the stack and places it at the empty position of the row of cards."
+        "drawNew": "Leon draws a new special solo farm card from the stack and places it at the empty position of the row of cards.",
+        "notPossible": "If Leon cannot play a special solo farm card, they play a normal farm card instead."
       }
     }
   },

@@ -2,13 +2,13 @@ import findMandatory from '@brdgm/brdgm-commons/src/util/map/findMandatory'
 import Card from './Card'
 import DiceModification from './enum/DiceModification'
 import SpecialFarmCardSelection from './enum/SpecialFarmCardSelection'
-import DeliveryType from './enum/DeliveryType'
 import DonkeySelection from './enum/DonkeySelection'
 import JunctionSelection from './enum/JunctionSelection'
 import DeliveryTarget from './enum/DeliveryTarget'
 import PlusTile from './enum/PlusTile'
 import DifficultyLevel from './enum/DifficultyLevel'
 import CardPlacement from './enum/CardPlacement'
+import Action from './enum/Action'
 
 /**
  * Solo game round cards.
@@ -20,7 +20,7 @@ const cards : Card[] = [
     diceValue: 5,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.LEFT,
-    deliveryType: DeliveryType.DONKEY,
+    deliveryAction: Action.DONKEY_DELIVERY,
     donkeySelection: DonkeySelection.REAR,
     junctionSelection: JunctionSelection.LONG_WAY,
     deliveryTarget: DeliveryTarget.LOCAL_MARKET,
@@ -37,7 +37,7 @@ const cards : Card[] = [
     diceValue: 3,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.RIGHT,
-    deliveryType: DeliveryType.DONKEY,
+    deliveryAction: Action.DONKEY_DELIVERY,
     donkeySelection: DonkeySelection.REAR,
     junctionSelection: JunctionSelection.LONG_WAY,
     deliveryTarget: DeliveryTarget.LOCAL_MARKET,
@@ -53,7 +53,7 @@ const cards : Card[] = [
     diceValue: 4,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.LEFT,
-    deliveryType: DeliveryType.DONKEY,
+    deliveryAction: Action.DONKEY_DELIVERY,
     donkeySelection: DonkeySelection.LEADING,
     junctionSelection: JunctionSelection.LONG_WAY,
     deliveryTarget: DeliveryTarget.MARKET_BARROW,
@@ -69,7 +69,7 @@ const cards : Card[] = [
     diceValue: 6,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.RIGHT,
-    deliveryType: DeliveryType.GOAT,
+    deliveryAction: Action.GOAT_DELIVERY,
     donkeySelection: DonkeySelection.LEADING,
     junctionSelection: JunctionSelection.SHORT_WAY,
     deliveryTarget: DeliveryTarget.MARKET_BARROW,
@@ -87,7 +87,7 @@ const cards : Card[] = [
     diceValue: 2,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.MIDDLE,
-    deliveryType: DeliveryType.DONKEY,
+    deliveryAction: Action.DONKEY_DELIVERY,
     donkeySelection: DonkeySelection.LEADING,
     junctionSelection: JunctionSelection.LONG_WAY,
     deliveryTarget: DeliveryTarget.MARKET_BARROW,
@@ -103,7 +103,7 @@ const cards : Card[] = [
     diceValue: 5,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.MIDDLE,
-    deliveryType: DeliveryType.GOAT,
+    deliveryAction: Action.GOAT_DELIVERY,
     donkeySelection: DonkeySelection.REAR,
     junctionSelection: JunctionSelection.SHORT_WAY,
     deliveryTarget: DeliveryTarget.LOCAL_MARKET,
@@ -120,7 +120,7 @@ const cards : Card[] = [
     diceValue: 1,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.LEFT,
-    deliveryType: DeliveryType.DONKEY,
+    deliveryAction: Action.DONKEY_DELIVERY,
     donkeySelection: DonkeySelection.LEADING,
     junctionSelection: JunctionSelection.SHORT_WAY,
     deliveryTarget: DeliveryTarget.LOCAL_MARKET,
@@ -136,7 +136,7 @@ const cards : Card[] = [
     diceValue: 4,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.LEFT,
-    deliveryType: DeliveryType.GOAT,
+    deliveryAction: Action.GOAT_DELIVERY,
     donkeySelection: DonkeySelection.LEADING,
     junctionSelection: JunctionSelection.SHORT_WAY,
     deliveryTarget: DeliveryTarget.MARKET_BARROW,
@@ -153,7 +153,7 @@ const cards : Card[] = [
     diceValue: 3,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.RIGHT,
-    deliveryType: DeliveryType.DONKEY,
+    deliveryAction: Action.DONKEY_DELIVERY,
     donkeySelection: DonkeySelection.REAR,
     junctionSelection: JunctionSelection.SHORT_WAY,
     deliveryTarget: DeliveryTarget.LOCAL_MARKET,
@@ -171,7 +171,7 @@ const cards : Card[] = [
     diceValue: 2,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.MIDDLE,
-    deliveryType: DeliveryType.GOAT,
+    deliveryAction: Action.GOAT_DELIVERY,
     donkeySelection: DonkeySelection.LEADING,
     junctionSelection: JunctionSelection.SHORT_WAY,
     deliveryTarget: DeliveryTarget.MARKET_BARROW,
@@ -187,7 +187,7 @@ const cards : Card[] = [
     diceValue: 1,
     diceModification: DiceModification.DOWN,
     specialFarmCardSelection: SpecialFarmCardSelection.MIDDLE,
-    deliveryType: DeliveryType.GOAT,
+    deliveryAction: Action.GOAT_DELIVERY,
     donkeySelection: DonkeySelection.REAR,
     junctionSelection: JunctionSelection.LONG_WAY,
     deliveryTarget: DeliveryTarget.LOCAL_MARKET,
@@ -203,7 +203,7 @@ const cards : Card[] = [
     diceValue: 6,
     diceModification: DiceModification.UP,
     specialFarmCardSelection: SpecialFarmCardSelection.RIGHT,
-    deliveryType: DeliveryType.GOAT,
+    deliveryAction: Action.GOAT_DELIVERY,
     donkeySelection: DonkeySelection.LEADING,
     junctionSelection: JunctionSelection.SHORT_WAY,
     deliveryTarget: DeliveryTarget.MARKET_BARROW,

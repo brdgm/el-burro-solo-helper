@@ -41,6 +41,7 @@
         </ul>
         <li v-html="t('rules.playCard.special.drawNew')"></li>
       </ul>
+      <p v-html="t('rules.playCard.special.notPossible')"></p>
     </template>
   </ModalDialog>
 </template>

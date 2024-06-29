@@ -57,7 +57,7 @@
     }
   },
   "roundPhaseFarm": {
-    "title": "Hofphase",
+    "title": "Hof",
     "gameRoundTile": {
       "title": "Rundenplättchen prüfen",
       "appliesBot": "Auch von Leon verwendet."
@@ -72,13 +72,17 @@
       "gainOffspring": "Nachwuchs erhalten: Hat Leon freie Stallplätze für Schweine, deckt er <b>einen</b> der Plätze mit 1 Gütermarker ab. Leon legt dafür 1 Gütermarker und 1 Silber in seine Lager."
     }
   },
+  "roundPhaseRevenue": {
+    "title": "Ertrag:"
+  },
   "playFarmCard": {
     "normal": "Leon spielt eine <b>normale</b> Hofkarte.",
     "special": "Leon spielt bevorzugt eine <b>spezielle Solo-Hofkarte</b>.",
     "otherwiseNormal": "ansonsten normal:"
   },
   "sideBar": {
-    "round": "Runde"
+    "round": "Runde",
+    "turn": "Zug"
   },
   "rules": {
     "playCard": {
@@ -101,7 +105,8 @@
         "gameEndMarketBarrow": "Seine erste spezielle Solo-Hofkarte legt er oben am Hof in die rechte Aussparung für den „Spielende“-Marktkarren.",
         "additionalCards": "Jede weitere spezielle Solo-Hofkarte schiebt Leon so von unten unter seinen Hof, dass der Marktkarren komplett verdeckt ist.",
         "hotVariant": "Wenn du die \"Hot!\"-Variante spielst, lasse die \"Hot!\"-Anweisungen sichtbar, ansonsten verdecke sie.",
-        "drawNew": "Leon zieht eine neue spezielle Solo-Hofkarte vom Stapel und legt sie an die nun leere Stelle in der Kartenreihe."
+        "drawNew": "Leon zieht eine neue spezielle Solo-Hofkarte vom Stapel und legt sie an die nun leere Stelle in der Kartenreihe.",
+        "notPossible": "Kann Leon keine spezielle Solo-Hofkarte spielen, spielt er stattdessen eine normale Hofkarte."
       }
     }
   },

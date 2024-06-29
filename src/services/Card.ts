@@ -1,6 +1,6 @@
+import Action from './enum/Action'
 import CardPlacement from './enum/CardPlacement'
 import DeliveryTarget from './enum/DeliveryTarget'
-import DeliveryType from './enum/DeliveryType'
 import DiceModification from './enum/DiceModification'
 import DifficultyLevel from './enum/DifficultyLevel'
 import DonkeySelection from './enum/DonkeySelection'
@@ -14,7 +14,7 @@ export default interface Card {
   diceValue: number
   diceModification: DiceModification
   specialFarmCardSelection: SpecialFarmCardSelection
-  deliveryType: DeliveryType
+  deliveryAction: Action
   donkeySelection: DonkeySelection
   junctionSelection: JunctionSelection
   deliveryTarget: DeliveryTarget

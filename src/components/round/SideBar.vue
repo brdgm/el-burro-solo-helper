@@ -1,6 +1,9 @@
 <template>
   <div class="sidebar">
-    <p>{{t('sideBar.round')}} <strong>{{round}}</strong> / 4</p>
+    <p>
+      {{t('sideBar.round')}} <strong>{{round}}</strong> / 4<br/>
+      <span v-if="turn > 0">{{t('sideBar.turn')}} {{turn}}</span>
+    </p>
     <ul class="rules">
       <li><a data-bs-toggle="modal" href="#playCardModal" class="rule">{{t('rules.playCard.title')}}</a></li>
     </ul>
@@ -38,6 +41,9 @@ export default defineComponent({
   computed: {
     round() : number {
       return this.navigationState.round
+    },
+    turn() : number {
+      return this.navigationState.turn
     }
   }
 })
