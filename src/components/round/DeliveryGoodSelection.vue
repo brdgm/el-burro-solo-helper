@@ -64,7 +64,6 @@ export default defineComponent({
   methods: {
     determineGood() {
       determineDeliveryGood(this.goodTokens, this.navigationState.cardDeck)
-      this.$forceUpdate()
     },
     removeGoodConfirm(good: Good) {
       this.goodToRemove = good
@@ -75,7 +74,6 @@ export default defineComponent({
         this.goodTokens.remove(this.goodToRemove)
         this.goodToRemove = undefined
       }
-      this.$forceUpdate()
     }
   }
 })

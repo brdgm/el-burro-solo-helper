@@ -2,45 +2,46 @@ import { clone } from 'lodash'
 import { GoodTokensPersistence } from '@/store/state'
 import Good from './enum/Good'
 import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValues'
+import { ref } from 'vue'
 
 /**
  * Good tokens for goat/community deliveries.
  */
 export default class GoodTokens {
 
-  private _reserve : Good[]
-  private _used : Good[]
+  private _reserve
+  private _used
 
   public constructor(reserve : Good[], used : Good[]) {
-    this._reserve = reserve
-    this._used = used
+    this._reserve = ref(reserve)
+    this._used = ref(used)
   }
 
   public get reserve() : readonly Good[] {
-    return this._reserve
+    return this._reserve.value
   }
 
   public get used() : readonly Good[] {
-    return this._used
+    return this._used.value
   }
 
   /**
    * Uses a good for goat/community delivery
    */
   public use(good : Good) : void {
-    if (!this._reserve.includes(good)) {
+    if (!this._reserve.value.includes(good)) {
       throw new Error(`Good is already in use.`)
     }
-    this._reserve = this._reserve.filter(g => g != good)
-    this._used.push(good)
+    this._reserve.value = this._reserve.value.filter(g => g != good)
+    this._used.value.push(good)
   }
 
   /**
    * Removes a good from the list of used goods - it will be ignored in future deliveries.
    */
   public remove(good : Good) : void {
-    if (this._used.includes(good)) {
-      this._used = this._used.filter(g => g != good)
+    if (this._used.value.includes(good)) {
+      this._used.value = this._used.value.filter(g => g != good)
     }
     else {
       throw new Error(`Good is not in use.`)
@@ -52,8 +53,8 @@ export default class GoodTokens {
    */
   public toPersistence() : GoodTokensPersistence {
     return {
-      reserve: clone(this._reserve),
-      used: clone(this._used)
+      reserve: clone(this._reserve.value),
+      used: clone(this._used.value)
     }
   }
 
