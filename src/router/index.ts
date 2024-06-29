@@ -35,7 +35,7 @@ const routes: Array<RouteRecordRaw> = [
     component: RoundPhaseFarm
   },
   {
-    path: '/round/:round/phase/revenue',
+    path: '/round/:round/phase/revenue/turn/:turn',
     name: 'RoundPhaseRevenue',
     component: RoundPhaseRevenue
   },

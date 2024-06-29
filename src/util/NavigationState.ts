@@ -15,6 +15,7 @@ import Player from '@/services/enum/Player'
 export default class NavigationState {
 
   readonly round : number
+  readonly turn : number
   readonly phase : Phase
   readonly gameRoundTile? : GameRoundTile
   readonly transportBonusTile: TransportBonusTile
@@ -26,12 +27,13 @@ export default class NavigationState {
 
   public constructor(route: RouteLocation, phase: Phase, state: State) {
     this.round = getRound(route, phase)
+    this.turn = getIntRouteParam(route, 'turn')
     this.phase = phase
 
     const setup = state.setup
     this.gameRoundTile = getGameRoundTile(setup, this.round, this.phase)
     this.transportBonusTile = getTransportBonusTile(setup, this.round)
-    this.cardDeck = getCardDeck(state, this.round, this.phase)
+    this.cardDeck = getCardDeck(state, this.round, this.phase, this.turn)
 
     if (this.cardDeck.currentRoundCard) {
       this.roundCard = this.cardDeck.currentRoundCard
@@ -40,7 +42,7 @@ export default class NavigationState {
       this.roundCard = this.cardDeck.drawRound()
     }
 
-    const phasePersistence = getPhasePersistence(state, this.round, this.phase)
+    const phasePersistence = getPhasePersistence(state, this.round, this.phase, this.turn)
     if (phasePersistence) {
       this.rewardTracks = RewardTracks.fromPersistence(phasePersistence.rewardTracks)
       this.goodTokens = GoodTokens.fromPersistence(phasePersistence.goodTokens)
@@ -100,9 +102,9 @@ function getTransportBonusTile(setup: Setup, round: number) : TransportBonusTile
  * Get card deck for current round and phase - if not found going back phases and rounds
  * up to the initial card deck.
  */
-function getCardDeck(state: State, round: number, phase: Phase) : CardDeck {
+function getCardDeck(state: State, round: number, phase: Phase, turn: number) : CardDeck {
   // get from current or previous phase
-  const phasePersistence = getPhasePersistence(state, round, phase)
+  const phasePersistence = getPhasePersistence(state, round, phase, turn)
   if (phasePersistence) {
     const cardDeck = CardDeck.fromPersistence(phasePersistence.cardDeck)
     for (let phaseRound=phasePersistence.round; phaseRound<round; phaseRound++) {
@@ -121,19 +123,23 @@ function getCardDeck(state: State, round: number, phase: Phase) : CardDeck {
 /**
  * Get phase persistence for current round and phase - if not found going back phases and rounds.
  */
-function getPhasePersistence(state: State, round: number, phase: Phase) : PhasePersistence|undefined {
+function getPhasePersistence(state: State, round: number, phase: Phase, turn: number) : PhasePersistence|undefined {
   const roundState = state.rounds.find(item => item.round == round)
   if (roundState) {
     const phasePersistence = roundState.phases
-      .toSorted((item1,item2) => item2.phase - item1.phase)  // sort descending
-      .find(item => item.phase <= phase)  // get first matching phase item
+      .toSorted((item1,item2) => getPersistenceIndex(item2) - getPersistenceIndex(item1))  // sort descending by phase and turn
+      .find(item => item.phase <= phase && (turn == 0 || item.phase < phase || item.turn <= turn))  // get first matching phase item
     if (phasePersistence) {
       return phasePersistence
     }
   }
   if (round > 1) {
     // get from previous round
-    return getPhasePersistence(state, round-1, Phase.IV_SCORING)
+    return getPhasePersistence(state, round-1, Phase.IV_SCORING, 0)
   }
   return undefined
+}
+
+function getPersistenceIndex(phasePersistence: PhasePersistence) : number {
+  return phasePersistence.phase * 100 + phasePersistence.turn
 }

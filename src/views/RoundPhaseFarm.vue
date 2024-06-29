@@ -78,7 +78,7 @@ export default defineComponent({
   methods: {
     next() : void {
       storePhase(this.navigationState)
-      this.$router.push(`/round/${this.round}/phase/revenue`)
+      this.$router.push(`/round/${this.round}/phase/revenue/turn/1`)
     }
   }
 })

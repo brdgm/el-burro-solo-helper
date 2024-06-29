@@ -64,6 +64,7 @@ export interface Round {
 export interface PhasePersistence {
   round: number
   phase: Phase
+  turn: number
   cardDeck: CardDeckPersistence
   rewardTracks: RewardTracksPersistence
   goodTokens: GoodTokensPersistence

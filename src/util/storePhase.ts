@@ -10,6 +10,7 @@ export default function storePhase(navigationState : NavigationState, startPlaye
   const phase : PhasePersistence = {
     round: navigationState.round,
     phase: navigationState.phase,
+    turn: navigationState.turn,
     cardDeck: navigationState.cardDeck.toPersistence(),
     rewardTracks: navigationState.rewardTracks.toPersistence(),
     goodTokens: navigationState.goodTokens.toPersistence(),

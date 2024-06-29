@@ -42,17 +42,28 @@ export default defineComponent({
     const state = useStateStore()
     const navigationState = new NavigationState(route, Phase.II_REVENUE, state)
     const round = navigationState.round
-    return { t, state, navigationState, round }
+    const turn = navigationState.turn
+    return { t, state, navigationState, round, turn }
   },
   computed: {
     backButtonRouteTo() : string|undefined {
-      return `/round/${this.round}/phase/farm`
+      if (this.turn > 1) {
+        return `/round/${this.round}/phase/revenue/turn/${this.turn-1}`
+      }
+      else {
+        return `/round/${this.round}/phase/farm`
+      }
     }
   },
   methods: {
     next() : void {
       storePhase(this.navigationState)
-      this.$router.push(`/round/${this.round}/phase/transport`)
+      if (this.turn < 6) {
+        this.$router.push(`/round/${this.round}/phase/revenue/turn/${this.turn+1}`)
+      }
+      else {
+        this.$router.push(`/round/${this.round}/phase/transport`)
+      }
     }
   }
 })

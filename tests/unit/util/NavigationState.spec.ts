@@ -52,14 +52,16 @@ describe('util/NavigationSTate', () => {
     initialCardDeck: mockCardDeck({roundPile:['R09','R10','R11','R12'],auxiliaryPile:['R01','R02','R03','R04']}),
     rounds: [
       mockRound({round:1,phases:[
-        mockPhase({round:1,phase:1,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryPile:['R02','R03','R04'],auxiliaryDiscard:['R01']})}),
-        mockPhase({round:1,phase:2,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryPile:['R03','R04'],auxiliaryDiscard:['R02','R01']})}),
-        mockPhase({round:1,phase:3,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryPile:['R04'],auxiliaryDiscard:['R03','R02','R01']})}),
-        mockPhase({round:1,phase:4,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryDiscard:['R04','R03','R02','R01']})})
+        mockPhase({round:1,phase:Phase.I_FARM,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryPile:['R02','R03','R04'],auxiliaryDiscard:['R01']})}),
+        mockPhase({round:1,phase:Phase.II_REVENUE,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryPile:['R03','R04'],auxiliaryDiscard:['R02','R01']})}),
+        mockPhase({round:1,phase:Phase.III_TRANSPORT,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryPile:['R04'],auxiliaryDiscard:['R03','R02','R01']})}),
+        mockPhase({round:1,phase:Phase.IV_SCORING,cardDeck:mockCardDeck({roundPile:['R10','R11','R12'],roundDiscard:['R09'],auxiliaryDiscard:['R04','R03','R02','R01']})})
       ]}),
       mockRound({round:2,phases:[
-        mockPhase({round:2,phase:1,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R04','R01','R03'],auxiliaryDiscard:['R02']})}),
-        mockPhase({round:2,phase:2,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R01','R03'],auxiliaryDiscard:['R04','R02']})})
+        mockPhase({round:2,phase:Phase.I_FARM,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R04','R01','R03'],auxiliaryDiscard:['R02']})}),
+        mockPhase({round:2,phase:Phase.II_REVENUE,turn:1,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R01','R03'],auxiliaryDiscard:['R04','R02']})}),
+        mockPhase({round:2,phase:Phase.II_REVENUE,turn:2,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R03'],auxiliaryDiscard:['R01','R04','R02']})}),
+        mockPhase({round:2,phase:Phase.II_REVENUE,turn:3,cardDeck:mockCardDeck({roundPile:['R11','R12'],roundDiscard:['R10','R09'],auxiliaryPile:['R02','R03','R01'],auxiliaryDiscard:['R04',]})})
       ]})
     ]
   })
@@ -69,14 +71,19 @@ describe('util/NavigationSTate', () => {
     expect(navigationState.cardDeck.toPersistence().auxiliaryPile).to.eql(['R04','R01','R03'])
   })
 
+  it('card-deck-matching-round-matching-phase-matching-turn', () => {
+    const navigationState = new NavigationState(mockRouteLocation({params:{'round':'2','turn':'2'}}),Phase.II_REVENUE,CARD_STATE)
+    expect(navigationState.cardDeck.toPersistence().auxiliaryPile).to.eql(['R03'])
+  })
+
   it('card-deck-matching-round-previous-phase', () => {
     const navigationState = new NavigationState(mockRouteLocation({params:{'round':'2'}}),Phase.IV_SCORING,CARD_STATE)
-    expect(navigationState.cardDeck.toPersistence().auxiliaryPile).to.eql(['R01','R03'])
+    expect(navigationState.cardDeck.toPersistence().auxiliaryPile).to.eql(['R02','R03','R01'])
   })
 
   it('card-deck-previous-round-previous-phase', () => {
     const navigationState = new NavigationState(mockRouteLocation({params:{'round':'4'}}),Phase.I_FARM,CARD_STATE)
-    expect(navigationState.cardDeck.toPersistence().auxiliaryPile).to.eql(['R01','R03'])
+    expect(navigationState.cardDeck.toPersistence().auxiliaryPile).to.eql(['R02','R03','R01'])
     expect(navigationState.cardDeck.toPersistence().roundDiscard).to.eql(['R12','R11','R10','R09'])
   })
 

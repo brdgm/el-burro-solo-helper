@@ -7,7 +7,8 @@ import Player from '@/services/enum/Player'
 export default function (params?: MockPhaseParams) : PhasePersistence {
   return {
     round: params?.round ?? 1,
-    phase: params?.phase ?? 1,
+    phase: params?.phase ?? Phase.I_FARM,
+    turn: params?.turn ?? 0,
     cardDeck: params?.cardDeck ?? mockCardDeck(),
     rewardTracks: params?.rewardTracks ?? [],
     goodTokens: params?.goodTokens ?? mockGoodTokens(),
@@ -18,6 +19,7 @@ export default function (params?: MockPhaseParams) : PhasePersistence {
 export interface MockPhaseParams {
   round? : number
   phase? : Phase
+  turn? : number
   cardDeck? : CardDeckPersistence
   rewardTracks? : RewardTracksPersistence
   goodTokens?: GoodTokensPersistence

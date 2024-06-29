@@ -53,7 +53,7 @@ export default defineComponent({
   },
   computed: {
     backButtonRouteTo() : string|undefined {
-      return `/round/${this.round}/phase/revenue`
+      return `/round/${this.round}/phase/revenue/turn/6`
     }
   },
   methods: {
