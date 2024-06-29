@@ -45,13 +45,15 @@
     <li v-html="t('roundPhaseScoring.payWorkers.losePrestige')"></li>
   </ul>
 
-  <h4 v-if="round < 4">
-    <AppIcon type="phase-step" name="5" class="phase-step"/>
-    {{t('roundPhaseScoring.prepareNextRound.title')}}
-  </h4>
-  <ul>
-    <li v-html="t('roundPhaseScoring.prepareNextRound.performSteps')"></li>
-  </ul>
+  <template v-if="round < 4">
+    <h4>
+      <AppIcon type="phase-step" name="5" class="phase-step"/>
+      {{t('roundPhaseScoring.prepareNextRound.title')}}
+    </h4>
+    <ul>
+      <li v-html="t('roundPhaseScoring.prepareNextRound.performSteps')"></li>
+    </ul>
+  </template>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}

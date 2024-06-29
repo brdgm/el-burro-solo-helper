@@ -104,7 +104,7 @@
       "title": "Siesta halten",
       "moveSiesta": "Setze Leons Siestamarker um <b>{value} Schritt</b> vor. | Setze Leons Siestamarker um <b>{value} Schritte</b> vor.",
       "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weiteren Schritt vorzurücken. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Schritte vorzurücken.",
-      "travelGainPrestige": "Reise auf der Straße und erhalte Ansehen von der Siestaleiste.",
+      "travelGainPrestige": "Leon reist auf der Straße und erhält Ansehen von der Siestaleiste.",
       "transportBonus": "Erhalte den Transportbonus.",
       "updateTurnOrder": {
         "title": "Spielreihenfolge anpassen",
@@ -119,7 +119,7 @@
     "donkeyDelivery": {
       "title": "Mit Esel liefern",
       "deliver": "Führe <b>{value} Esellieferung</b> aus. | Führe <b>{value} Esellieferungen</b> aus.",
-      "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferung auszuführen. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferungen auszuführen",
+      "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferung auszuführen. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferungen auszuführen.",
       "transportBonus": "Erhalte den Transportbonus."
     }
   },
@@ -152,7 +152,34 @@
     }
   },
   "phaseFinalScoring": {
-    "title": "Schlusswertung"
+    "title": "Schlusswertung",
+    "rewardTracks": {
+      "title": "Belohnungsleisten",
+      "trackConnections": "<b>Leistenverbindungen</b>: Konnte Leon seine Belohnungsmarker auf zwei benachbarten Leisten mindestens bis zum Feld „3“ versetzen, erhält er jetzt das entsprechende Ansehen, das zwischen den jeweiligen Leisten angegeben ist. Er überprüft dies bei allen 5 Leistenverbindungen.",
+      "scoringOptions": "<b>Wertungsoptionen</b>: Auch wenn Leon vor dir Belohnungsmarker auf die obersten Felder der Leisten versetzt hat, erhält er kein Ansehen für die Wertungsoptionen."
+    },
+    "specialFarmCards": {
+      "title": "Spezielle Hofkarten",
+      "scoreCards": "Leon wertet die speziellen Solo-Hofkarten, die er am Hof angelegt hat.",
+      "gameEndMarketBarrows": "<b>„Spielende“-Marktkarren</b>: Besitzt Leon einen „Spielende“-Marktkarren im rechten Kartenslot und wurde dieser noch nicht komplett beliefert, stellt Leon nun restliche Gütermarker von seinem Hof auf die leeren Markierungen des Marktkarrens. Ist der Marktkarren nun komplett gefüllt, erhält Leon das angegebene Ansehen. Letzteres gilt auch, wenn die Markierungen bereits während der Partie von dir gefüllt wurden. Sollte Leon nicht genügend Gütermarker haben, aber noch ausreichend Silber und Arbeitskräfte, um den „Spielende“-Marktkarren zu beliefern, führt er ausreichend viele Täusche durch.",
+      "gameEndScorings": "<b>„Spielende“-Wertungen</b>: Hat Leon spezielle Solo-Hofkarten von unten unter den Hof geschoben, wertet er deren Wertungskategorien. Er erhält Ansehen für die obere Wertungskategorie, abhängig von den erreichten Zielen. In der unteren Wertungskategorie vergleicht sich Leon mit dir. Hat er genauso viel erreicht wie du, bekommt er 3 Ansehen. Hat er mehr erreicht als du, bekommt er sogar 5 Ansehen."
+    },
+    "harbor": {
+      "title": "Schiffe im Hafen",
+      "claimHarbor": "Sollte Leon mit einem oder beiden Eseln ein Hafenfeld erreicht haben, beansprucht Leon es nun und erhält das auf dem Anlegeplatz angegebene Ansehen.",
+      "claimHarborException": "<b>Ausnahme</b>: Steht er auf einem Hafenfeld, dass du bereits während der Partie beansprucht hast, zieht er auf den Hafenfeldern Richtung Straße zurück, bis er ein leeres Hafenfeld erreicht. Zieht er auf diese Weise auf die Straße zurück, hat er Pech gehabt. Das gilt auch, wenn Leons Esel beide auf demselben Hafenfeld stehen. Einer beansprucht das Feld und der andere zieht entsprechend zurück.",
+      "remainingGoods": "Hat Leon noch übrige Gütermarker auf dem Hof, um ein Schiff auf einem oder beiden beanspruchten Hafenfeldern komplett zu beliefern, wählt er je ein ausliegendes Schiff, das ihm das meiste Ansehen gibt. Sollte Leon keine weiteren Gütermarker haben, aber noch ausreichend Silber und Arbeitskräfte, um das Schiff zu beliefern, führt er ausreichend viele Täusche durch."
+    },
+    "throughTrack": {
+      "title": "Tränkenpunkte",
+      "exchangeSteps": "Leon tauscht seine übrigen Tränkenpunkte in Ansehen ein. Pro 2 Tränkenpunkte erhält er 1 Ansehen."
+    },
+    "strikingWorkers": {
+      "title": "Ansehensverluste für streikende Arbeiter",
+      "ignoreSteps": "Leon ignoriert diesen Schritt (da er seine Arbeitskräfte immer in Schritt 4 der Wertungsphase entfernt)."
+    },
+    "remainingStuff": "Restliche Hofgüter, Silber und Arbeitskräfte geben Leon kein weiteres Ansehen.",
+    "determineWinner": "Hast du nun mehr Ansehen als Leon, gewinnst du die Partie. Im Falle eines Gleichstandes gewinnt Leon!"
   },
   "playFarmCard": {
     "normal": "Leon spielt eine <b>normale</b> Hofkarte.",

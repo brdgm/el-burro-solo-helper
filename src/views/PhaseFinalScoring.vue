@@ -6,13 +6,54 @@
     {{t('phaseFinalScoring.title')}}
   </h1>
 
+  <h4>
+    <AppIcon type="phase-step" name="1" class="phase-step"/>
+    {{t('phaseFinalScoring.rewardTracks.title')}}
+  </h4>
   <ul>
-    <li>Reward Tracks</li>
-    <li>Special Farm Cards</li>
-    <li>Boats in the Harbor</li>
-    <li>Trough Track</li>
-    <li>Loss of prestige points for striking workers</li>
+    <li v-html="t('phaseFinalScoring.rewardTracks.trackConnections')"></li>
+    <li v-html="t('phaseFinalScoring.rewardTracks.scoringOptions')"></li>
   </ul>
+
+  <h4>
+    <AppIcon type="phase-step" name="2" class="phase-step"/>
+    {{t('phaseFinalScoring.specialFarmCards.title')}}
+  </h4>
+  <ul>
+    <li v-html="t('phaseFinalScoring.specialFarmCards.scoreCards')"></li>
+    <li v-html="t('phaseFinalScoring.specialFarmCards.gameEndMarketBarrows')"></li>
+    <li v-html="t('phaseFinalScoring.specialFarmCards.gameEndScorings')"></li>
+  </ul>
+
+  <h4>
+    <AppIcon type="phase-step" name="3" class="phase-step"/>
+    {{t('phaseFinalScoring.harbor.title')}}
+  </h4>
+  <ul>
+    <li v-html="t('phaseFinalScoring.harbor.claimHarbor')"></li>
+    <li v-html="t('phaseFinalScoring.harbor.claimHarborException')"></li>
+    <li v-html="t('phaseFinalScoring.harbor.remainingGoods')"></li>
+  </ul>
+
+  <h4>
+    <AppIcon type="phase-step" name="4" class="phase-step"/>
+    {{t('phaseFinalScoring.throughTrack.title')}}
+  </h4>
+  <ul>
+    <li v-html="t('phaseFinalScoring.throughTrack.exchangeSteps')"></li>
+  </ul>
+
+  <h4>
+    <AppIcon type="phase-step" name="5" class="phase-step"/>
+    {{t('phaseFinalScoring.strikingWorkers.title')}}
+  </h4>
+  <ul>
+    <li v-html="t('phaseFinalScoring.strikingWorkers.ignoreSteps')"></li>
+  </ul>
+
+  <p v-html="t('phaseFinalScoring.remainingStuff')"></p>
+
+  <p class="fw-bold" v-html="t('phaseFinalScoring.determineWinner')"></p>
 
   <DebugInfo :navigationState="navigationState"/>
 
@@ -60,7 +101,8 @@ export default defineComponent({
   height: 3rem;
   margin-top: -0.5rem
 }
-ol > li {
-  margin-top: 1rem;
+.phase-step {
+  height: 1.5rem;
+  margin-top: -0.4rem
 }
 </style>

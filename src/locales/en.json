@@ -107,7 +107,7 @@
       "title": "Have a siesta",
       "moveSiesta": "Move Leon's siesta marker by <b>{value} step</b>. | Move Leon's siesta marker by <b>{value} steps</b>.",
       "plusTile": "If possible, move back the through marker to move {value} additional step. | If possible, move back the through marker to move {value} additional steps.",
-      "travelGainPrestige": "Travel on the road and gain prestige from the siesta track.",
+      "travelGainPrestige": "Leon travels on the road and gains prestige from the siesta track.",
       "transportBonus": "Gain transport bonus.",
       "updateTurnOrder": {
         "title": "Update turn order",
@@ -155,7 +155,34 @@
     }
   },
   "phaseFinalScoring": {
-    "title": "Final Scoring"
+    "title": "Final Scoring",
+    "rewardTracks": {
+      "title": "Reward Tracks",
+      "trackConnections": "<b>Track connections</b>: If Leon moved their reward markers on two adjacent tracks at least to space “3”, they gain the prestige displayed between both tracks. Leon checks these requirements for all five track connections.",
+      "scoringOptions": "<b>Scoring options</b>: Even if Leon reached the topmost spaces of the tracks before you, they gain no prestige for the scoring options."
+    },
+    "specialFarmCards": {
+      "title": "Special Farm Cards",
+      "scoreCards": "Leon scores the special solo farm cards that they played at the farm.",
+      "gameEndMarketBarrows": "<b>“Game end” market barrows</b>: If Leon played a “game end” market barrow in the right card slot and it is not completely delivered, Leon now places remaining goods tokens from their farm on the empty markings of the market barrow. If they completely deliver it, they gain the prestige. The same is true if the barrow was already completely delivered by you during the game. If Leon does not have enough goods tokens but enough silver and workers to deliver the “game end” market barrow, they make all necessary trades to do so.",
+      "gameEndScorings": "<b>“Game end” scorings</b>: If Leon pushed special solo farm cards below their farm, they score these scoring categories. They gain prestige for the top category depending on the achieved goals. To score the bottom category, Leon compares their results with yours. If they achieved exactly as much as you, they gain 3 prestige. If they achieved more than you, they gain 5 prestige."
+    },
+    "harbor": {
+      "title": "Boats in the Harbor",
+      "claimHarbor": "If Leon reached the harbor with one or both donkeys, they now claim their harbor spaces and gain the displayed prestige.",
+      "claimHarborException": "<b>Exception</b>: If their donkey stands on a harbor space that you claimed during the game, they move their donkey back on the harbor spaces closer to the road spaces, until the donkey can claim a harbor space. If the donkey leaves the harbor, tough luck for Leon. This is also true, if Leon's donkeys both stand on the same harbor space; one of them claims that space, and the other moves back accordingly.",
+      "remainingGoods": "If Leon still has remaining goods tokens on their storage space to completely deliver a boat for one or both claimed harbor spaces, they choose the remaining boat(s) offering the most prestige. If Leon does not have enough goods tokens but enough silver and workers to deliver the boat(s), they make all necessary trades to do so."
+    },
+    "throughTrack": {
+      "title": "Through Track",
+      "exchangeSteps": "Leon exchanges their remaining trough points for prestige, gaining 1 prestige for every 2 trough points as usual."
+    },
+    "strikingWorkers": {
+      "title": "Loss of Prestige for striking workers",
+      "ignoreSteps": "Leon ignores this step (since their workers are always removed in step 4 of the scoring phase)."
+    },
+    "remainingStuff": "Remaining farm goods, silver, and workers offer no additional prestige.",
+    "determineWinner": "If you have a higher prestige than Leon, you win the game. In case of a tie, Leon wins the game!"
   },
   "playFarmCard": {
     "normal": "Leon plays a <b>normal</b> farm card.",
