@@ -3,7 +3,7 @@
 
   <h1>
     <AppIcon type="phase" name="2" class="phase"/>
-    {{t('roundPhaseRevenue.title')}} {{t(`player.${navigationState.turnPlayer}`)}}
+    {{t('roundPhaseRevenue.title')}}: {{t(`player.${navigationState.turnPlayer}`)}}
   </h1>
 
   <ul>
@@ -145,7 +145,7 @@ export default defineComponent({
         this.$router.push(`/round/${this.round}/phase/revenue/turn/${this.turn+1}`)
       }
       else {
-        this.$router.push(`/round/${this.round}/phase/transport`)
+        this.$router.push(`/round/${this.round}/phase/transport/turn/0`)
       }
     }
   }

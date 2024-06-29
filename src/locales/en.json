@@ -79,7 +79,7 @@
     }
   },
   "roundPhaseRevenue": {
-    "title": "Revenue:",
+    "title": "Revenue",
     "rollDice": "Roll the revenue dice.",
     "player": {
       "revenueDie": "Take 1 die, execute the revenue action and bonus action.",
@@ -95,6 +95,31 @@
       "title": "Actions",
       "intro": "If Leon executes any these actions:"
     }
+  },
+  "roundPhaseTransport": {
+    "title": "Transport",
+    "donkeyCards": {
+      "title": "Choose donkey cards",
+      "botNoCards": "Leon does not play donkey cards."
+    },
+    "siesta": {
+      "title": "Have a siesta",
+      "updateTurnOrder": {
+        "title": "Update turn order"
+      }
+    },
+    "goatDelivery": {
+      "title": "Goat delivery"
+    },
+    "donkeyDelivery": {
+      "title": "Donkey delivery"
+    }
+  },
+  "roundPhaseScoring": {
+    "title": "Scoring"
+  },
+  "phaseFinalScoring": {
+    "title": "Final Scoring"
   },
   "playFarmCard": {
     "normal": "Leon plays a <b>normal</b> farm card.",

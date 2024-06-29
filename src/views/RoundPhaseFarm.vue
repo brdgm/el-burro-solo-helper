@@ -6,24 +6,33 @@
     {{t('roundPhaseFarm.title')}}
   </h1>
 
-  <ol>
-    <li v-html="t('roundPhaseFarm.gameRoundTile.title')"></li>
-    <ul>
-      <li v-html="t('roundPhaseFarm.gameRoundTile.appliesBot')"></li>
-    </ul>
-    <li v-html="t('roundPhaseFarm.expandFarm.title')"></li>
-    <ul>
-      <li>
-        <PlayFarmCard :navigationState="navigationState"/>
-      </li>
-    </ul>
-    <li v-html="t('roundPhaseFarm.increaseFarm.title')"></li>
-    <ul>
-      <li v-html="t('roundPhaseFarm.increaseFarm.gainIncome')"></li>
-      <li v-html="t('roundPhaseFarm.increaseFarm.harvest')"></li>
-      <li v-html="t('roundPhaseFarm.increaseFarm.gainOffspring')"></li>
-    </ul>
-  </ol>
+  <h4>
+    <AppIcon type="phase-step" name="1" class="phase-step"/>
+    {{t('roundPhaseFarm.gameRoundTile.title')}}
+  </h4>
+  <ul>
+    <li v-html="t('roundPhaseFarm.gameRoundTile.appliesBot')"></li>
+  </ul>
+
+  <h4>
+    <AppIcon type="phase-step" name="2" class="phase-step"/>
+    {{t('roundPhaseFarm.expandFarm.title')}}
+  </h4>
+  <ul>
+    <li>
+      <PlayFarmCard :navigationState="navigationState"/>
+    </li>
+  </ul>
+
+  <h4>
+    <AppIcon type="phase-step" name="3" class="phase-step"/>
+    {{t('roundPhaseFarm.increaseFarm.title')}}
+  </h4>
+  <ul>
+    <li v-html="t('roundPhaseFarm.increaseFarm.gainIncome')"></li>
+    <li v-html="t('roundPhaseFarm.increaseFarm.harvest')"></li>
+    <li v-html="t('roundPhaseFarm.increaseFarm.gainOffspring')"></li>
+  </ul>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -89,7 +98,8 @@ export default defineComponent({
   height: 3rem;
   margin-top: -0.5rem
 }
-ol > li {
-  margin-top: 1rem;
+.phase-step {
+  height: 1.5rem;
+  margin-top: -0.4rem
 }
 </style>

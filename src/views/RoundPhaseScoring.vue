@@ -3,7 +3,7 @@
 
   <h1>
     <AppIcon type="phase" name="4" class="phase"/>
-    Scoring Phase
+    {{t('roundPhaseScoring.title')}}
   </h1>
 
   <ol>
@@ -54,7 +54,7 @@ export default defineComponent({
   },
   computed: {
     backButtonRouteTo() : string|undefined {
-      return `/round/${this.round}/phase/transport`
+      return `/round/${this.round}/phase/transport/turn/6`
     }
   },
   methods: {

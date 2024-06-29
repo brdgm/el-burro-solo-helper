@@ -3,15 +3,14 @@
 
   <h1>
     <AppIcon type="phase" name="3" class="phase"/>
-    Transport Phase
+    {{t('roundPhaseTransport.title')}}<span v-if="turn > 0">: {{t(`player.${navigationState.turnPlayer}`)}}
+    </span>
   </h1>
 
-  <ol>
-    <li>Choose donkey cards</li>
-    <li>Have a siesta</li>
-    <li>Goat delivery</li>
-    <li>Donkey delivery</li>
-  </ol>
+  <TransportDonkeyCards :navigationState="navigationState" v-if="turn == 0"/>
+  <TransportSiesta :navigationState="navigationState" v-else-if="turn <= 2"/>
+  <TransportGoatDelivery :navigationState="navigationState" v-else-if="turn <= 4"/>
+  <TransportDonkeyDelivery :navigationState="navigationState" v-else-if="turn <= 6"/>
 
   <button class="btn btn-primary btn-lg mt-4" @click="next()">
     {{t('action.next')}}
@@ -34,6 +33,10 @@ import Phase from '@/services/enum/Phase'
 import SideBar from '@/components/round/SideBar.vue'
 import DebugInfo from '@/components/round/DebugInfo.vue'
 import storePhase from '@/util/storePhase'
+import TransportSiesta from '@/components/round/TransportSiesta.vue'
+import TransportDonkeyCards from '@/components/round/TransportDonkeyCards.vue'
+import TransportGoatDelivery from '@/components/round/TransportGoatDelivery.vue'
+import TransportDonkeyDelivery from '@/components/round/TransportDonkeyDelivery.vue'
 
 export default defineComponent({
   name: 'RoundPhaseTransport',
@@ -41,7 +44,11 @@ export default defineComponent({
     FooterButtons,
     AppIcon,
     SideBar,
-    DebugInfo
+    DebugInfo,
+    TransportDonkeyCards,
+    TransportSiesta,
+    TransportGoatDelivery,
+    TransportDonkeyDelivery
   },
   setup() {
     const { t } = useI18n()
@@ -49,17 +56,28 @@ export default defineComponent({
     const state = useStateStore()
     const navigationState = new NavigationState(route, Phase.III_TRANSPORT, state)
     const round = navigationState.round
-    return { t, state, navigationState, round }
+    const turn = navigationState.turn
+    return { t, state, navigationState, round, turn }
   },
   computed: {
     backButtonRouteTo() : string|undefined {
-      return `/round/${this.round}/phase/revenue/turn/6`
+      if (this.turn > 0) {
+        return `/round/${this.round}/phase/transport/turn/${this.turn-1}`        
+      }
+      else {
+        return `/round/${this.round}/phase/revenue/turn/6`
+      }
     }
   },
   methods: {
     next() : void {
       storePhase(this.navigationState)
-      this.$router.push(`/round/${this.round}/phase/scoring`)
+      if (this.turn < 6) {
+        this.$router.push(`/round/${this.round}/phase/transport/turn/${this.turn+1}`)
+      }
+      else {
+        this.$router.push(`/round/${this.round}/phase/scoring`)
+      }
     }
   }
 })
@@ -69,8 +87,5 @@ export default defineComponent({
 .phase {
   height: 3rem;
   margin-top: -0.5rem
-}
-ol > li {
-  margin-top: 1rem;
 }
 </style>

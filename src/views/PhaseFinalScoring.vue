@@ -3,7 +3,7 @@
 
   <h1>
     <AppIcon type="phase" name="5" class="phase"/>
-    Final Scoring
+    {{t('phaseFinalScoring.title')}}
   </h1>
 
   <ul>

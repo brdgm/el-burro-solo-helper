@@ -76,7 +76,7 @@
     }
   },
   "roundPhaseRevenue": {
-    "title": "Ertrag:",
+    "title": "Ertrag",
     "rollDice": "Würfel die Ertragswürfel.",
     "player": {
       "revenueDie": "Nimm 1 Würfel, führe die Ertragsaktion und die Bonusaktion aus.",
@@ -92,6 +92,31 @@
       "title": "Aktionen",
       "intro": "Falls Leon eine dieser Aktionen ausführt:"
     }
+  },
+  "roundPhaseTransport": {
+    "title": "Transport",
+    "donkeyCards": {
+      "title": "Eselkarten auswählen",
+      "botNoCards": "Leon spielt keine Eselkarten."
+    },
+    "siesta": {
+      "title": "Siesta halten",
+      "updateTurnOrder": {
+        "title": "Spielreihenfolge anpassen"
+      }
+    },
+    "goatDelivery": {
+      "title": "Mit Ziege liefern"
+    },
+    "donkeyDelivery": {
+      "title": "Mit Esel liefern"
+    }
+  },
+  "roundPhaseScoring": {
+    "title": "Wertung"
+  },
+  "phaseFinalScoring": {
+    "title": "Schlusswertung"
   },
   "playFarmCard": {
     "normal": "Leon spielt eine <b>normale</b> Hofkarte.",

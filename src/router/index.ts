@@ -40,7 +40,7 @@ const routes: Array<RouteRecordRaw> = [
     component: RoundPhaseRevenue
   },
   {
-    path: '/round/:round/phase/transport',
+    path: '/round/:round/phase/transport/turn/:turn',
     name: 'RoundPhaseTransport',
     component: RoundPhaseTransport
   },

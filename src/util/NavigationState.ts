@@ -135,17 +135,11 @@ function getCardDeck(state: State, round: number, phase: Phase, turn: number) : 
 function getPhasePersistence(state: State, round: number, phase: Phase, turn: number) : PhasePersistence|undefined {
   const roundState = state.rounds.find(item => item.round == round)
   if (roundState) {
-    // sort descending by phase and turn
-    const sortedItems = roundState.phases.toSorted((item1,item2) => getPersistenceIndex(item2) - getPersistenceIndex(item1))
-    let phasePersistence
-    if (turn <= 1) {
-      // get first matching item from previous phase
-      phasePersistence = sortedItems.find(item => item.phase < phase)
-    }
-    else {
-      // get first matching item from previous turn or from previous phase
-      phasePersistence = sortedItems.find(item => (item.phase == phase && item.turn < turn) || (item.phase < phase))
-    }
+    const phasePersistence = roundState
+        // sort descending by phase and turn
+        .phases.toSorted((item1,item2) => getPersistenceIndex(item2) - getPersistenceIndex(item1))
+        // get first matching item from previous turn or from previous phase
+        .find(item => (item.phase == phase && item.turn < turn) || (item.phase < phase))
     if (phasePersistence) {
       return phasePersistence
     }
