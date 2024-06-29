@@ -193,6 +193,33 @@
     },
     "communityDelivery": {
       "title": "Gemeinschaftslieferung"
+    },
+    "deliveryTargetScoring": {
+      "title": "Lieferziele",
+      "intro": "Hat Leon einen Marktkarren oder lokalen Markt komplett beliefert, folgt er im Wesentlichen denselben Spielregeln wie du.",
+      "marketBarrow": {
+        "title": "Komplett belieferter Marktkarren",
+        "prestige": "Leon erhält das angegebene Ansehen.",
+        "moveDonkey": "Leon zieht mit einem seiner Esel 2 Felder auf der Straße vorwärts. Die aktuelle Rundenkarte bestimmt, welchen der beiden Esel Leon vorzieht.",
+        "takeBonuses": "Leon berücksichtigt sämtliche Boni, die anfallen könnten (wie Boni von Rundenplättchen usw.).",
+        "removeCard": "Leon entfernt die Hofkarte vom Hof und legt sie auf den Ablagestapel für normale Hofkarten.",
+        "ambitiousDifficulty": "<i>Anspruchsvoller Schwierigkeitsgrad</i>: Suchst du eine größere Herausforderung, gilt Folgendes: Nachdem Leon den belieferten Marktkarren vom Hof entfernt hat, zieht er sofort 1 Hofkarte vom Stapel und legt sie als neuen Marktkarren an den Hof."
+      },
+      "localMarket": {
+        "title": "Komplett belieferter lokaler Markt",
+        "goodToken": "Leon versetzt einen Gütermarker in den Wertungsbereich des lokalen Markts und erhält das entsprechende Ansehen.",
+        "immediateEffect": "Leon erhält den Soforteffekt des ausliegenden Marktbonusplättchens. Für drei Marktbonusplättchen gibt es Anpassungen für Leon, siehe unten.",
+        "noToken": "Leon lässt alle Marktbonusplättchen auf dem Spielplan liegen und bekommt somit keine dauerhaften Effekte."
+      },
+      "marketBonusTiles": {
+        "title": "Marktbonusplättchen",
+        "intro": "Leon erhält die Soforteffekte der Marktbonusplättchen, wenn er seine lokalen Märkte komplett beliefert oder auf der Ansehensleiste die beiden ausliegenden Marktbonusplättchen erreicht oder an ihnen vorbeizieht.",
+        "adjustments": "Drei Marktbonusplättchen müssen für Leon angepasst werden. Alle anderen funktionieren für ihn unverändert.",
+        "takeUpgradedGood": "Soforteffekt - „Aufgewertetes Gut erhalten“: Leon erhält 1 Gütermarker.",
+        "takeFarmGoodPig": "Soforteffekt - „Erntegüter erhalten“ oder „Schwein erhalten“: Leon erhält 1 Gütermarker und 1 Silber.",
+        "takeFarmGoodPigAmbitious": "<i>Anspruchsvoller Schwierigkeitsgrad</i>: Suchst du eine größere Herausforderung, gilt Folgendes: Leon erhält stattdessen 2 Gütermarker.",
+        "rewardTrackStep": "Soforteffekt - „1 kostenfreier Schritt auf 1 Belohnungsleiste“: Leon zieht den Belohnungsmarker 1 Feld auf der Belohnungsleiste vorwärts, deren Hofgut auf dem obersten Hofgutplättchen des Ziegenbereichs angezeigt wird."
+      }
     }
   },
   "difficultyLevel": {

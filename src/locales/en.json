@@ -199,6 +199,33 @@
     },
     "communityDelivery": {
       "title": "Community Delivery"
+    },
+    "deliveryTargetScoring": {
+      "title": "Delivery Targets",
+      "intro": "When Leon completely delivers a market barrow or local market, generally they follow the same game rules as you do.",
+      "marketBarrow": {
+        "title": "Completely delivered market barrow",
+        "prestige": "Leon gains the displayed prestige.",
+        "moveDonkey": "Leon moves the donkey indicated by the current game round card 2 spaces forward on the road.",
+        "takeBonuses": "Leon takes all bonuses rewarded for the delivery (like bonus from game round tiles and so on).",
+        "removeCard": "Leon removes the market barrow from the farm and places the card on the discard pile for normal farm cards.",
+        "ambitiousDifficulty": "<i>Ambitious difficulty</i>: When looking for a bigger challenge, apply the following: After Leon removes the market barrow from the farm, they immediately draw 1 normal farm card and place it as a new market barrow at their farm."
+      },
+      "localMarket": {
+        "title": "Completely delivered local market",
+        "goodToken": "Leon moves a goods token to the space above the local market offering the most prestige and gains the appropriate prestige.",
+        "immediateEffect": "Leon takes the immediate effect of the market bonus tile next to the local market. Check below for adjustments for three of the market bonus tiles.",
+        "noToken": "Leon does not take any market bonus tiles and thus does not get any permanent effects."
+      },
+      "marketBonusTiles": {
+        "title": "Market Bonus Tiles",
+        "intro": "Leon takes the immediate effect of the market bonus tiles when they completely deliver their local markets or when they reach or pass both market bonus tiles next to the prestige track.",
+        "adjustments": "Three market bonus tiles need adjustments for Leon. The other tiles work as normal.",
+        "takeUpgradedGood": "Immediate effect - “Take an upgraded good”: Leon takes 1 goods token.",
+        "takeFarmGoodPig": "Immediate effect - “Take farm goods” or “Take a pig”: Leon takes 1 goods token and 1 silver.",
+        "takeFarmGoodPigAmbitious": "<i>Ambitious difficulty</i>: When looking for a bigger challenge, apply the following: Instead, Leon takes 2 goods tokens.",
+        "rewardTrackStep": "Immediate effect - “1 free step on a reward track”: As stated on the topmost farm goods tile, Leon moves the reward marker 1 space forward in the matching reward track."
+      }
     }
   },
   "difficultyLevel": {

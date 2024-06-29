@@ -6,6 +6,7 @@
     </p>
     <ul class="rules">
       <li><a data-bs-toggle="modal" href="#roundCardModal" class="rule">{{t('gameRoundCard.title')}}</a></li>
+      <li><a data-bs-toggle="modal" href="#deliveryTargetScoringModal" class="rule">{{t('rules.deliveryTargetScoring.title')}}</a></li>
     </ul>
     <GameRoundTile :navigationState="navigationState"/>
   </div>
@@ -16,6 +17,7 @@
   <DonkeyDeliveryModal :navigationState="navigationState"/>
   <GoatDeliveryModal :navigationState="navigationState"/>
   <CommunityDeliveryModal :navigationState="navigationState"/>
+  <DeliveryTargetScoringModal :navigationState="navigationState"/>
 </template>
 
 <script lang="ts">
@@ -30,6 +32,7 @@ import TravelRoadModal from '../rules/TravelRoadModal.vue'
 import DonkeyDeliveryModal from '../rules/DonkeyDeliveryModal.vue'
 import GoatDeliveryModal from '../rules/GoatDeliveryModal.vue'
 import CommunityDeliveryModal from '../rules/CommunityDeliveryModal.vue'
+import DeliveryTargetScoringModal from '../rules/DeliveryTargetScoringModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
@@ -40,7 +43,8 @@ export default defineComponent({
     TravelRoadModal,
     DonkeyDeliveryModal,
     GoatDeliveryModal,
-    CommunityDeliveryModal
+    CommunityDeliveryModal,
+    DeliveryTargetScoringModal
   },
   setup() {
     const { t } = useI18n()
