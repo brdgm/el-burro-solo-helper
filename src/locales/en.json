@@ -76,7 +76,22 @@
     }
   },
   "roundPhaseRevenue": {
-    "title": "Revenue:"
+    "title": "Revenue:",
+    "rollDice": "Roll the revenue dice.",
+    "player": {
+      "revenueDie": "Take 1 die, execute the revenue action and bonus action.",
+      "communityDie": "Execute the revenue action from the community die."
+    },
+    "bot": {
+      "revenueDie": "Leon takes 1 die and executes the revenue action.",
+      "bonusAction": "Leon executes the bonus action.",
+      "communityDie": "Leon executes the revenue action from the community die.",
+      "gameRoundTileCommunityDieBonus": "<i>Game Round Tile</i>: Leon executes the bonus action of the community die."
+    },
+    "actionDetails": {
+      "title": "Actions",
+      "intro": "If Leon executes any these actions:"
+    }
   },
   "playFarmCard": {
     "normal": "Leon plays a <b>normal</b> farm card.",

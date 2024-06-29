@@ -73,7 +73,22 @@
     }
   },
   "roundPhaseRevenue": {
-    "title": "Ertrag:"
+    "title": "Ertrag:",
+    "rollDice": "Würfel die Ertragswürfel.",
+    "player": {
+      "revenueDie": "Nimm 1 Würfel, führe die Ertragsaktion und die Bonusaktion aus.",
+      "communityDie": "Führe die Ertragsaktion des Gemeinschaftswürfel aus."
+    },
+    "bot": {
+      "revenueDie": "Leon nimmt 1 Würfen und führt die Ertragsaktion aus.",
+      "bonusAction": "Leon führt die Bonusaktion aus.",
+      "communityDie": "Leon führt die Ertragsaktion des Gemeinschaftswürfel aus.",
+      "gameRoundTileCommunityDieBonus": "<i>Rundenplättchen</i>: Leon führt die Bonusaktion des Gemeinschaftswürfel aus."
+    },
+    "actionDetails": {
+      "title": "Aktionen",
+      "intro": "Falls Leon eine dieser Aktionen ausführt:"
+    }
   },
   "playFarmCard": {
     "normal": "Leon spielt eine <b>normale</b> Hofkarte.",

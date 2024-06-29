@@ -7,30 +7,32 @@
   </h1>
 
   <ul>
-    <li v-if="turn == 1">Roll the revenue dice.</li>
+    <li v-if="turn == 1" v-html="t('roundPhaseRevenue.rollDice')"></li>
     
     <template v-if="isPlayer">
-      <li v-if="isRevenueDie">Take 1 revenue die and execute the action, execute the bonus action.</li>
-      <li v-else>Execute the revenue action from the community die.</li>
+      <li v-if="isRevenueDie" v-html="t('roundPhaseRevenue.player.revenueDie')"></li>
+      <li v-else v-html="t('roundPhaseRevenue.player.communityDie')"></li>
     </template>
 
     <template v-else>
       <template v-if="isRevenueDie">
         <li>
-          <span>Leon takes 1 revenue die and executes the action.</span><br/>
+          <span v-html="t('roundPhaseRevenue.bot.revenueDie')"></span><br/>
           <AppIcon type="dice-value" :name="roundCard.diceValue.toString()" class="dice"/>
           <AppIcon type="dice-modification" :name="roundCard.diceModification" class="dice"/>
         </li>
-        <li>Leon executes the bonus action.</li>
+        <li v-html="t('roundPhaseRevenue.bot.bonusAction')"></li>
       </template>
-      <li v-else>Leon executes the revenue action from the community die.</li>
+      <template v-else>
+        <li v-html="t('roundPhaseRevenue.bot.communityDie')"></li>
+        <li v-if="isGameRoundTileCommunityDieBonus" v-html="t('roundPhaseRevenue.bot.gameRoundTileCommunityDieBonus')"></li>
+      </template>
     </template>
-
   </ul>
 
   <div class="actionDetails" v-if="isBot">
-    <h5>Action Details</h5>
-    <p>If Leon executes any these actions:</p>
+    <h5 v-html="t('roundPhaseRevenue.actionDetails.title')"></h5>
+    <p v-html="t('roundPhaseRevenue.actionDetails.intro')"></p>
     <table>
       <tr>
         <td><AppIcon type="dice-value" name="2" class="dice"/></td>
@@ -45,10 +47,8 @@
       <tr>
         <td><AppIcon type="dice-value" name="6" class="dice"/></td>
         <td><AppIcon type="action" :name="roundCard.deliveryAction" class="action"/></td>
-        <td>
-          <DonkeyDelivery v-if="isDonkeyDelivery" :navigationState="navigationState"/>
-          <GoatDelivery v-else :navigationState="navigationState"/>
-        </td>
+        <td v-if="isDonkeyDelivery"><DonkeyDelivery :navigationState="navigationState"/></td>
+        <td v-else><GoatDelivery :navigationState="navigationState"/></td>
       </tr>
       <tr v-if="isRevenueDie">
         <td></td>
@@ -133,6 +133,9 @@ export default defineComponent({
     },
     isRevenueDie() : boolean {
       return this.turn < 5
+    },
+    isGameRoundTileCommunityDieBonus() : boolean {
+      return this.navigationState.gameRoundTile?.id == '1-community-die-bonus'
     }
   },
   methods: {
