@@ -32,7 +32,7 @@ export const useStateStore = defineStore(`${name}.state`, {
         this.rounds = this.rounds.filter(item => item.round < phase.round)
         this.rounds.push(round)
       }
-      round.phases = round.phases.filter(item => item.phase < phase.phase)
+      round.phases = round.phases.filter(item => item.phase < phase.phase || (item.phase == phase.phase && item.turn < phase.turn))
       round.phases.push(phase)
     }
   },

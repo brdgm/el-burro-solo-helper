@@ -67,12 +67,12 @@ describe('util/NavigationSTate', () => {
   })
 
   it('card-deck-matching-round-matching-phase', () => {
-    const navigationState = new NavigationState(mockRouteLocation({params:{'round':'2'}}),Phase.I_FARM,CARD_STATE)
+    const navigationState = new NavigationState(mockRouteLocation({params:{'round':'2','turn':'1'}}),Phase.II_REVENUE,CARD_STATE)
     expect(navigationState.cardDeck.toPersistence().auxiliaryPile).to.eql(['R04','R01','R03'])
   })
 
   it('card-deck-matching-round-matching-phase-matching-turn', () => {
-    const navigationState = new NavigationState(mockRouteLocation({params:{'round':'2','turn':'2'}}),Phase.II_REVENUE,CARD_STATE)
+    const navigationState = new NavigationState(mockRouteLocation({params:{'round':'2','turn':'3'}}),Phase.II_REVENUE,CARD_STATE)
     expect(navigationState.cardDeck.toPersistence().auxiliaryPile).to.eql(['R03'])
   })
 
