@@ -14,6 +14,7 @@
       <li v-html="t('setupBot.supportMarker')"></li>
       <li v-html="t('setupBot.stableBoard')"></li>
       <li v-html="t('setupBot.specialSoloFarmCards')"></li>
+      <li v-html="t(`setupBot.soloRewardOverview.${state.setup.rewardDifficultyLevel}`)"></li>
       <li>
         <span v-html="t('setupBot.startingSpace')"></span><br/>
         <button class="btn btn-secondary mt-2" @click="showStartingSpace = true" v-if="!showStartingSpace">
@@ -28,7 +29,6 @@
       <li v-html="t('setupBot.unusedMaterial.soloGameRoundCards')"></li>
       <li v-html="t('setupBot.unusedMaterial.soloTransportBonusTiles')"></li>
       <li v-html="t('setupBot.unusedMaterial.soloFarmGoods')"></li>
-      <li v-html="t('setupBot.unusedMaterial.soloRewardOverview')"></li>
     </ul>
   </div>
 

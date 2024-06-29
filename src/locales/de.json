@@ -38,6 +38,10 @@
     "supportMarker": "Lege 1 <b>Unterstützungsmarker</b> mit der Ansehensseite nach oben neben Leons Hof.",
     "stableBoard": "Lege Leons <b>Solo-Stalltableau</b> bereit. Lege neben <b>Tränken</b>- und <b>Meilensteinmarker</b> auf die entsprechenden Ablagefelder. Leon startet mit dem Tränkenmarker auf Feld „1“.",
     "specialSoloFarmCards": "Mische die speziellen <b>Solo-Hofkarten</b> und lege sie als verdeckten Stapel neben den Hof. Ziehe 3 Karten und lege sie offen in eine Reihe.",
+    "soloRewardOverview": {
+      "1": "Lege die <b>Solo-Belohnungsübersicht</b> neben das Belohnungstableau (mit der leichten Seite).",
+      "3": "Lege die <b>Solo-Belohnungsübersicht</b> neben das Belohnungstableau (mit der anspruchsvollen Seite)."
+    },
     "startingSpace": "Wenn Leon an die Reihe kommt, um ein Startfeld für seine Esel zu bestimmen:",
     "determineStartingSpace": "Startfeld bestimmen",
     "spaceBlocked": "Platz besetzt",
@@ -52,8 +56,7 @@
       "title": "Ungenutztes Material (durch die Applikation verwaltet):",
       "soloGameRoundCards": "Solo-Rundenkarten",
       "soloTransportBonusTiles": "Solo-Transportbonusplättchen",
-      "soloFarmGoods": "Solo-Hofgutplättchen",
-      "soloRewardOverview": "Solo-Belohnungsübersicht"
+      "soloFarmGoods": "Solo-Hofgutplättchen"
     }
   },
   "roundPhaseFarm": {
