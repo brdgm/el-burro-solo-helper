@@ -49,6 +49,7 @@
           <td>
             <b>{{roundCard.siestaValue}}</b>
             <AppIcon v-if="roundCard.siestaPlusTile" type="plus-tile" :name="roundCard.siestaPlusTile.toString()" class="plusTile"/>
+            <AppIcon v-if="siestaTransportBonus" type="action" :name="siestaTransportBonus" class="icon"/>
           </td>
         </tr>
         <tr>
@@ -62,6 +63,7 @@
           <td>
             <b>{{roundCard.donkeyValue}}</b>
             <AppIcon v-if="roundCard.donkeyPlusTile" type="plus-tile" :name="roundCard.donkeyPlusTile.toString()" class="plusTile"/>
+            <AppIcon v-if="donkeyTransportBonus" type="action" :name="donkeyTransportBonus" class="icon"/>
           </td>
         </tr>
         <tr>
@@ -111,6 +113,12 @@ export default defineComponent({
       else {
         return '#goatDeliveryModal'
       }
+    },
+    siestaTransportBonus() : Action|undefined {
+      return this.navigationState.transportBonusTile.action[this.roundCard.siestaValue]
+    },
+    donkeyTransportBonus() : Action|undefined {
+      return this.navigationState.transportBonusTile.action[this.roundCard.donkeyValue]
     }
   }
 })
@@ -127,6 +135,7 @@ td {
 .plusTile {
   height: 1.75rem;
   margin-left: 0.5rem;
+  margin-right: 1rem;
   filter: drop-shadow(2px 2px 2px #888);
 }
 .difficultyLevel {

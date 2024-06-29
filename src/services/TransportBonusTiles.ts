@@ -8,27 +8,27 @@ import Action from './enum/Action'
 const transportBonusTiles : TransportBonusTile[] = [
   {
     id: 1,
-    action: [
-      { 1: Action.COMMUNITY_DELIVERY },
-      { 2: Action.TRAVEL_ROAD_2 },
-      { 3: Action.TAKE_SILVER_2 }
-    ]
+    action: {
+      1: Action.COMMUNITY_DELIVERY,
+      2: Action.TRAVEL_ROAD_2,
+      3: Action.TAKE_SILVER_2
+    }
   },
   {
     id: 2,
-    action: [
-      { 1: Action.PLAY_FARM_CARD },
-      { 2: Action.PAY_SILVER_1_DONKEY_DELIVERY_1 },
-      { 3: Action.TAKE_FARM_GOOD_1 }
-    ]
+    action: {
+      1: Action.PLAY_FARM_CARD,
+      2: Action.PAY_SILVER_1_DONKEY_DELIVERY_1,
+      3: Action.TAKE_FARM_GOOD_1
+    }
   },
   {
     id: 3,
-    action: [
-      { 1: Action.HIRE_WORKER },
-      { 2: Action.TAKE_FARM_GOOD_1_SILVER_1 },
-      { 3: Action.FILL_TROUGH_1 }
-    ]
+    action: {
+      1: Action.HIRE_WORKER,
+      2: Action.TAKE_FARM_GOOD_1_SILVER_1,
+      3: Action.FILL_TROUGH_1
+    }
   }
 ]
 
