@@ -227,7 +227,7 @@
         "preferredGoods": "Leon liefert Güterarten priorisiert nach dieser Reihenfolge:",
         "trackTopSpace": "Kommt Leon auf dem obersten Feld eine Belohnungsleiste an, entferne das entsprechende Gut aus dieser List (durch anklicken)."
       },
-      "firstFarmGood": "Leon always delivers the first farm good in the list. They place the goods token in their supply and move forward on the matching reward track."
+      "firstFarmGood": "Leon liefert er immer das erste Liefergut aus der Liste. Er legt den Gütermarker in seinen Vorrat und zieht auf der entsprechenden Belohnungsleiste vor."
     },
     "deliveryTargetScoring": {
       "title": "Lieferziele",
