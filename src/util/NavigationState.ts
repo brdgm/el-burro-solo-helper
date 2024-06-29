@@ -11,6 +11,7 @@ import Card from '@/services/Card'
 import RewardTracks from '@/services/RewardTracks'
 import GoodTokens from '@/services/GoodTokens'
 import Player from '@/services/enum/Player'
+import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValues'
 
 export default class NavigationState {
 
@@ -24,6 +25,7 @@ export default class NavigationState {
   readonly rewardTracks : RewardTracks
   readonly goodTokens : GoodTokens
   readonly startPlayer : Player
+  readonly turnPlayer : Player
 
   public constructor(route: RouteLocation, phase: Phase, state: State) {
     this.round = getRound(route, phase)
@@ -52,6 +54,13 @@ export default class NavigationState {
       this.rewardTracks = RewardTracks.new()
       this.goodTokens = GoodTokens.new()
       this.startPlayer = state.setup.startPlayer ?? Player.PLAYER
+    }
+
+    if (this.turn % 2 == 0) {
+      this.turnPlayer = getAllEnumValues(Player).filter(player => player != this.startPlayer)[0]
+    }
+    else {
+      this.turnPlayer = this.startPlayer
     }
   }
 
