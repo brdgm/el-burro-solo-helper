@@ -3,7 +3,9 @@
     <AppIcon type="phase-step" name="1" class="phase-step"/>
     {{t('roundPhaseTransport.donkeyCards.title')}}
   </h4>
-  <p v-html="t('roundPhaseTransport.donkeyCards.botNoCards')"></p>
+  <ul>
+    <li v-html="t('roundPhaseTransport.donkeyCards.botNoCards')"></li>
+  </ul>
 </template>
 
 <script lang="ts">
@@ -36,5 +38,8 @@ export default defineComponent({
 .phase-step {
   height: 1.5rem;
   margin-top: -0.4rem
+}
+ul > li {
+  margin-top: 1rem;
 }
 </style>

@@ -95,14 +95,20 @@
   },
   "roundPhaseTransport": {
     "title": "Transport",
+    "takeYourTurn": "Führe deinen Zug aus.",
     "donkeyCards": {
       "title": "Eselkarten auswählen",
       "botNoCards": "Leon spielt keine Eselkarten."
     },
     "siesta": {
       "title": "Siesta halten",
+      "moveSiesta": "Setze Leons Siestamarker um <b>{value} Schritt</b> vor. | Setze Leons Siestamarker um <b>{value} Schritte</b> vor.",
+      "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weiteren Schritt vorzurücken. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Schritte vorzurücken.",
+      "travelGainPrestige": "Reise auf der Straße und erhalte Ansehen von der Siestaleiste.",
+      "transportBonus": "Erhalte den Transportbonus.",
       "updateTurnOrder": {
-        "title": "Spielreihenfolge anpassen"
+        "title": "Spielreihenfolge anpassen",
+        "newStartPlayer": "Nächster Startspieler:"
       }
     },
     "goatDelivery": {

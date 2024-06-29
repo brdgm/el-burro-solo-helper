@@ -98,14 +98,20 @@
   },
   "roundPhaseTransport": {
     "title": "Transport",
+    "takeYourTurn": "Take your turn.",
     "donkeyCards": {
       "title": "Choose donkey cards",
       "botNoCards": "Leon does not play donkey cards."
     },
     "siesta": {
       "title": "Have a siesta",
+      "moveSiesta": "Move Leon's siesta marker by <b>{value} step</b>. | Move Leon's siesta marker by <b>{value} steps</b>.",
+      "plusTile": "If possible, move back the through marker to move {value} additional step. | If possible, move back the through marker to move {value} additional steps.",
+      "travelGainPrestige": "Travel on the road and gain prestige from the siesta track.",
+      "transportBonus": "Gain transport bonus.",
       "updateTurnOrder": {
-        "title": "Update turn order"
+        "title": "Update turn order",
+        "newStartPlayer": "New start player:"
       }
     },
     "goatDelivery": {

@@ -8,11 +8,11 @@
   </h1>
 
   <TransportDonkeyCards :navigationState="navigationState" v-if="turn == 0"/>
-  <TransportSiesta :navigationState="navigationState" v-else-if="turn <= 2"/>
+  <TransportSiesta :navigationState="navigationState" v-else-if="turn <= 2" @nextStartPlayer="setNextStartPlayer"/>
   <TransportGoatDelivery :navigationState="navigationState" v-else-if="turn <= 4"/>
   <TransportDonkeyDelivery :navigationState="navigationState" v-else-if="turn <= 6"/>
 
-  <button class="btn btn-primary btn-lg mt-4" @click="next()">
+  <button class="btn btn-primary btn-lg mt-4" @click="next()" :disabled="!nextAllowed">
     {{t('action.next')}}
   </button>
 
@@ -37,6 +37,8 @@ import TransportSiesta from '@/components/round/TransportSiesta.vue'
 import TransportDonkeyCards from '@/components/round/TransportDonkeyCards.vue'
 import TransportGoatDelivery from '@/components/round/TransportGoatDelivery.vue'
 import TransportDonkeyDelivery from '@/components/round/TransportDonkeyDelivery.vue'
+import { ref } from 'vue'
+import Player from '@/services/enum/Player'
 
 export default defineComponent({
   name: 'RoundPhaseTransport',
@@ -57,7 +59,13 @@ export default defineComponent({
     const navigationState = new NavigationState(route, Phase.III_TRANSPORT, state)
     const round = navigationState.round
     const turn = navigationState.turn
-    return { t, state, navigationState, round, turn }
+    const nextAllowed = ref(turn != 2)
+    return { t, state, navigationState, round, turn, nextAllowed }
+  },
+  data() {
+    return {
+      nextStartPlayer: undefined as Player|undefined
+    }
   },
   computed: {
     backButtonRouteTo() : string|undefined {
@@ -71,13 +79,17 @@ export default defineComponent({
   },
   methods: {
     next() : void {
-      storePhase(this.navigationState)
+      storePhase(this.navigationState, this.nextStartPlayer)
       if (this.turn < 6) {
         this.$router.push(`/round/${this.round}/phase/transport/turn/${this.turn+1}`)
       }
       else {
         this.$router.push(`/round/${this.round}/phase/scoring`)
       }
+    },
+    setNextStartPlayer(startPlayer : Player) : void {
+      this.nextStartPlayer = startPlayer
+      this.nextAllowed = true
     }
   }
 })
