@@ -32,6 +32,13 @@
     </ul>
   </div>
 
+  <div class="row">
+    <div class="col">
+      <div class="alert alert-info" v-html="t('setupBot.rulesNotice')"></div>
+    </div>
+  </div>
+  <GoodsModal/>
+
   <button class="btn btn-primary btn-lg mt-4" @click="startGame()">
     {{t('action.startGame')}}
   </button>
@@ -45,12 +52,14 @@ import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import BotStartingPlace from '@/components/setup/BotStartingPlace.vue'
+import GoodsModal from '@/components/rules/GoodsModal.vue'
 
 export default defineComponent({
   name: 'SetupBot',
   components: {
     FooterButtons,
-    BotStartingPlace
+    BotStartingPlace,
+    GoodsModal
   },
   setup() {
     const { t } = useI18n()

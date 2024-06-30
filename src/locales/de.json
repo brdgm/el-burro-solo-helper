@@ -57,7 +57,8 @@
       "soloGameRoundCards": "Solo-Rundenkarten",
       "soloTransportBonusTiles": "Solo-Transportbonusplättchen",
       "soloFarmGoods": "Solo-Hofgutplättchen"
-    }
+    },
+    "rulesNotice": "<i>Leons Regeln</i>: Mache dich damit vertraut, wie <a data-bs-toggle='modal' href='#goodsModal' class='rule'>Leons Güter</a> verwaltet werden - es sind die einzigen <i>Jederzeit-Aktionen</i> die Leon nutzt. Alle anderen Regeln werden im Verlauf des Spiels eingeführt."
   },
   "roundPhaseFarm": {
     "title": "Hof",
@@ -405,6 +406,28 @@
             "tiledRoof": "Leon erhält 1 Ansehen und zieht den Belohnungsmarker 1 Feld auf der Belohnungsleiste vorwärts, deren Hofgut auf dem obersten Hofgutplättchen des Ziegenbereichs angezeigt wird."
           }
         }
+      }
+    },
+    "goods": {
+      "title": "Leons Güter",
+      "usage": "Leon nutzt seine Gütermarker, um seinen Güterbestand anzuzeigen. Er hat nur 1 großes Lagerfeld für Hofgüter. Leon macht keinen Unterschied zwischen einzelnen Gütersorten. Steht 1 Gütermarker auf dem Lagerfeld, so ist es ein universelles Gut, das Leon für jede Lieferung (außer für Silber und Arbeitskräfte) nutzen kann.",
+      "field": "Spielt Leon Äcker oder erntet Güter während der Hofphase, stellt er für einen neuen Acker bzw. beim Ernten für jeden Acker 1 Gütermarker auf sein Lager. Die Gütersorten auf den Äckern haben für Leon keine Bedeutung.",
+      "deliver": "Liefert Leon seine Güter, dann füllt er Märkte oder Marktkarren einfach von links nach rechts mit Gütermarkern auf. Er nimmt dafür Gütermarker von seinem Lager, ohne die auf den Karten angezeigten Gütersymbole zu beachten.",
+      "deliverSilverWorker": "Verlangt ein Lieferauftrag Silber oder Arbeitskräfte, gibt Leon auch genau dies ab.",
+      "trade": {
+        "title": "Leon tauscht Güter",
+        "intro": "Sollte Leon Gütermarker, Silber oder Arbeitskräfte benötigen und hat davon gerade nichts im entsprechenden Lager, tauscht er, falls möglich, seine Hofgüter wie folgt um:",
+        "needs": "Leon benötigt …",
+        "tradesFor": "Leon tauscht … für …",
+        "silver": "Silber",
+        "silverTrade": "1 Gütermarker für 2 Silber",
+        "goodsToken": "Gütermarker",
+        "goodsTokenTradeSilver": "A) 2 Silber für 1 Gütermarker",
+        "goodsTokenTradeWorker": "B) 1 Arbeitskraft für 2 Gütermarker",
+        "worker": "Arbeitskräfte",
+        "workerTradeSilver": "3 Silber für 1 Arbeitskraft",
+        "missingGoods": "Um fehlende Gütermarker zu bekommen, tauscht Leon bevorzugt Silber für Gütermarker. Nur wenn Leon nicht genügend Silber für einen erforderlichen Gütermarker hat, nimmt er dafür Arbeitskräfte.",
+        "tradeOnce": "Leon macht maximal einen Tausch pro Lieferung. Leon führt den Tausch nur aus, wenn er anschließend genügend Ressourcen hat, um die geforderte Aktion auszuführen. Ansonsten verzichtet er komplett auf den Tausch und führt keine Lieferung aus."
       }
     }
   },

@@ -60,7 +60,8 @@
       "soloGameRoundCards": "Solo game round cards",
       "soloTransportBonusTiles": "Solo transport bonus tiles",
       "soloFarmGoods": "Solo farm goods"
-    }
+    },
+    "rulesNotice": "<i>Leons rules</i>: Familiarize yourself with how to use <a data-bs-toggle='modal' href='#goodsModal' class='rule'>Leon's Goods</a> - they are the only <i>anytime actions</i> that Leon makes us of. All other rules will be introduced in the course of the game as required."
   },
   "roundPhaseFarm": {
     "title": "Farm",
@@ -407,6 +408,28 @@
             "tiledRoof": "For the first delivery good in the list, Leon moves the reward marker 1 space forward on the matching reward track."
           }
         }
+      }
+    },
+    "goods": {
+      "title": "Leon's Goods",
+      "usage": "Leon uses their goods tokens to display their goods stock. They only have a single big storage space for farm goods. Leon does not distinguish between different goods types. When 1 goods token is on the storage space, it is considered to be a universal good that Leon can deliver for each demanded goods type (except silver and workers).",
+      "field": "When Leon plays a field or harvests farm goods during the farm phase, they place 1 goods token for each new field, or while harvesting for all fields, on the storage space of their farm. Leon ignores the goods types displayed on the fields.",
+      "deliver": "When Leon delivers goods, they fill the market barrows and local markets from left to right with goods tokens. They take goods tokens from their storage space and ignore the displayed goods symbols on the cards.",
+      "deliverSilverWorker": "If a delivery target demands silver or workers, Leon delivers these.",
+      "trade": {
+        "title": "Leon trades goods",
+        "intro": "When Leon needs goods tokens, silver, or workers but does not have them on their storage spaces or small farmhouse, they make the following trades, if possible:",
+        "needs": "Leon needs …",
+        "tradesFor": "Leon trades … for …",
+        "silver": "silver",
+        "silverTrade": "1 goods token for 2 silver",
+        "goodsToken": "goods tokens",
+        "goodsTokenTradeSilver": "A) 2 silver for 1 goods token",
+        "goodsTokenTradeWorker": "B) 1 worker for 2 goods tokens",
+        "worker": "workers",
+        "workerTradeSilver": "3 silver for 1 worker",
+        "missingGoods": "To get missing goods tokens, Leon prefers to trade silver for goods markers. Only if they do not have enough silver for a needed goods token, they trade a worker.",
+        "tradeOnce": "Leon only trades at most once per delivery. Leon only closes the trade if they have enough resources to make the demanded action. Otherwise they completely pass on the trade and make no delivery."
       }
     }
   },

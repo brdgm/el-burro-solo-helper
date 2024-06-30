@@ -18,6 +18,7 @@
         </a>
       </li>
       <li><a data-bs-toggle="modal" href="#deliveryTargetScoringModal" class="rule">{{t('rules.deliveryTargetScoring.title')}}</a></li>
+      <li><a data-bs-toggle="modal" href="#goodsModal" class="rule">{{t('rules.goods.title')}}</a></li>
     </ul>
     <GameRoundTile :navigationState="navigationState"/>
   </div>
@@ -30,6 +31,7 @@
   <CommunityDeliveryModal :navigationState="navigationState"/>
   <DeliveryTargetScoringModal :navigationState="navigationState"/>
   <RewardTracksModal :navigationState="navigationState"/>
+  <GoodsModal/>
 </template>
 
 <script lang="ts">
@@ -49,6 +51,7 @@ import RewardTracksModal from '../rules/RewardTracksModal.vue'
 import Card from '@/services/Card'
 import AppIcon from '../structure/AppIcon.vue'
 import GoodTokens from '@/services/GoodTokens'
+import GoodsModal from '../rules/GoodsModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
@@ -62,7 +65,8 @@ export default defineComponent({
     GoatDeliveryModal,
     CommunityDeliveryModal,
     DeliveryTargetScoringModal,
-    RewardTracksModal
+    RewardTracksModal,
+    GoodsModal
   },
   setup() {
     const { t } = useI18n()
