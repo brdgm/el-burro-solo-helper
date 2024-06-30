@@ -1,6 +1,6 @@
 <template>
   <ModalDialog id="roundCardModal" :size-lg="true" :scrollable="true"
-      :title="t('gameRoundCard.title')">
+      :title="`${t('gameRoundCard.title')} (${roundCard.id})`">
     <template #body>
       <AppIcon type="difficulty-level" :name="roundCard.difficultyLevel.toString()" class="difficultyLevel"/>
       <table>

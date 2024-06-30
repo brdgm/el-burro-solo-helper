@@ -12,6 +12,12 @@
   <TransportGoatDelivery :navigationState="navigationState" v-else-if="turn <= 4"/>
   <TransportDonkeyDelivery :navigationState="navigationState" v-else-if="turn <= 6"/>
 
+  <div class="row" v-if="!nextAllowed">
+    <div class="col">
+      <div class="alert alert-warning mt-2" v-html="t('roundPhaseTransport.selectNewStartPlayer')"></div>
+    </div>
+  </div>
+
   <button class="btn btn-primary btn-lg mt-4" @click="next()" :disabled="!nextAllowed">
     {{t('action.next')}}
   </button>

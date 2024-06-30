@@ -2,10 +2,14 @@
   <div class="mt-4" v-if="state.setup.debugMode">
     <hr/>
     <p class="debug">
-      <b>gameRoundTile</b>: {{navigationState.gameRoundTile}}<br/>
-      <b>transportBonusTile</b>: {{navigationState.transportBonusTile}}<br/>
       <b>cardDeck</b>: {{navigationState.cardDeck.toPersistence()}}<br/>
-      <b>roundCard</b>: {{navigationState.roundCard}}
+      <b>roundCard</b>: {{navigationState.roundCard}}<br/>
+      <template v-if="navigationState.gameRoundTile">
+        <b>gameRoundTile</b>: {{navigationState.gameRoundTile}}<br/>
+      </template>
+      <b>transportBonusTile</b>: {{navigationState.transportBonusTile}}<br/>
+      <b>goodTokens</b>: {{navigationState.goodTokens}}<br/>
+      <b>startPlayer</b>: {{navigationState.startPlayer}}<br/>
     </p>
   </div>
 </template>

@@ -3,7 +3,7 @@
   "home": {
     "title": "El Burro Solo Helper",
     "play1": "Play <a href='https://boardgamegeek.com/boardgame/368386/el-burro-a-la-granja-game' target='_blank' rel='noopener'><b>El Burro</b></a> against Leon, the Solo opponent.",
-    "play2": "This application replaced the deck of solo game round cards and helps managing the difficulty levels.",
+    "play2": "This application replaces the solo game round cards, manages the difficulty levels and gently guides you through the game flow and solo rules.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
@@ -99,6 +99,7 @@
   "roundPhaseTransport": {
     "title": "Transport",
     "takeYourTurn": "Take your turn.",
+    "selectNewStartPlayer": "Please select the new start player.",
     "donkeyCards": {
       "title": "Choose donkey cards",
       "botNoCards": "Leon does not play donkey cards."
