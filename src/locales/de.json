@@ -1,0 +1,466 @@
+{
+  "gameTitle": "El Burro",
+  "home": {
+    "title": "El Burro Solo Helper",
+    "play1": "Spiele <a href='https://boardgamegeek.com/boardgame/368386/el-burro-a-la-granja-game' target='_blank' rel='noopener'><b>El Burro</b></a> gegen Leon, den Solo-Gegner.",
+    "play2": "Diese Applikation ersetzt die Solo-Rundenkarten, verwaltet die Schwierigkeitsgrade und führt dich durch das Spielablauf und die Solo-Regeln.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Spielaufbau",
+    "randomize": "Neu wählen",
+    "difficultyLevel": {
+      "title": "Schwierigkeitsgrad",
+      "easy": "Leicht",
+      "hard": "Schwer",
+      "cardsWith": "Karten mit"
+    },
+    "gameRoundTiles": {
+      "title": "Spielplan",
+      "setupGameBoard": "Bereite den Spielplan wie üblich für 2 Spieler vor. Verwende diese Rundenplättchen:"
+    },
+    "farmExtensionTiles": {
+      "title": "Belohnungstableau",
+      "placeTiles": "Platziere die Solo-Hofausbauten für Leon in dieser Reihenfolge auf das jeweils erste Feld der Belohnungsleisten:"
+    },
+    "startPlayer": {
+      "title": "Startspieler"
+    }
+  },
+  "setupBot": {
+    "title": "Leon vorbereiten",
+    "soloFarmBoard": "Lege Leons <b>Solo-Hoftableau</b> in deiner Reichweite bereit. Lass wie üblich rundherum ein wenig Platz, um Hofkarten anlegen zu können. Lege Leons <b>Gütermarker</b> als seinen persönlichen Vorrat neben dessen Hof.",
+    "goodsTokenSilver": "Lege 1 <b>Gütermarker</b> und 2 <b>Silber</b> auf die entsprechenden Lagerfelder auf Leons Hof.",
+    "farmCards": "Ziehe 4 <b>Hofkarten</b>, um Leons Startauslage zu bilden. Ziehe die Karten einzeln und lege sie folgendermaßen an seinen Hof an:",
+    "farmCard1": "1. Karte als Acker (stelle 1 Gütermarker auf das Lagerfeld für Gütermarker).",
+    "farmCard23": "2. und 3. Karte als Marktkarren (in den linken und den mittleren Kartenslot).",
+    "farmCard4": "4. Karte als Hofverwaltung.",
+    "supportMarker": "Lege 1 <b>Unterstützungsmarker</b> mit der Ansehensseite nach oben neben Leons Hof.",
+    "stableBoard": "Lege Leons <b>Solo-Stalltableau</b> bereit. Lege neben <b>Tränken</b>- und <b>Meilensteinmarker</b> auf die entsprechenden Ablagefelder. Leon startet mit dem Tränkenmarker auf Feld „1“.",
+    "specialSoloFarmCards": "Mische die speziellen <b>Solo-Hofkarten</b> und lege sie als verdeckten Stapel neben den Hof. Ziehe 3 Karten und lege sie offen in eine Reihe.",
+    "soloRewardOverview": {
+      "1": "Lege die <b>Solo-Belohnungsübersicht</b> neben das Belohnungstableau (mit der leichten Seite).",
+      "3": "Lege die <b>Solo-Belohnungsübersicht</b> neben das Belohnungstableau (mit der anspruchsvollen Seite)."
+    },
+    "startingSpace": "Wenn Leon an die Reihe kommt, um ein Startfeld für seine Esel zu bestimmen:",
+    "determineStartingSpace": "Startfeld bestimmen",
+    "spaceBlocked": "Platz besetzt",
+    "startingSpaceOption": {
+      "1": "<b>1. Feld</b>: Leon erhält 1 Gütermarker und 1 Silber.",
+      "2": "<b>2. Feld</b>: Leon erhält 2 Gütermarker.",
+      "3": "<b>3. Feld</b>: Leon erhält 3 Silber.",
+      "4": "<b>4. Feld</b>: Leon zieht mit dem Siestamarker 2 Felder auf der Siestaleiste weiter.",
+      "5": "<b>5. Feld</b>: Leon zieht einen seiner Esel 2 Felder auf der Straße vor."
+    },
+    "unusedMaterial": {
+      "title": "Ungenutztes Material (durch die Applikation verwaltet):",
+      "soloGameRoundCards": "Solo-Rundenkarten",
+      "soloTransportBonusTiles": "Solo-Transportbonusplättchen",
+      "soloFarmGoods": "Solo-Hofgutplättchen"
+    },
+    "rulesNotice": "<i>Leons Regeln</i>: Mache dich damit vertraut, wie <a data-bs-toggle='modal' href='#goodsModal' class='rule'>Leons Güter</a> verwaltet werden - es sind die einzigen <i>Jederzeit-Aktionen</i> die Leon nutzt. Alle anderen Regeln werden im Verlauf des Spiels eingeführt."
+  },
+  "roundPhaseFarm": {
+    "title": "Hof",
+    "gameRoundTile": {
+      "title": "Rundenplättchen prüfen",
+      "appliesBot": "Auch von Leon verwendet."
+    },
+    "expandFarm": {
+      "title": "Hoferweiterung",
+      "firstRoundNote": "<i>Hinweis</i>: Während der ersten Runde spielst du 4 Karten in diesem Schritt. Leon spielt 1 Hofkarte zusätzlich zu den 4 Startkarten während der Spielvorbereitung."
+    },
+    "increaseFarm": {
+      "title": "Hofwachstum",
+      "gainIncome": "Einkommen erhalten: Leon nimmt sein Einkommen in Silber (wie auf der Hofverwaltung dargestellt).",
+      "harvest": "Ernten: Leon stellt für jeden Acker 1 Gütermarker auf das Lager.",
+      "gainOffspring": "Nachwuchs erhalten: Hat Leon freie Stallplätze für Schweine, deckt er <b>einen</b> der Plätze mit 1 Gütermarker ab. Leon legt dafür 1 Gütermarker und 1 Silber in seine Lager."
+    }
+  },
+  "roundPhaseRevenue": {
+    "title": "Ertrag",
+    "rollDice": "Würfel die Ertragswürfel.",
+    "player": {
+      "revenueDie": "Nimm 1 <b>Ertragswürfel</b>, führe die Aktion und die Bonusaktion aus.",
+      "communityDie": "Führe die Ertragsaktion des <b>Gemeinschaftswürfel</b> aus."
+    },
+    "bot": {
+      "revenueDie": "Leon nimmt 1 <b>Ertragswürfel</b> und führt die Aktion aus (siehe Solo-Hoftableau).",
+      "bonusAction": "Leon führt die Bonusaktion aus.",
+      "communityDie": "Leon führt die Ertragsaktion des <b>Gemeinschaftswürfel</b> aus (siehe Solo-Hoftableau).",
+      "gameRoundTileCommunityDieBonus": "<i>Rundenplättchen</i>: Leon führt die Bonusaktion des Gemeinschaftswürfel aus."
+    },
+    "actionDetails": {
+      "title": "Aktionen",
+      "intro": "Falls Leon eine dieser Aktionen ausführt:"
+    }
+  },
+  "roundPhaseTransport": {
+    "title": "Transport",
+    "takeYourTurn": "Führe deinen Zug aus.",
+    "selectNewStartPlayer": "Bitte wählen den neuen Startspieler aus.",
+    "donkeyCards": {
+      "title": "Eselkarten auswählen",
+      "botNoCards": "Leon spielt keine Eselkarten."
+    },
+    "siesta": {
+      "title": "Siesta halten",
+      "moveSiesta": "Setze Leons Siestamarker um <b>{value} Schritt</b> vor. | Setze Leons Siestamarker um <b>{value} Schritte</b> vor.",
+      "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weiteren Schritt vorzurücken. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Schritte vorzurücken.",
+      "travelGainPrestige": "Reise auf der Straße und erhalte Ansehen von der Siestaleiste.",
+      "transportBonus": "Erhalte den Transportbonus.",
+      "updateTurnOrder": {
+        "title": "Spielreihenfolge anpassen",
+        "newStartPlayer": "Nächster Startspieler:"
+      }
+    },
+    "goatDelivery": {
+      "title": "Mit Ziege liefern",
+      "makeDelivery": "Ziegenlieferung ausführen.",
+      "additionalDelivery": "Wenn Leon eine Arbeitskraft abgeben kann, führt er eine weitere Ziegenlieferung aus.<br/>Anderenfalls nimmt er 1 Arbeitskraft."
+    },
+    "donkeyDelivery": {
+      "title": "Mit Esel liefern",
+      "deliver": "Führe <b>{value} Esellieferung</b> aus. | Führe <b>{value} Esellieferungen</b> aus.",
+      "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferung auszuführen. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferungen auszuführen.",
+      "transportBonus": "Erhalte den Transportbonus.",
+      "fourthRoundNotice": "<i>Sonderfall in der vierten Runde</i>: Hat Leon in seiner letzten Transportphase gerade ein Lieferziel erfüllt und noch weitere Esellieferungen, mit denen er sein nächstes Lieferziel nicht mehr erfüllen kann, verzichtet er auf diese Lieferungen. Damit hat er ggf. genug Hofgüter übrig um seine „Spielende“-Marktkarren und Schiffe zu beliefern."
+    }
+  },
+  "roundPhaseScoring": {
+    "title": "Wertung",
+    "milestones": {
+      "title": "Meilensteine",
+      "gainPrestige": "Leon erhält Ansehen gemäß des Meilensteinmarkers auf der Leiste."
+    },
+    "stable": {
+      "title": "Stall",
+      "totalValue": "Leon zählt einen <b>Gesamtwert von {value}</b> für {count} Rundenkarte. | Leon zählt einen <b>Gesamtwert von {value}</b> für {count} Rundenkarten.",
+      "compareTotalValue": "Vergleiche die Werte deiner Eselkarten mit dem Gesamtwert von Leon:",
+      "gainPrestigePlace1": "<b>1. Platz</b>: {value} Ansehen",
+      "gainPrestigePlace2": "<b>2. Platz</b>: {value} Ansehen",
+      "tieBreaker": "Einen Gleichstand der Werte löst ihr gemäß der Positionen eurer Siestamarker auf der Siestaleiste auf."
+    },
+    "supportMarkers": {
+      "title": "Unterstützungsmarker",
+      "gainPrestige": "Liegt Leons Unterstützungsmarker mit der Ansehensseite nach oben neben seinem Hof, erhält er 1 Ansehen. Andernfalls dreht den Marker wieder von der Korb- auf die Ansehensseite um.."
+    },
+    "payWorkers": {
+      "title": "Arbeitskräfte bezahlen",
+      "paySilver": "Leon muss pro Arbeitskraft auf seinen Hofausbauten 1 Silber bezahlen. Kann Leon nicht alle Arbeiter bezahlen, führt er so viele Täusche wie möglich aus, um möglichst viele Arbeiter zu bezahlen. Leon legt alle bezahlten Arbeitskräfte in den Vorrat zurück.",
+      "losePrestige": "Bleiben Arbeitskräfte auf den Hofausbauten stehen, legt Leon diese übrigen Arbeitskräfte ersatzlos in den Vorrat zurück und verliert 1 Ansehen pro unbezahlt zurückgelegter Arbeitskraft."
+    },
+    "prepareNextRound": {
+      "title": "Nächsten Runde vorbereiten",
+      "performSteps": "Bereite die nächste Spielrunde wie gewohnt vor."
+    }
+  },
+  "phaseFinalScoring": {
+    "title": "Schlusswertung",
+    "rewardTracks": {
+      "title": "Belohnungsleisten",
+      "trackConnections": "<b>Leistenverbindungen</b>: Konnte Leon seine Belohnungsmarker auf zwei benachbarten Leisten mindestens bis zum Feld „3“ versetzen, erhält er jetzt das entsprechende Ansehen, das zwischen den jeweiligen Leisten angegeben ist. Er überprüft dies bei allen 5 Leistenverbindungen.",
+      "scoringOptions": "<b>Wertungsoptionen</b>: Auch wenn Leon vor dir Belohnungsmarker auf die obersten Felder der Leisten versetzt hat, erhält er kein Ansehen für die Wertungsoptionen."
+    },
+    "specialFarmCards": {
+      "title": "Spezielle Hofkarten",
+      "scoreCards": "Leon wertet die speziellen Solo-Hofkarten, die er am Hof angelegt hat.",
+      "gameEndMarketBarrows": "<b>„Spielende“-Marktkarren</b>: Besitzt Leon einen „Spielende“-Marktkarren im rechten Kartenslot und wurde dieser noch nicht komplett beliefert, stellt Leon nun restliche Gütermarker von seinem Hof auf die leeren Markierungen des Marktkarrens. Ist der Marktkarren nun komplett gefüllt, erhält Leon das angegebene Ansehen. Letzteres gilt auch, wenn die Markierungen bereits während der Partie von dir gefüllt wurden. Sollte Leon nicht genügend Gütermarker haben, aber noch ausreichend Silber und Arbeitskräfte, um den „Spielende“-Marktkarren zu beliefern, führt er ausreichend viele Täusche durch.",
+      "gameEndScorings": "<b>„Spielende“-Wertungen</b>: Hat Leon spezielle Solo-Hofkarten von unten unter den Hof geschoben, wertet er deren Wertungskategorien. Er erhält Ansehen für die obere Wertungskategorie, abhängig von den erreichten Zielen. In der unteren Wertungskategorie vergleicht sich Leon mit dir. Hat er genauso viel erreicht wie du, bekommt er 3 Ansehen. Hat er mehr erreicht als du, bekommt er sogar 5 Ansehen."
+    },
+    "harbor": {
+      "title": "Schiffe im Hafen",
+      "claimHarbor": "Sollte Leon mit einem oder beiden Eseln ein Hafenfeld erreicht haben, beansprucht Leon es nun und erhält das auf dem Anlegeplatz angegebene Ansehen.",
+      "claimHarborException": "<b>Ausnahme</b>: Steht er auf einem Hafenfeld, dass du bereits während der Partie beansprucht hast, zieht er auf den Hafenfeldern Richtung Straße zurück, bis er ein leeres Hafenfeld erreicht. Zieht er auf diese Weise auf die Straße zurück, hat er Pech gehabt. Das gilt auch, wenn Leons Esel beide auf demselben Hafenfeld stehen. Einer beansprucht das Feld und der andere zieht entsprechend zurück.",
+      "remainingGoods": "Hat Leon noch übrige Gütermarker auf dem Hof, um ein Schiff auf einem oder beiden beanspruchten Hafenfeldern komplett zu beliefern, wählt er je ein ausliegendes Schiff, das ihm das meiste Ansehen gibt. Sollte Leon keine weiteren Gütermarker haben, aber noch ausreichend Silber und Arbeitskräfte, um das Schiff zu beliefern, führt er ausreichend viele Täusche durch."
+    },
+    "throughTrack": {
+      "title": "Tränkenpunkte",
+      "exchangeSteps": "Leon tauscht seine übrigen Tränkenpunkte in Ansehen ein. Pro 2 Tränkenpunkte erhält er 1 Ansehen."
+    },
+    "strikingWorkers": {
+      "title": "Ansehensverluste für streikende Arbeiter",
+      "ignoreSteps": "Leon ignoriert diesen Schritt (da er seine Arbeitskräfte immer in Schritt 4 der Wertungsphase entfernt)."
+    },
+    "remainingStuff": "Restliche Hofgüter, Silber und Arbeitskräfte geben Leon kein weiteres Ansehen.",
+    "determineWinner": "Hast du nun mehr Ansehen als Leon, gewinnst du die Partie. Im Falle eines Gleichstandes gewinnt Leon!"
+  },
+  "playFarmCard": {
+    "normal": "Leon spielt eine <b>normale</b> Hofkarte.",
+    "special": "Leon spielt bevorzugt eine <b>spezielle Solo-Hofkarte</b>.",
+    "otherwiseNormal": "ansonsten normal:"
+  },
+  "travelRoad": {
+    "title": "Leon reist auf der Straße."
+  },
+  "donkeyDelivery": {
+    "title":"Leon führt eine Esellieferung aus."
+  },
+  "goatDelivery": {
+    "title":"Leon führt eine Ziegenlieferung aus."
+  },
+  "communityDelivery": {
+    "title":"Leon führt eine Gemeinschaftslieferung aus."
+  },
+  "deliveryGoodSelection": {
+    "firstGood": "Liefergut bestimmen",
+    "nextGood": "Nächstes Liefergut",
+    "remove": {
+      "title": "Gut entfernen",
+      "confirmation": "Möchtest du dieses Liefergut entfernen?",
+      "ignored": "Es wird bei zukünftigen Lieferungen ignoriert."
+    }
+  },
+  "sideBar": {
+    "round": "Runde",
+    "turn": "Zug"
+  },
+  "gameRoundCard": {
+    "title": "Rundenkarte",
+    "farmCard": "Hofkarte",
+    "dice": "Würfel",
+    "delivery": "Lieferung",
+    "road": "Straße",
+    "transport": "Transport",
+    "siesta": "Siesta",
+    "goatDelivery": "Ziegenlieferung",
+    "donkey": "Esel",
+    "stable": "Stall",
+    "yes": "ja",
+    "no": "nein"
+  },
+  "rules": {
+    "playCard": {
+      "title": "Hofkarte spielen",
+      "normal": {
+        "title": "Normale Hofkarte spielen",
+        "intro": "Runde 1 und 2 - Leon spielt eine normale Hofkarte (vom Stapel):",
+        "marketBarrowSlotEmpty": "Ist eine der beiden Aussparungen für Marktkarren frei, spielt er die Karte automatisch als Marktkarren (der rechte Slot ist  für eine „Spielende“-Hofkarte reserviert).",
+        "marketBarrowSlotsFilled": "Sind alle relevanten Slots für Marktkarren belegt, folgt Leon den Anweisungen:",
+        "sameNumber": "Am wichtigsten ist für Leon dieselbe Anzahl an Hofkarten links und rechts an seinem Hof. Hat er mehr Äcker als Karten in der Hofverwaltung, legt er die Karte in die Hofverwaltung und umgekehrt.",
+        "cardPlacement": {
+          "left": "Ist die Anzahl links und rechts am Hof gleich, spielt Leon einen <b>Acker</b> aus. Er stellt sofort 1 Gütermarker auf das Lager.",
+          "right": "Ist die Anzahl links und rechts am Hof gleich, spielt Leon eine Karte in die <b>Hofverwaltung</b>."
+        },        
+        "leftOrRight": "Ist die Anzahl links und rechts am Hof gleich, folgt Leon dem Pfeil: Zeigt der Pfeil von links auf das Hoftableau, spielt Leon einen Acker aus. Er stellt sofort 1 Gütermarker auf das Lager. Zeigt der Pfeil von rechts auf das Hoftableau, legt Leon eine Karte in die Hofverwaltung.",
+        "noAcquisitions": "Wichtig: Leon spielt keine Anschaffungen!"
+      },
+      "special": {
+        "title": "Spezielle Solo-Hofkarte spielen",
+        "intro": "Runde 3 und 4 - Leon spielt bevorzugt seine speziellen Solo-Hofkarten:",
+        "cardLimit": "Für Leon gelten andere Spielregeln beim Handkartenlimit. Während es für dich bestimmt, wie viele Hofkarten du auf der Hand haben darfst, beschränkt es Leons Anzahl an seinen speziellen Solo-Hofkarten, die er an seinem Hof ausspielen darf. Jede normale Hofkarte, die er mit dem passenden Symbol rechts in die Hofverwaltung legt, erhöht diese Anzahl.",
+        "paySilver": "Leon muss diese Karten mit Silber bezahlen und prüft zunächst seinen Silberbestand. Hat er genügend Silber in seinem Lager, spielt er eine spezielle Solo-Hofkarte. Hat Leon nicht genügend Silber, prüft er, ob er mit maximal 1 Tausch ausreichend Silber erhält. Ist dies nicht der Fall, verzichtet Leon auf den Tausch und spielt eine normale Hofkarte. Reicht das Silber nach maximal 1 Tausch, spielt er die spezielle Solo-Hofkarte.",
+        "pickCard": "Leon wählt die angegebene Karte.",
+        "gameEndMarketBarrow": "Seine erste spezielle Solo-Hofkarte legt er oben am Hof in die rechte Aussparung für den „Spielende“-Marktkarren.",
+        "additionalCards": "Jede weitere spezielle Solo-Hofkarte schiebt Leon so von unten unter seinen Hof, dass der Marktkarren komplett verdeckt ist.",
+        "hotVariant": "Wenn du die \"Hot!\"-Variante spielst, lasse die \"Hot!\"-Anweisungen sichtbar, ansonsten verdecke sie.",
+        "drawNew": "Leon zieht eine neue spezielle Solo-Hofkarte vom Stapel und legt sie an die nun leere Stelle in der Kartenreihe.",
+        "notPossible": "Kann Leon keine spezielle Solo-Hofkarte spielen, spielt er stattdessen eine normale Hofkarte."
+      }
+    },
+    "travelRoad": {
+      "title": "Straße nach Port de Palma",
+      "intro": "Leon zieht seine Esel wie gewohnt auf den Feldern der Straße vorwärts. Für ihn gelten diese Bedingungen:",
+      "donkeySelection": {
+        "leading": "<b>Eselwahl</b>: Leon bewegt den <b>vorderen Esel</b>.",
+        "rear": "<b>Eselwahl</b>: Leon bewegt den <b>hinteren Esel</b>."
+      },
+      "troughsMilestones": "<b>Tränken und Meilensteine</b>: Erreicht Leon Tränken und Meilensteine, setzt er die entsprechenden Marker auf seinem Stall vor.",
+      "barriers": "<b>Barrieren</b>: Die beiden Barrieren sind für Leon kein Hindernis. Er kennt sich in der Umgebung gut genug aus, um einen Weg vorbei zu finden und zieht seine Esel einfach weiter. Trotzdem ist Leon nicht von gestern: Sollte er eine Barriere passieren, bevor du deren Errungenschaft erfüllst, besetzt er den Ansehensplatz auf dem Errungenschaftsplättchen und streicht dessen Ansehen vor dir ein.",
+      "junctionSelection": {
+        "short-way": "<b>Abzweigungen</b>: An jeder Abzweigung folgt Leon dem <b>kurzen Weg</b>. Dies gilt auch für die Abzweigung an den Barrieren.",
+        "long-way": "<b>Abzweigungen</b>: An jeder Abzweigung folgt Leon dem <b>langen Weg</b>. Dies gilt auch für die Abzweigung an den Barrieren."
+      },
+      "harbor": "<b>Hafen</b>: Erreichen Leons Esel die Hafenfelder, belässt er sie vorerst auf den Feldern und zieht sie später weiter. Erreicht der vordere Esel das Ende des Hafens, zieht Leon ab jetzt bis zum Ende der Partie nur noch den hinteren Esel. Er beansprucht erst in der Schlusswertung ein Hafenfeld."
+    },
+    "donkeyDelivery": {
+      "title": "Esellieferung",
+      "deliveryTargets": "Siehe Wertung komplett belieferter Lieferziele.",
+      "delivery": {
+        "title": "Wie liefert Leon per Esel?",
+        "startedDelivery": "Hat Leon bereits mit der Lieferung eines Marktkarrens oder lokalen Markts begonnen (oder hast du per Ziegenlieferung einen beliefert), führt er Esellieferungen an dieses aktuelle Lieferziel aus, bis er es komplett beliefert hat.",
+        "deliveryTarget": {
+          "market-barrow": "Hat Leon aktuell kein Lieferziel, oder stehen mehrere Lieferziele mit angefangener Lieferung zur Auswahl, bevorzugt er <b>Marktkarren</b>.",
+          "local-market": "Hat Leon aktuell kein Lieferziel, oder stehen mehrere Lieferziele mit angefangener Lieferung zur Auswahl, bevorzugt er <b>lokale Märkte</b>."
+        }
+      },
+      "marketBarrow": {
+        "title": "Marktkarren",
+        "slotOrder": "Leon beliefert bevorzugt den Marktkarren im linken Slot, dann den in der Mitte.",
+        "markingOrder": "Er füllt zuerst die oberen Markierungen des Marktkarrens von links nach rechts, dann die unteren Markierungen.",
+        "fallback": "Liegt aktuell kein Marktkarren an Leons Hof, beliefert er stattdessen einen lokalen Markt."
+      },
+      "localMarket": {
+        "title": "Lokaler Markt",
+        "marketOrder": "Leon beliefert den lokalen Markt, den er mit seinen Eseln am weitesten hinten auf der Straße freigeschaltet hat.",
+        "markingOrder": "Er füllt die Markierungen von links nach rechts.",
+        "fallback": "Hat Leon aktuell alle freigeschalteten lokalen Märkte komplett beliefert, beliefert er stattdessen einen Marktkarren."
+      }
+    },
+    "goatDelivery": {
+      "title": "Ziegenlieferung",
+      "firstDelivery": {
+        "title": "Erste Lieferung",
+        "intro": "Führt Leon seine erste Ziegen- oder Gemeinschaftslieferung der Partie durch, folgt er diesen Schritten in der genannten Reihenfolge:",
+        "deliveryTarget": {
+          "market-barrow": "Leon führt nun eine Ziegenlieferung an dich aus. Er bevorzugt <b>Marktkarren</b>. Sollte kein Marktkarren das Hofgut benötigen, beliefert Leon anstelle dessen lokale Märkte.",
+          "local-market": "Leon führt nun eine Ziegenlieferung an dich aus. Er bevorzugt <b>lokale Märkte</b>. Sollte kein lokaler Markt das Hofgut benötigen, beliefert Leon anstelle dessen Marktkarren."
+        },
+        "gainRewards": "Leon bekommt die üblichen Belohnungen für die Ziegenlieferung: Für die erste Ziegenlieferung der Spielrunde erhält er 1 Ansehen für deinen Unterstützungsmarker. Außerdem zieht er seinen Belohnungsmarker 1 Feld auf der entsprechenden Belohnungsleiste vor.",
+        "communityDelivery": "Gibt es weder Marktkarren noch lokale Märkte für das auf dem Plättchen geforderte Hofgut, macht Leon eine Gemeinschaftslieferung und darf nur auf der Belohnungsleiste vorziehen."
+      },
+      "subsequentDelivery": {
+        "title": "Weitere Lieferungen",
+        "intro": "Für jede weitere Ziegenlieferung folgt Leon diesen Schritten in der genannten Reihenfolge:",
+        "goodPriority": "Leon versucht zuerst das erste Hofgut aus der Liste zu liefern. Gibt es kein Lieferziel für dieses Hofgut und es gibt weitere Hofgüter in der Liste, kontrolliert er auch diese Hofgüter eins nach dem anderen.",
+        "goodSelection": "Findet Leon weiterhin kein Lieferziel, wählt er ein weiteres Liefergut. Dann versucht er, dieses zu liefern. Sollte er wieder nicht liefern können, führt er eine Gemeinschaftslieferung aus.",
+        "selectionPriority": "Wenn bereits mehrere Liefergüter in der Liste sind, beginnt Leon den Suchprozess immer beim ersten. Er sucht nur nach einem neuen Lieferziel, wenn alle Liefergüter aus der Liste keinen Erfolg bringen."
+      }
+    },
+    "communityDelivery": {
+      "title": "Gemeinschaftslieferung",
+      "deliveryGoods": {
+        "title": "Liefergüter",
+        "preferredGoods": "Leon liefert Güterarten priorisiert nach dieser Reihenfolge:",
+        "trackTopSpace": "Kommt Leon auf dem obersten Feld eine Belohnungsleiste an, entferne das entsprechende Gut aus dieser List (durch anklicken)."
+      },
+      "firstFarmGood": "Leon liefert er immer das erste Liefergut aus der Liste. Er legt den Gütermarker in seinen Vorrat und zieht auf der entsprechenden Belohnungsleiste vor.",
+      "rewardTracks": "Siehe Leons Aktionen auf den Belohnungsleisten."
+    },
+    "deliveryTargetScoring": {
+      "title": "Lieferziele",
+      "intro": "Hat Leon einen Marktkarren oder lokalen Markt komplett beliefert, folgt er im Wesentlichen denselben Spielregeln wie du.",
+      "marketBarrow": {
+        "title": "Komplett belieferter Marktkarren",
+        "prestige": "Leon erhält das angegebene Ansehen.",
+        "moveDonkey": "Leon zieht mit einem seiner Esel 2 Felder auf der Straße vorwärts. Die aktuelle Rundenkarte bestimmt, welchen der beiden Esel Leon vorzieht.",
+        "takeBonuses": "Leon berücksichtigt sämtliche Boni, die anfallen könnten (wie Boni von Rundenplättchen usw.).",
+        "removeCard": "Leon entfernt die Hofkarte vom Hof und legt sie auf den Ablagestapel für normale Hofkarten.",
+        "ambitiousDifficulty": "<i>Anspruchsvoller Schwierigkeitsgrad</i>: Suchst du eine größere Herausforderung, gilt Folgendes: Nachdem Leon den belieferten Marktkarren vom Hof entfernt hat, zieht er sofort 1 Hofkarte vom Stapel und legt sie als neuen Marktkarren an den Hof."
+      },
+      "localMarket": {
+        "title": "Komplett belieferter lokaler Markt",
+        "goodToken": "Leon versetzt einen Gütermarker in den Wertungsbereich des lokalen Markts und erhält das entsprechende Ansehen.",
+        "immediateEffect": "Leon erhält den Soforteffekt des ausliegenden Marktbonusplättchens. Für drei Marktbonusplättchen gibt es Anpassungen für Leon, siehe unten.",
+        "noToken": "Leon lässt alle Marktbonusplättchen auf dem Spielplan liegen und bekommt somit keine dauerhaften Effekte."
+      },
+      "marketBonusTiles": {
+        "title": "Marktbonusplättchen",
+        "intro": "Leon erhält die Soforteffekte der Marktbonusplättchen, wenn er seine lokalen Märkte komplett beliefert oder auf der Ansehensleiste die beiden ausliegenden Marktbonusplättchen erreicht oder an ihnen vorbeizieht.",
+        "adjustments": "Drei Marktbonusplättchen müssen für Leon angepasst werden. Alle anderen funktionieren für ihn unverändert.",
+        "takeUpgradedGood": "Soforteffekt - „Aufgewertetes Gut erhalten“: Leon erhält 1 Gütermarker.",
+        "takeFarmGoodPig": "Soforteffekt - „Erntegüter erhalten“ oder „Schwein erhalten“: Leon erhält 1 Gütermarker und 1 Silber.",
+        "takeFarmGoodPigAmbitious": "<i>Anspruchsvoller Schwierigkeitsgrad</i>: Suchst du eine größere Herausforderung, gilt Folgendes: Leon erhält stattdessen 2 Gütermarker.",
+        "rewardTrackStep": "Soforteffekt - „1 kostenfreier Schritt auf 1 Belohnungsleiste“: Leon zieht den Belohnungsmarker 1 Feld auf der Belohnungsleiste vorwärts, deren Hofgut auf dem obersten Hofgutplättchen des Ziegenbereichs angezeigt wird."
+      }
+    },
+    "rewardTracks": {
+      "title": "Belohnungsleisten",
+      "tracks": {
+        "title": "Die Belohnungsleisten",
+        "intro": "Leon bekommt auf den Feldern des Belohnungstableaus folgende Belohnungen:",
+        "space1": "<b>1. Feld</b>: Leon bekommt den Hofausbau, der auf dem jeweiligen Feld liegt. Er legt diesen Hofausbau auf das Hoffeld, das demselben Hofgut zugeordnet ist.",
+        "space2": "<b>2. Feld</b>: Leon zieht seinen Tränkenmarker 1 Feld auf der Tränkenleiste weiter.",
+        "space3": "<b>3. Feld</b>: Leon wertet den Hofausbau auf dem Hoffeld auf, das demselben Hofgut zugeordnet ist, indem er ihn auf die Seite mit Ziegeldach dreht.",
+        "space4": "<b>4. Feld</b>: Kommt Leon auf dem obersten Feld einer Leiste an und du hast die Wertungsoption noch nicht besetzt, zieht Leon seinen Marker auf das Feld und blockiert es somit. Hast du das Feld bereits besetzt, zieht Leon seinen Marker in den unteren Bereich. Er spielt in beiden Fällen 1 spezielle Solo-Hofkarte kostenfrei aus! Danach dreht er das entsprechende Hofgutplättchen im Ziegenbereich um und ignoriert es zukünftig bei Ziegenlieferungen.",
+        "gainPrestige": "Leon erhält <b>{prestige} Ansehen</b>."
+      },
+      "extensions": {
+        "title": "Leons Hofausbauten",
+        "intro": "Zieht Leon auf den Belohnungsleisten vor, bekommt er die dort ausliegenden Solo-Hofausbauten bzw. wertet sie später auf.",
+        "activation": "In beiden Fällen aktiviert Leon einmalig den Soforteffekt des Hofausbaus. Es können zwei unterschiedliche Dinge passieren:",
+        "hasWorker": "Leon hat eine Arbeitskraft zur Verfügung. Er stellt sie auf den Hofausbau und führt den oberen Soforteffekt aus. Die Arbeitskraft verbleibt dort bis zum Rundenende. Hat Leon keine Arbeitskraft aber genügend Silber, um eine zu tauschen, verwendet er die eingetauschte Arbeitskraft.",
+        "noWorker": "Leon hat keine Arbeitskraft und kann keine tauschen. Statt den oberen Effekt des Hofausbaus zu aktivieren, nimmt er 1 Arbeitskraft aus dem Vorrat und stellt sie auf das kleine Bauernhaus.",
+        "extensionsIntro": "Die Hofausbauten haben folgende Soforteffekte:",
+        "thatchedRoof": "Strohdach",
+        "tiledRoof": "Ziegeldach",
+        "farmExtension": {
+          "donkey-delivery-with-costs": {
+            "title": "Kostenpflichtig mit dem Esel liefern",
+            "thatchedRoof": "Leon zahlt 1 Silber, um 1 Lieferung an einen eigenen Lieferauftrag auszuführen.",
+            "tiledRoof": "Leon erhält 1 Ansehen und zahlt 1 Silber, um bis zu 2 Lieferungen an eigene Lieferaufträge auszuführen."
+          },
+          "travel-on-the-road": {
+            "title": "Auf der Straße reisen",
+            "thatchedRoof": "Leon setzt den Esel auf der Straße um 1 Feld vorwärts, der auf der aktuellen Rundenkarte vorgegeben ist.",
+            "tiledRoof": "Leon erhält 1 Ansehen und setzt den Esel auf der Straße um 2 Felder vorwärts, der auf der aktuellen Rundenkarte vorgegeben ist."
+          },
+          "fill-through": {
+            "title": "Tränke auffüllen",
+            "thatchedRoof": "Leon zieht den Tränkenmarker um 1 Feld auf der Tränkenleiste weiter.",
+            "tiledRoof": "Leon erhält 1 Ansehen und zieht den Tränkenmarker um 2 Felder auf der Tränkenleiste weiter."
+          },
+          "play-a-farm-card": {
+            "title": "Hofkarte spielen",
+            "thatchedRoof": "Leon spielt 1 Hofkarte an seinen Hof.",
+            "tiledRoof": "Leon erhält 1 Ansehen und spielt 1 Hofkarte an seinen Hof."
+          },
+          "goat-delivery-with-costs": {
+            "title": "Kostenpflichtig mit der Ziege liefern",
+            "thatchedRoof": "Leon zahlt 1 Silber, um 1 Lieferung an einen deiner Lieferaufträge auszuführen.",
+            "tiledRoof": "Leon erhält 1 Ansehen und zahlt 1 Silber, um bis zu 2 Lieferungen an deine Lieferaufträge auszuführen."
+          },
+          "community-delivery-free-step-reward-track": {
+            "title": "Gemeinschaftslieferung“/„1 kostenfreier Schritt auf 1 Belohnungsleiste",
+            "thatchedRoof": "Leon legt 1 Gütermarker vom Hof zurück in seinen Vorrat und zieht den Belohnungsmarker 1 Feld auf der Belohnungsleiste vorwärts, deren Hofgut auf dem obersten Hofgutplättchen des Ziegenbereichs angezeigt wird.",
+            "tiledRoof": "Leon erhält 1 Ansehen und zieht den Belohnungsmarker 1 Feld auf der Belohnungsleiste vorwärts, deren Hofgut auf dem obersten Hofgutplättchen des Ziegenbereichs angezeigt wird."
+          }
+        }
+      }
+    },
+    "goods": {
+      "title": "Leons Güter",
+      "usage": "Leon nutzt seine Gütermarker, um seinen Güterbestand anzuzeigen. Er hat nur 1 großes Lagerfeld für Hofgüter. Leon macht keinen Unterschied zwischen einzelnen Gütersorten. Steht 1 Gütermarker auf dem Lagerfeld, so ist es ein universelles Gut, das Leon für jede Lieferung (außer für Silber und Arbeitskräfte) nutzen kann.",
+      "field": "Spielt Leon Äcker oder erntet Güter während der Hofphase, stellt er für einen neuen Acker bzw. beim Ernten für jeden Acker 1 Gütermarker auf sein Lager. Die Gütersorten auf den Äckern haben für Leon keine Bedeutung.",
+      "deliver": "Liefert Leon seine Güter, dann füllt er Märkte oder Marktkarren einfach von links nach rechts mit Gütermarkern auf. Er nimmt dafür Gütermarker von seinem Lager, ohne die auf den Karten angezeigten Gütersymbole zu beachten.",
+      "deliverSilverWorker": "Verlangt ein Lieferauftrag Silber oder Arbeitskräfte, gibt Leon auch genau dies ab.",
+      "trade": {
+        "title": "Leon tauscht Güter",
+        "intro": "Sollte Leon Gütermarker, Silber oder Arbeitskräfte benötigen und hat davon gerade nichts im entsprechenden Lager, tauscht er, falls möglich, seine Hofgüter wie folgt um:",
+        "needs": "Leon benötigt …",
+        "tradesFor": "Leon tauscht … für …",
+        "silver": "Silber",
+        "silverTrade": "1 Gütermarker für 2 Silber",
+        "goodsToken": "Gütermarker",
+        "goodsTokenTradeSilver": "A) 2 Silber für 1 Gütermarker",
+        "goodsTokenTradeWorker": "B) 1 Arbeitskraft für 2 Gütermarker",
+        "worker": "Arbeitskräfte",
+        "workerTradeSilver": "3 Silber für 1 Arbeitskraft",
+        "missingGoods": "Um fehlende Gütermarker zu bekommen, tauscht Leon bevorzugt Silber für Gütermarker. Nur wenn Leon nicht genügend Silber für einen erforderlichen Gütermarker hat, nimmt er dafür Arbeitskräfte.",
+        "tradeOnce": "Leon macht maximal einen Tausch pro Lieferung. Leon führt den Tausch nur aus, wenn er anschließend genügend Ressourcen hat, um die geforderte Aktion auszuführen. Ansonsten verzichtet er komplett auf den Tausch und führt keine Lieferung aus."
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Leicht",
+    "2": "Mittel",
+    "3": "Anspruchsvoll",
+    "4": "Zufällig"
+  },
+  "player": {
+    "player": "Spieler",
+    "bot": "Leon"
+  },
+  "action": {
+    "playGame": "Spielen",
+    "startGame": "Spiel starten",
+    "next": "Weiter",
+    "nextRound": "Nächste Runde",
+    "abortGame": "Spiel abbrechen",
+    "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist du sicher?",
+    "endGame": "Spiel beenden",
+    "endGameConfirm": "Dieses Spiel wird beendet - bist du sicher?",
+    "cancel": "Abbrechen",
+    "backToHome": "Zurück zum Anfang",
+    "back": "Zurück",
+    "close": "Schließen",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Applikation neu laden",
+    "notice": "Die Applikation wurde aktualisiert - möchtest du die Seite neu laden um die neueste Version zu nutzen?"
+  }
+}
