@@ -3,22 +3,23 @@ import Card from './Card'
 import Cards from './Cards'
 import { CardDeckPersistence } from '@/store/state'
 import DifficultyLevel from './enum/DifficultyLevel'
+import { ref } from 'vue'
 
 /**
  * Manages the two El Burro card decks: game round card deck (4 cards), and auxiliary card deck (8 cards).
  */
 export default class CardDeck {
 
-  private _roundPile : Card[]
-  private _roundDiscard : Card[]
-  private _auxiliaryPile : Card[]
-  private _auxiliaryDiscard : Card[]
+  private _roundPile
+  private _roundDiscard
+  private _auxiliaryPile
+  private _auxiliaryDiscard
 
   public constructor(roundPile : Card[], roundDiscard : Card[], auxiliaryPile : Card[], auxiliaryDiscard : Card[]) {
-    this._roundPile = roundPile
-    this._roundDiscard = roundDiscard
-    this._auxiliaryPile = auxiliaryPile
-    this._auxiliaryDiscard = auxiliaryDiscard
+    this._roundPile = ref(roundPile)
+    this._roundDiscard = ref(roundDiscard)
+    this._auxiliaryPile = ref(auxiliaryPile)
+    this._auxiliaryDiscard = ref(auxiliaryDiscard)
   }
 
   public get currentRoundCard() : Card|undefined {
@@ -26,11 +27,11 @@ export default class CardDeck {
   }
 
   public get roundPile() : readonly Card[] {
-    return this._roundPile
+    return this._roundPile.value
   }
 
   public get roundDiscard() : readonly Card[] {
-    return this._roundDiscard
+    return this._roundDiscard.value
   }
 
   public get currentAuxiliaryCard() : Card|undefined {
@@ -38,11 +39,11 @@ export default class CardDeck {
   }
 
   public get auxiliaryPile() : readonly Card[] {
-    return this._auxiliaryPile
+    return this._auxiliaryPile.value
   }
 
   public get auxiliaryDiscard() : readonly Card[] {
-    return this._auxiliaryDiscard
+    return this._auxiliaryDiscard.value
   }
 
   /**
@@ -51,11 +52,11 @@ export default class CardDeck {
    * @returns New current card
    */
   public drawRound() : Card {
-    const card = this._roundPile.shift()
+    const card = this._roundPile.value.shift()
     if (!card) {
       throw new Error('No more round cards left.')
     }
-    this._roundDiscard.unshift(card)
+    this._roundDiscard.value.unshift(card)
     return card
   }
 
@@ -65,13 +66,13 @@ export default class CardDeck {
    * @returns New current card
    */
   public drawAuxiliary() : Card {
-    const card = this._auxiliaryPile.shift()
+    const card = this._auxiliaryPile.value.shift()
     if (card) {
-      this._auxiliaryDiscard.unshift(card)
+      this._auxiliaryDiscard.value.unshift(card)
       return card
     }
-    this._auxiliaryPile = shuffle(this._auxiliaryDiscard)
-    this._auxiliaryDiscard = []
+    this._auxiliaryPile.value = shuffle(this._auxiliaryDiscard.value)
+    this._auxiliaryDiscard.value = []
     return this.drawAuxiliary()
   }
 
@@ -80,10 +81,10 @@ export default class CardDeck {
    */
   public toPersistence() : CardDeckPersistence {
     return {
-      roundPile: this._roundPile.map(card => card.id),
-      roundDiscard: this._roundDiscard.map(card => card.id),
-      auxiliaryPile: this._auxiliaryPile.map(card => card.id),
-      auxiliaryDiscard: this._auxiliaryDiscard.map(card => card.id)
+      roundPile: this._roundPile.value.map(card => card.id),
+      roundDiscard: this._roundDiscard.value.map(card => card.id),
+      auxiliaryPile: this._auxiliaryPile.value.map(card => card.id),
+      auxiliaryDiscard: this._auxiliaryDiscard.value.map(card => card.id)
     }
   }
 
