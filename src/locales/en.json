@@ -87,9 +87,9 @@
       "communityDie": "Execute the revenue action from the community die."
     },
     "bot": {
-      "revenueDie": "Leon takes 1 die and executes the revenue action.",
+      "revenueDie": "Leon takes 1 die and executes the revenue action (see solo farm board).",
       "bonusAction": "Leon executes the bonus action.",
-      "communityDie": "Leon executes the revenue action from the community die.",
+      "communityDie": "Leon executes the revenue action from the community die (see solo farm board).",
       "gameRoundTileCommunityDieBonus": "<i>Game Round Tile</i>: Leon executes the bonus action of the community die."
     },
     "actionDetails": {
@@ -109,7 +109,7 @@
       "title": "Have a siesta",
       "moveSiesta": "Move Leon's siesta marker by <b>{value} step</b>. | Move Leon's siesta marker by <b>{value} steps</b>.",
       "plusTile": "If possible, move back the through marker to move {value} additional step. | If possible, move back the through marker to move {value} additional steps.",
-      "travelGainPrestige": "Leon travels on the road and gains prestige from the siesta track.",
+      "travelGainPrestige": "Travel on the road and gain prestige from the siesta track.",
       "transportBonus": "Gain transport bonus.",
       "updateTurnOrder": {
         "title": "Update turn order",
@@ -268,8 +268,8 @@
       "troughsMilestones": "<b>Troughs and milestones</b>: When Leon’s donkeys reach or pass troughs and milestones, Leon moves the appropriate markers forward on the tracks of their stable.",
       "barriers": "<b>Barriers</b>: The barriers are no obstacles for Leon. They know the surroundings well enough to find a way around them, and simply move their donkeys forward. Still, Leon was not born yesterday: when they pass a barrier before you fulfill its achievement, they place a goods token on the first marking and gain the corresponding prestige.",
       "junctionSelection": {
-        "short-way": "<b>Junctions</b>: Leon follows the instruction at each junction: Choose the <b>short section</b>. This is also true for the junction at the barriers.",
-        "long-way": "<b>Junctions</b>: Leon follows the instruction at each junction: Choose the <b>long section</b>. This is also true for the junction at the barriers."
+        "short-way": "<b>Junctions</b>: At a junction, Leon chooses the <b>short section</b>. This is also true for the junction at the barriers.",
+        "long-way": "<b>Junctions</b>: At a junction, Leon chooses the <b>long section</b>. This is also true for the junction at the barriers."
       },
       "harbor": "<b>Harbor</b>: When Leon’s donkeys reach the harbor, they remain on the harbor spaces, as they later continue to move forward. When the leading donkey reaches the end of the harbor, Leon only moves the rear donkey forward until the end of the game. Leon claims harbor spaces at the final scoring."
     },
@@ -279,8 +279,8 @@
         "title": "How does Leon deliver goods with their donkey?",
         "startedDelivery": "If Leon has already started a delivery of a market barrow or local market (or you made a goat delivery to one of them), they continue to deliver that current delivery target, until they have completely delivered it.",
         "deliveryTarget": {
-          "market-barrow": "When Leon has no current delivery target, or a choice of multiple targets with a started delivery, they follow the instructions: They prefer a <b>market barrow</b>.",
-          "local-market": "When Leon has no current delivery target, or a choice of multiple targets with a started delivery, they follow the instructions: They prefer a <b>local market</b>."
+          "market-barrow": "When Leon has no current delivery target, or a choice of multiple targets with a started delivery, they prefer <b>market barrows</b>.",
+          "local-market": "When Leon has no current delivery target, or a choice of multiple targets with a started delivery, they prefer <b>local markets</b>."
         }
       },
       "marketBarrow": {

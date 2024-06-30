@@ -84,9 +84,9 @@
       "communityDie": "Führe die Ertragsaktion des Gemeinschaftswürfel aus."
     },
     "bot": {
-      "revenueDie": "Leon nimmt 1 Würfen und führt die Ertragsaktion aus.",
+      "revenueDie": "Leon nimmt 1 Würfel und führt die Ertragsaktion aus (siehe Solo-Hoftableau).",
       "bonusAction": "Leon führt die Bonusaktion aus.",
-      "communityDie": "Leon führt die Ertragsaktion des Gemeinschaftswürfel aus.",
+      "communityDie": "Leon führt die Ertragsaktion des Gemeinschaftswürfel aus (siehe Solo-Hoftableau).",
       "gameRoundTileCommunityDieBonus": "<i>Rundenplättchen</i>: Leon führt die Bonusaktion des Gemeinschaftswürfel aus."
     },
     "actionDetails": {
@@ -106,7 +106,7 @@
       "title": "Siesta halten",
       "moveSiesta": "Setze Leons Siestamarker um <b>{value} Schritt</b> vor. | Setze Leons Siestamarker um <b>{value} Schritte</b> vor.",
       "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weiteren Schritt vorzurücken. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Schritte vorzurücken.",
-      "travelGainPrestige": "Leon reist auf der Straße und erhält Ansehen von der Siestaleiste.",
+      "travelGainPrestige": "Reise auf der Straße und erhalte Ansehen von der Siestaleiste.",
       "transportBonus": "Erhalte den Transportbonus.",
       "updateTurnOrder": {
         "title": "Spielreihenfolge anpassen",
@@ -266,8 +266,8 @@
       "troughsMilestones": "<b>Tränken und Meilensteine</b>: Erreicht Leon Tränken und Meilensteine, setzt er die entsprechenden Marker auf seinem Stall vor.",
       "barriers": "<b>Barrieren</b>: Die beiden Barrieren sind für Leon kein Hindernis. Er kennt sich in der Umgebung gut genug aus, um einen Weg vorbei zu finden und zieht seine Esel einfach weiter. Trotzdem ist Leon nicht von gestern: Sollte er eine Barriere passieren, bevor du deren Errungenschaft erfüllst, besetzt er den Ansehensplatz auf dem Errungenschaftsplättchen und streicht dessen Ansehen vor dir ein.",
       "junctionSelection": {
-        "short-way": "<b>Abzweigungen</b>: An jeder Abzweigung folgt Leon der Anweisung: Er wählt den <b>kurzen Weg</b>. Dies gilt auch für die Abzweigung an den Barrieren.",
-        "long-way": "<b>Abzweigungen</b>: An jeder Abzweigung folgt Leon der Anweisung: Er wählt den <b>langen Weg</b>. Dies gilt auch für die Abzweigung an den Barrieren."
+        "short-way": "<b>Abzweigungen</b>: An jeder Abzweigung folgt Leon dem <b>kurzen Weg</b>. Dies gilt auch für die Abzweigung an den Barrieren.",
+        "long-way": "<b>Abzweigungen</b>: An jeder Abzweigung folgt Leon dem <b>langen Weg</b>. Dies gilt auch für die Abzweigung an den Barrieren."
       },
       "harbor": "<b>Hafen</b>: Erreichen Leons Esel die Hafenfelder, belässt er sie vorerst auf den Feldern und zieht sie später weiter. Erreicht der vordere Esel das Ende des Hafens, zieht Leon ab jetzt bis zum Ende der Partie nur noch den hinteren Esel. Er beansprucht erst in der Schlusswertung ein Hafenfeld."
     },
@@ -277,8 +277,8 @@
         "title": "Wie liefert Leon per Esel?",
         "startedDelivery": "Hat Leon bereits mit der Lieferung eines Marktkarrens oder lokalen Markts begonnen (oder hast du per Ziegenlieferung einen beliefert), führt er Esellieferungen an dieses aktuelle Lieferziel aus, bis er es komplett beliefert hat.",
         "deliveryTarget": {
-          "market-barrow": "Hat Leon aktuell kein Lieferziel, oder stehen mehrere Lieferziele mit angefangener Lieferung zur Auswahl, folgt er der Anweisung: Er bevorzugt <b>Marktkarren</b>.",
-          "local-market": "Hat Leon aktuell kein Lieferziel, oder stehen mehrere Lieferziele mit angefangener Lieferung zur Auswahl, folgt er der Anweisung: Er bevorzugt <b>lokale Märkte</b>."
+          "market-barrow": "Hat Leon aktuell kein Lieferziel, oder stehen mehrere Lieferziele mit angefangener Lieferung zur Auswahl, bevorzugt er <b>Marktkarren</b>.",
+          "local-market": "Hat Leon aktuell kein Lieferziel, oder stehen mehrere Lieferziele mit angefangener Lieferung zur Auswahl, bevorzugt er <b>lokale Märkte</b>."
         }
       },
       "marketBarrow": {
@@ -321,7 +321,8 @@
         "preferredGoods": "Leon liefert Güterarten priorisiert nach dieser Reihenfolge:",
         "trackTopSpace": "Kommt Leon auf dem obersten Feld eine Belohnungsleiste an, entferne das entsprechende Gut aus dieser List (durch anklicken)."
       },
-      "firstFarmGood": "Leon liefert er immer das erste Liefergut aus der Liste. Er legt den Gütermarker in seinen Vorrat und zieht auf der entsprechenden Belohnungsleiste vor."
+      "firstFarmGood": "Leon liefert er immer das erste Liefergut aus der Liste. Er legt den Gütermarker in seinen Vorrat und zieht auf der entsprechenden Belohnungsleiste vor.",
+      "rewardTracks": "Siehe Leons Aktionen auf den Belohnungsleisten."
     },
     "deliveryTargetScoring": {
       "title": "Lieferziele",

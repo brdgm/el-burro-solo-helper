@@ -17,7 +17,12 @@
         <AppIcon type="plus-tile" :name="roundCard.siestaPlusTile.toString()" class="plusTile"/>
         <span v-html="t('roundPhaseTransport.siesta.plusTile', {value:roundCard.siestaPlusTile}, roundCard.siestaPlusTile)"></span>
       </li>
-      <li v-html="t('roundPhaseTransport.siesta.travelGainPrestige')"></li>
+      <li>
+        <span v-html="t('roundPhaseTransport.siesta.travelGainPrestige')"></span>
+        <div>
+          <TravelRoad :navigationState="navigationState"/>
+        </div>
+      </li>
       <li v-if="transportBonus">
         <AppIcon type="action" :name="transportBonus" class="icon"/>
         <span v-html="t('roundPhaseTransport.siesta.transportBonus')"></span>
