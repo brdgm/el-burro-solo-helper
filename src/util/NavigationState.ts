@@ -8,7 +8,6 @@ import CardDeck from '@/services/CardDeck'
 import TransportBonusTile from '@/services/TransportBonusTile'
 import TransportBonusTiles from '@/services/TransportBonusTiles'
 import Card from '@/services/Card'
-import RewardTracks from '@/services/RewardTracks'
 import GoodTokens from '@/services/GoodTokens'
 import Player from '@/services/enum/Player'
 import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValues'
@@ -22,7 +21,6 @@ export default class NavigationState {
   readonly transportBonusTile: TransportBonusTile
   readonly cardDeck : CardDeck
   readonly roundCard : Card
-  readonly rewardTracks : RewardTracks
   readonly goodTokens : GoodTokens
   readonly startPlayer : Player
   readonly turnPlayer : Player
@@ -46,12 +44,10 @@ export default class NavigationState {
 
     const phasePersistence = getPhasePersistence(state, this.round, this.phase, this.turn)
     if (phasePersistence) {
-      this.rewardTracks = RewardTracks.fromPersistence(phasePersistence.rewardTracks)
       this.goodTokens = GoodTokens.fromPersistence(phasePersistence.goodTokens)
       this.startPlayer = phasePersistence.startPlayer
     }
     else {
-      this.rewardTracks = RewardTracks.new()
       this.goodTokens = GoodTokens.new()
       this.startPlayer = state.setup.startPlayer ?? Player.PLAYER
     }

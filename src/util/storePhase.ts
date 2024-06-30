@@ -12,7 +12,6 @@ export default function storePhase(navigationState : NavigationState, startPlaye
     phase: navigationState.phase,
     turn: navigationState.turn,
     cardDeck: navigationState.cardDeck.toPersistence(),
-    rewardTracks: navigationState.rewardTracks.toPersistence(),
     goodTokens: navigationState.goodTokens.toPersistence(),
     startPlayer: startPlayer ?? navigationState.startPlayer
   }

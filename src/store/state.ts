@@ -66,7 +66,6 @@ export interface PhasePersistence {
   phase: Phase
   turn: number
   cardDeck: CardDeckPersistence
-  rewardTracks: RewardTracksPersistence
   goodTokens: GoodTokensPersistence
   startPlayer: Player
 }
@@ -76,10 +75,6 @@ export interface CardDeckPersistence {
   roundDiscard: string[]
   auxiliaryPile: string[]
   auxiliaryDiscard: string[]
-}
-
-export interface RewardTracksPersistence {
-  [track: number]: number
 }
 
 export interface GoodTokensPersistence {
