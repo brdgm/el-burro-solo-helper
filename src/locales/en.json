@@ -1,0 +1,468 @@
+{
+  "gameTitle": "El Burro",
+  "home": {
+    "title": "El Burro Solo Helper",
+    "play1": "Play <a href='https://boardgamegeek.com/boardgame/368386/el-burro-a-la-granja-game' target='_blank' rel='noopener'><b>El Burro</b></a> against Leon, the Solo opponent.",
+    "play2": "This application replaces the solo game round cards, manages the difficulty levels and gently guides you through the game flow and solo rules.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Setup Game",
+    "randomize": "Randomize",
+    "difficultyLevel": {
+      "title": "Difficulty Level",
+      "easy": "Easy",
+      "hard": "Hard",
+      "cardsWith": "cards with"
+    },
+    "rewardDifficultyLevel": {
+      "title": "Solo Reward Overview"
+    },
+    "gameRoundTiles": {
+      "title": "Game Board",
+      "setupGameBoard": "Setup the game board as usual for 2 players. Use these game round tiles:"
+    },
+    "farmExtensionTiles": {
+      "title": "Reward Board",
+      "placeTiles": "Place the solo farm extension tiles for Leon in this order on the first spaces of the reward board:"
+    },
+    "startPlayer": {
+      "title": "Start Player"
+    }
+  },
+  "setupBot": {
+    "title": "Setup Leon",
+    "soloFarmBoard": "Place Leon’s <b>solo farm board</b> next to your play area. As usual, leave some space around it to place farm cards at the farm. Place Leon’s <b>goods tokens</b> as their supply next to their farm.",
+    "goodsTokenSilver": "Place 1 <b>goods token</b> and 2 <b>silver</b> on the matching storage spaces of Leon’s farm.",
+    "farmCards": "Draw 4 <b>farm cards</b> to create Leon’s starting display. Draw cards one by one and place them as follows at their farm:",
+    "farmCard1": "Place the 1<sup>st</sup> card as a field (place 1 goods token on the storage space for goods tokens).",
+    "farmCard23": "Place the 2<sup>nd</sup> and 3<sup>rd</sup> cards as market barrows (in the left and center card slots).",
+    "farmCard4": "Place the 4<sup>th</sup> card as farm administration.",
+    "supportMarker": "Place <b>1 support marker</b> with the prestige side face up next to Leon’s farm.",
+    "stableBoard": "Place Leon’s <b>stable board</b> next to the farm. Place the <b>trough</b> and <b>milestone marker</b> on the appropriate spaces. Leon starts with the trough marker on space “1”.",
+    "specialSoloFarmCards": "Shuffle the <b>special solo farm cards</b> and place them in a facedown draw stack next to the farm. Draw 3 cards and place them in a faceup row.",
+    "soloRewardOverview": {
+      "1": "Place the <b>solo reward overview</b> next to the reward board (with the simple side).",
+      "3": "Place the <b>solo reward overview</b> next to the reward board (with the ambitious side)."
+    },
+    "startingSpace": "When it is Leon’s turn to choose a starting space for their donkeys:",
+    "determineStartingSpace": "Determine starting space",
+    "spaceBlocked": "Space blocked",
+    "startingSpaceOption": {
+      "1": "<b>Place 1</b>: Leon places 1 goods token and 1 silver on their storage spaces.",
+      "2": "<b>Place 2</b>: Leon places 2 goods tokens on their storage space.",
+      "3": "<b>Place 3</b>: Leon takes 3 silver from the supply.",
+      "4": "<b>Place 4</b>: Leon moves their siesta marker 2 space forward on the siesta track.",
+      "5": "<b>Place 5</b>: Leon moves one of their donkeys 2 spaces forward on the road."
+    },
+    "unusedMaterial": {
+      "title": "Unused material (managed by the application):",
+      "soloGameRoundCards": "Solo game round cards",
+      "soloTransportBonusTiles": "Solo transport bonus tiles",
+      "soloFarmGoods": "Solo farm goods"
+    },
+    "rulesNotice": "<i>Leons rules</i>: Familiarize yourself with how to use <a data-bs-toggle='modal' href='#goodsModal' class='rule'>Leon's Goods</a> - they are the only <i>anytime actions</i> that Leon makes us of. All other rules will be introduced in the course of the game as required."
+  },
+  "roundPhaseFarm": {
+    "title": "Farm",
+    "gameRoundTile": {
+      "title": "Check Game Round Tile",
+      "appliesBot": "Also used by Leon."
+    },
+    "expandFarm": {
+      "title": "Expand the farm",
+      "firstRoundNote": "<i>Note</i>: During the first round, you play 4 cards in this step. Leon plays 1 additional farm card besides the 4 starting cards during setup."
+    },
+    "increaseFarm": {
+      "title": "Increase the farm",
+      "gainIncome": "Gain income: Leon takes an amount of silver as shown at their farm administration.",
+      "harvest": "Harvest: Leon places 1 goods token on the storage space for each field at their farm.",
+      "gainOffspring": "Gain offspring: When Leon has empty pig stable markings, they cover <b>one</b> of these markings with 1 goods token. Leon places 1 goods token and 1 silver on their storage spaces."
+    }
+  },
+  "roundPhaseRevenue": {
+    "title": "Revenue",
+    "rollDice": "Roll the revenue dice.",
+    "player": {
+      "revenueDie": "Take 1 <b>revenue die</b>, execute the action and bonus action.",
+      "communityDie": "Execute the revenue action from the <b>community die</b>."
+    },
+    "bot": {
+      "revenueDie": "Leon takes 1 <b>revenue die</b> and executes the action (see solo farm board).",
+      "bonusAction": "Leon executes the bonus action.",
+      "communityDie": "Leon executes the revenue action from the <b>community die</b> (see solo farm board).",
+      "gameRoundTileCommunityDieBonus": "<i>Game Round Tile</i>: Leon executes the bonus action of the community die."
+    },
+    "actionDetails": {
+      "title": "Actions",
+      "intro": "If Leon executes any these actions:"
+    }
+  },
+  "roundPhaseTransport": {
+    "title": "Transport",
+    "takeYourTurn": "Take your turn.",
+    "selectNewStartPlayer": "Please select the new start player.",
+    "donkeyCards": {
+      "title": "Choose donkey cards",
+      "botNoCards": "Leon does not play donkey cards."
+    },
+    "siesta": {
+      "title": "Have a siesta",
+      "moveSiesta": "Move Leon's siesta marker by <b>{value} step</b>. | Move Leon's siesta marker by <b>{value} steps</b>.",
+      "plusTile": "If possible, move back the through marker to move {value} additional step. | If possible, move back the through marker to move {value} additional steps.",
+      "travelGainPrestige": "Travel on the road and gain prestige from the siesta track.",
+      "transportBonus": "Gain transport bonus.",
+      "updateTurnOrder": {
+        "title": "Update turn order",
+        "newStartPlayer": "New start player:"
+      }
+    },
+    "goatDelivery": {
+      "title": "Goat delivery",
+      "makeDelivery": "Make goat delivery.",
+      "additionalDelivery": "If Leon can spend a worker from their farmhouse, make a second goat delivery.<br/>Otherwise hire one worker."
+    },
+    "donkeyDelivery": {
+      "title": "Donkey delivery",
+      "deliver": "Make <b>{value} donkey delivery</b>. | Make <b>{value} donkey deliveries</b>.",
+      "plusTile": "If possible, move back the through marker to make {value} additional delivery. | If possible, move back the through marker to make {value} additional deliveries.",
+      "transportBonus": "Gain transport bonus.",
+      "fourthRoundNotice": "<i>Special situation in the fourth game round</i>: During their final transport phase, when Leon has completely delivered a delivery target, but cannot completely deliver another delivery target with their remaining donkey deliveries, they skip them. This way, Leon may have enough goods tokens left to completely deliver their “game end” market barrow and possible boats at the harbor."
+    }
+  },
+  "roundPhaseScoring": {
+    "title": "Scoring",
+    "milestones": {
+      "title": "Milestones",
+      "gainPrestige": "Leon gains prestige matching the position of their milestone marker on the milestone track."
+    },
+    "stable": {
+      "title": "Stable",
+      "totalValue": "Leon counts a <b>total value of {value}</b> from {count} game round card. | Leon counts a <b>total value of {value}</b> from {count} game round cards.",
+      "compareTotalValue": "Compare the total value of your donkey cards face up below your stable with Leon’s total value:",
+      "gainPrestigePlace1": "<b>1<sup>st</sup> place</b>: {value} prestige",
+      "gainPrestigePlace2": "<b>2<sup>nd</sup> place</b>: {value} prestige",
+      "tieBreaker": "In case of a tie check your current positions on the siesta track."
+    },
+    "supportMarkers": {
+      "title": "Support Marker",
+      "gainPrestige": "If Leon’s support marker is still showing the prestige side, Leon gains 1 prestige. Otherwise, they turn it back from the basket side to the prestige side."
+    },
+    "payWorkers": {
+      "title": "Pay workers",
+      "paySilver": "Leon pays 1 silver for each assigned worker on their farm extensions. When Leon cannot pay, they make as many trades as needed to pay as many workers as possible. Leon places the paid worker in the supply.",
+      "losePrestige": "If workers remain on the farm extensions, Leon places them back in the supply, and loses 1 prestige for each of these workers."
+    },
+    "prepareNextRound": {
+      "title": "Prepare for next round",
+      "performSteps": "Perform the usual steps to prepare the next round."
+    }
+  },
+  "phaseFinalScoring": {
+    "title": "Final Scoring",
+    "rewardTracks": {
+      "title": "Reward Tracks",
+      "trackConnections": "<b>Track connections</b>: If Leon moved their reward markers on two adjacent tracks at least to space “3”, they gain the prestige displayed between both tracks. Leon checks these requirements for all five track connections.",
+      "scoringOptions": "<b>Scoring options</b>: Even if Leon reached the topmost spaces of the tracks before you, they gain no prestige for the scoring options."
+    },
+    "specialFarmCards": {
+      "title": "Special Farm Cards",
+      "scoreCards": "Leon scores the special solo farm cards that they played at the farm.",
+      "gameEndMarketBarrows": "<b>“Game end” market barrows</b>: If Leon played a “game end” market barrow in the right card slot and it is not completely delivered, Leon now places remaining goods tokens from their farm on the empty markings of the market barrow. If they completely deliver it, they gain the prestige. The same is true if the barrow was already completely delivered by you during the game. If Leon does not have enough goods tokens but enough silver and workers to deliver the “game end” market barrow, they make all necessary trades to do so.",
+      "gameEndScorings": "<b>“Game end” scorings</b>: If Leon pushed special solo farm cards below their farm, they score these scoring categories. They gain prestige for the top category depending on the achieved goals. To score the bottom category, Leon compares their results with yours. If they achieved exactly as much as you, they gain 3 prestige. If they achieved more than you, they gain 5 prestige."
+    },
+    "harbor": {
+      "title": "Boats in the Harbor",
+      "claimHarbor": "If Leon reached the harbor with one or both donkeys, they now claim their harbor spaces and gain the displayed prestige.",
+      "claimHarborException": "<b>Exception</b>: If their donkey stands on a harbor space that you claimed during the game, they move their donkey back on the harbor spaces closer to the road spaces, until the donkey can claim a harbor space. If the donkey leaves the harbor, tough luck for Leon. This is also true, if Leon's donkeys both stand on the same harbor space; one of them claims that space, and the other moves back accordingly.",
+      "remainingGoods": "If Leon still has remaining goods tokens on their storage space to completely deliver a boat for one or both claimed harbor spaces, they choose the remaining boat(s) offering the most prestige. If Leon does not have enough goods tokens but enough silver and workers to deliver the boat(s), they make all necessary trades to do so."
+    },
+    "throughTrack": {
+      "title": "Through Track",
+      "exchangeSteps": "Leon exchanges their remaining trough points for prestige, gaining 1 prestige for every 2 trough points as usual."
+    },
+    "strikingWorkers": {
+      "title": "Loss of Prestige for striking workers",
+      "ignoreSteps": "Leon ignores this step (since their workers are always removed in step 4 of the scoring phase)."
+    },
+    "remainingStuff": "Remaining farm goods, silver, and workers offer no additional prestige.",
+    "determineWinner": "If you have a higher prestige than Leon, you win the game. In case of a tie, Leon wins the game!"
+  },
+  "playFarmCard": {
+    "normal": "Leon plays a <b>normal</b> farm card.",
+    "special": "Leon prefers to play a <b>special solo</b> farm card.",
+    "otherwiseNormal": "otherwise normal:"
+  },
+  "travelRoad": {
+    "title": "Leon travels on the road."
+  },
+  "donkeyDelivery": {
+    "title":"Leon makes a donkey delivery."
+  },
+  "goatDelivery": {
+    "title":"Leon makes a goat delivery."
+  },
+  "communityDelivery": {
+    "title":"Leon makes a community delivery."
+  },
+  "deliveryGoodSelection": {
+    "firstGood": "Determine Delivery Good",
+    "nextGood": "Next Delivery Good",
+    "remove": {
+      "title": "Remove Good",
+      "confirmation": "Do you want to remove this delivery good?",
+      "ignored": "It will be ignored for future deliveries."
+    }
+  },
+  "sideBar": {
+    "round": "Round",
+    "turn": "Turn"
+  },
+  "gameRoundCard": {
+    "title": "Round Card",
+    "farmCard": "Farm Card",
+    "dice": "Dice",
+    "delivery": "Delivery",
+    "road": "Road",
+    "transport": "Transport",
+    "siesta": "Siesta",
+    "goatDelivery": "Goat Delivery",
+    "donkey": "Donkey",
+    "stable": "Stable",
+    "yes": "yes",
+    "no": "no"
+  },
+  "rules": {
+    "playCard": {
+      "title": "Play Farm Card",
+      "normal": {
+        "title": "Play normal farm card",
+        "intro": "Game round 1 and 2 - Leon plays only normal farm cards (drawn from the stack):",
+        "marketBarrowSlotEmpty": "If one of the two slots for market barrows is empty, they automatically play the card as a market barrow (rightmost slot is reserved for a “game end” market barrow).",
+        "marketBarrowSlotsFilled": "If all relevant slots for market barrows are filled, Leon follows the instructions:",
+        "sameNumber": "Most important for Leon is the same number of farm cards to the left and right at their farm. When they have more fields than cards in the farm administration, they place the card in the administration, and vice versa.",
+        "cardPlacement": {
+          "left": "If Leon has the same number of cards to the left and right of their farm, Leon plays <b>a farm</b>. They immediately place 1 goods token on the storage space.",
+          "right": "If Leon has the same number of cards to the left and right of their farm, Leon places the card in the <b>farm administration</b>."
+        },        
+        "noAcquisitions": "Important: Leon never plays acquisitions!"
+      },
+      "special": {
+        "title": "Play special solo farm card",
+        "intro": "Game round 3 and 4 - Leon prefers to play their special solo farm cards:",
+        "cardLimit": "Leon follows other rules regarding the card limit. While it determines the number of cards you can have in your hand, it limits Leon’s number of special solo farm cards they can play at their farm. Each normal farm card they play in the farm administration showing the matching symbol increases that number.",
+        "paySilver": "Leon must pay for these cards with silver and first checks their amount of silver in the storage. If they have enough silver, they play the special solo farm card. When Leon does not have enough silver, they check if they can get enough silver by a single trade. If they cannot, Leon passes on the trade and instead plays a normal farm card. Otherwise they close the trade and play the special solo farm card.",
+        "pickCard": "They pick the special solo farm card as indicated.",
+        "gameEndMarketBarrow": "They place their first special solo farm as a “game end” market barrow in the right slot at the top of the farm.",
+        "additionalCards": "They push each additional special solo farm card below the bottom side of the farm, so they completely cover the market barrow.",
+        "hotVariant": "When playing the \"Hot!\" variant, keep the \"Hot!\"-instruction visible, otherwise hide it.",
+        "drawNew": "Leon draws a new special solo farm card from the stack and places it at the empty position of the row of cards.",
+        "notPossible": "If Leon cannot play a special solo farm card, they play a normal farm card instead."
+      }
+    },
+    "travelRoad": {
+      "title": "Road to Port de Palma",
+      "intro": "Leon moves their donkeys forward as usual along the spaces of the road. The following terms apply for Leon:",
+      "donkeySelection": {
+        "leading": "<b>Donkey selection</b>: Leon moves the <b>leading donkey</b>.",
+        "rear": "<b>Donkey selection</b>: Leon moves the <b>rear donkey</b>."
+      },
+      "troughsMilestones": "<b>Troughs and milestones</b>: When Leon’s donkeys reach or pass troughs and milestones, Leon moves the appropriate markers forward on the tracks of their stable.",
+      "barriers": "<b>Barriers</b>: The barriers are no obstacles for Leon. They know the surroundings well enough to find a way around them, and simply move their donkeys forward. Still, Leon was not born yesterday: when they pass a barrier before you fulfill its achievement, they place a goods token on the first marking and gain the corresponding prestige.",
+      "junctionSelection": {
+        "short-way": "<b>Junctions</b>: At a junction, Leon chooses the <b>short section</b>. This is also true for the junction at the barriers.",
+        "long-way": "<b>Junctions</b>: At a junction, Leon chooses the <b>long section</b>. This is also true for the junction at the barriers."
+      },
+      "harbor": "<b>Harbor</b>: When Leon’s donkeys reach the harbor, they remain on the harbor spaces, as they later continue to move forward. When the leading donkey reaches the end of the harbor, Leon only moves the rear donkey forward until the end of the game. Leon claims harbor spaces at the final scoring."
+    },
+    "donkeyDelivery": {
+      "title": "Donkey Delivery",
+      "deliveryTargets": "See how to score completely delivered delivery targets.",
+      "delivery": {
+        "title": "How does Leon deliver goods with their donkey?",
+        "startedDelivery": "If Leon has already started a delivery of a market barrow or local market (or you made a goat delivery to one of them), they continue to deliver that current delivery target, until they have completely delivered it.",
+        "deliveryTarget": {
+          "market-barrow": "When Leon has no current delivery target, or a choice of multiple targets with a started delivery, they prefer <b>market barrows</b>.",
+          "local-market": "When Leon has no current delivery target, or a choice of multiple targets with a started delivery, they prefer <b>local markets</b>."
+        }
+      },
+      "marketBarrow": {
+        "title": "Market barrow",
+        "slotOrder": "Leon prefers the market barrow in the left slot, then in the center slot.",
+        "markingOrder": "First, they fill the top markings from left to right, then the bottom markings.",
+        "fallback": "If there are no market barrows at Leon’s farm, instead they deliver a local market."
+      },
+      "localMarket": {
+        "title": "Local market",
+        "marketOrder": "Leon delivers to the local market that they unlocked with their donkeys furthest down the road.",
+        "markingOrder": "They fill the markings from left to right.",
+        "fallback": "If Leon has currently completely delivered all unlocked local markets, instead they deliver a market barrow."
+      }
+    },
+    "goatDelivery": {
+      "title": "Goat Delivery",
+      "firstDelivery": {
+        "title": "First Delivery",
+        "intro": "When Leon makes their first goat or community delivery of the game, they follow these steps in the given order:",
+        "deliveryTarget": {
+          "market-barrow": "Leon makes a goat delivery to you. They prefer to deliver to <b>market barrows</b>. If none of your market barrows needs that farm good, Leon delivers to local markets instead.",
+          "local-market": "Leon makes a goat delivery to you. They prefer to deliver to <b>local markets</b>. If none of your local markets needs that farm good, Leon delivers to market barrows instead."
+        },
+        "gainRewards": "Leon gains the usual rewards for the goat delivery: They gain 1 prestige for the first goat delivery of a game round. They move the reward marker 1 space forward on the appropriate reward track.",
+        "communityDelivery": "If neither your market barrows nor local markets need the stated farm good, Leon makes a community delivery and only moves forward on the reward track."
+      },
+      "subsequentDelivery": {
+        "title": "Subsequent deliveries",
+        "intro": "For each further goat delivery, Leon follows these steps in the given order:",
+        "goodPriority": "Leon tries to deliver the farm good displayed fist in the list of delivery goods. If there is no demand for that farm good, and there are additional farm goods in the list, Leon checks them as well one after another.",
+        "goodSelection": "If Leon still does not find a delivery target, they choose another farm good. Then they try to deliver that farm good. If that fails again, they make a community delivery.",
+        "selectionPriority": "If there are several farm goods in the list, Leon always starts the search with the first good. They only look for a new farm goods tile if all listed goods turn out to be not deliverable."
+      }
+    },
+    "communityDelivery": {
+      "title": "Community Delivery",
+      "deliveryGoods": {
+        "title": "Delivery Goods",
+        "preferredGoods": "Leon prefers to delivery goods in this order of priority:",
+        "trackTopSpace": "When Leon reaches the top space of a reward track, remove the corresponding good from this list (by clicking on it)."
+      },
+      "firstFarmGood": "Leon always delivers the first farm good in the list. They place the goods token in their supply and move forward on the matching reward track.",
+      "rewardTracks": "See Leon’s actions on the reward tracks."
+    },
+    "deliveryTargetScoring": {
+      "title": "Delivery Targets",
+      "intro": "When Leon completely delivers a market barrow or local market, generally they follow the same game rules as you do.",
+      "marketBarrow": {
+        "title": "Completely delivered market barrow",
+        "prestige": "Leon gains the displayed prestige.",
+        "moveDonkey": "Leon moves the donkey indicated by the current game round card 2 spaces forward on the road.",
+        "takeBonuses": "Leon takes all bonuses rewarded for the delivery (like bonus from game round tiles and so on).",
+        "removeCard": "Leon removes the market barrow from the farm and places the card on the discard pile for normal farm cards.",
+        "ambitiousDifficulty": "<i>Ambitious difficulty</i>: When looking for a bigger challenge, apply the following: After Leon removes the market barrow from the farm, they immediately draw 1 normal farm card and place it as a new market barrow at their farm."
+      },
+      "localMarket": {
+        "title": "Completely delivered local market",
+        "goodToken": "Leon moves a goods token to the space above the local market offering the most prestige and gains the appropriate prestige.",
+        "immediateEffect": "Leon takes the immediate effect of the market bonus tile next to the local market. Check below for adjustments for three of the market bonus tiles.",
+        "noToken": "Leon does not take any market bonus tiles and thus does not get any permanent effects."
+      },
+      "marketBonusTiles": {
+        "title": "Market Bonus Tiles",
+        "intro": "Leon takes the immediate effect of the market bonus tiles when they completely deliver their local markets or when they reach or pass both market bonus tiles next to the prestige track.",
+        "adjustments": "Three market bonus tiles need adjustments for Leon. The other tiles work as normal.",
+        "takeUpgradedGood": "Immediate effect - “Take an upgraded good”: Leon takes 1 goods token.",
+        "takeFarmGoodPig": "Immediate effect - “Take farm goods” or “Take a pig”: Leon takes 1 goods token and 1 silver.",
+        "takeFarmGoodPigAmbitious": "<i>Ambitious difficulty</i>: When looking for a bigger challenge, apply the following: Instead, Leon takes 2 goods tokens.",
+        "rewardTrackStep": "Immediate effect - “1 free step on a reward track”: As stated on the topmost farm goods tile, Leon moves the reward marker 1 space forward in the matching reward track."
+      }
+    },
+    "rewardTracks": {
+      "title": "Reward tracks",
+      "tracks": {
+        "title": "The reward tracks",
+        "intro": "Leon gains the following rewards on the spaces of the reward tracks:",
+        "space1": "<b>1<sup>st</sup> space</b>: Leon takes the farm extension from the space.They place the tile on the farm space displaying the same farm good as the track.",
+        "space2": "<b>2<sup>nd</sup> space</b>: Leon moves their trough marker 1 space forward on the trough track.",
+        "space3": "<b>3<sup>rd</sup> space</b>: Leon updates the farm extension on the farm space matching the farm good of the reward track by turning the tile to the tiled roof side.",
+        "space4": "<b>4<sup>th</sup> space</b>: When Leon reaches the top space, if you have not already chosen the scoring option, Leon moves their marker on that space and blocks it. If you already chose the scoring option, Leon places their marker in the lower section. In both cases, they play 1 special solo farm card for free! Afterward, remove the corresponding farm goods from the list of delivery goods (by clicking on it), and ignore it for further goat deliveries.",
+        "gainPrestige": "Leon gains <b>{prestige} prestige</b>."
+      },
+      "extensions": {
+        "title": "Leon's farm extensions",
+        "intro": "When Leon moves forward on the reward tracks, they gain the solo farm extensions on the first spaces, and upgrade them later.",
+        "activation": "In both cases, Leon activates the immediate effect of the farm extension once. Two different things can happen:",
+        "hasWorker": "Leon has a worker on their small farmhouse. They place the worker on the farm extension and perform the top immediate effect. The worker remains on the tile until the end of the game round. If Leon has no worker but enough silver for a trade, they use that traded worker.",
+        "noWorker": "Leon has no worker on the farmhouse and cannot make a trade. Instead of activating the top effect of the farm extension, they take 1 worker from the supply and place them on the small farmhouse.",
+        "extensionsIntro": "The farm extensions offer the following immediate effects:",
+        "thatchedRoof": "Thatched roof",
+        "tiledRoof": "Tiled roof",
+        "farmExtension": {
+          "donkey-delivery-with-costs": {
+            "title": "Donkey delivery with costs",
+            "thatchedRoof": "Leon pays 1 silver for 1 delivery to one of their delivery targets.",
+            "tiledRoof": "Leon gains 1 prestige and pays 1 silver for up to 2 deliveries to their delivery targets."
+          },
+          "travel-on-the-road": {
+            "title": "Travel on the road",
+            "thatchedRoof": "Leon moves the donkey specified by the current game round card 1 space forward on the road.",
+            "tiledRoof": "Leon gains 1 prestige and moves the donkey specified by the current game round card 2 spaces forward on the road."
+          },
+          "fill-through": {
+            "title": "Fill trough",
+            "thatchedRoof": "Leon moves their trough marker 1 space forward on their trough track.",
+            "tiledRoof": "Leon gains 1 prestige and moves their trough marker 2 spaces forward on their trough track."
+          },
+          "play-a-farm-card": {
+            "title": "Play a farm card",
+            "thatchedRoof": "Leon plays 1 farm card at their farm.",
+            "tiledRoof": "Leon gains 1 prestige and plays 1 farm card at their farm."
+          },
+          "goat-delivery-with-costs": {
+            "title": "Goat delivery with costs",
+            "thatchedRoof": "Leon pays 1 silver for 1 delivery to one of your delivery targets.",
+            "tiledRoof": "Leon gains 1 prestige and pays 1 silver for up to 2 deliveries to your delivery targets."
+          },
+          "community-delivery-free-step-reward-track": {
+            "title": "Community delivery / 1 free step on a reward track",
+            "thatchedRoof": "Leon places 1 goods token from the farm in their supply and moves 1 space forward on the reward track matching the farm good as stated by the topmost farm goods tile on their goat area.",
+            "tiledRoof": "For the first delivery good in the list, Leon moves the reward marker 1 space forward on the matching reward track."
+          }
+        }
+      }
+    },
+    "goods": {
+      "title": "Leon's Goods",
+      "usage": "Leon uses their goods tokens to display their goods stock. They only have a single big storage space for farm goods. Leon does not distinguish between different goods types. When 1 goods token is on the storage space, it is considered to be a universal good that Leon can deliver for each demanded goods type (except silver and workers).",
+      "field": "When Leon plays a field or harvests farm goods during the farm phase, they place 1 goods token for each new field, or while harvesting for all fields, on the storage space of their farm. Leon ignores the goods types displayed on the fields.",
+      "deliver": "When Leon delivers goods, they fill the market barrows and local markets from left to right with goods tokens. They take goods tokens from their storage space and ignore the displayed goods symbols on the cards.",
+      "deliverSilverWorker": "If a delivery target demands silver or workers, Leon delivers these.",
+      "trade": {
+        "title": "Leon trades goods",
+        "intro": "When Leon needs goods tokens, silver, or workers but does not have them on their storage spaces or small farmhouse, they make the following trades, if possible:",
+        "needs": "Leon needs …",
+        "tradesFor": "Leon trades … for …",
+        "silver": "silver",
+        "silverTrade": "1 goods token for 2 silver",
+        "goodsToken": "goods tokens",
+        "goodsTokenTradeSilver": "A) 2 silver for 1 goods token",
+        "goodsTokenTradeWorker": "B) 1 worker for 2 goods tokens",
+        "worker": "workers",
+        "workerTradeSilver": "3 silver for 1 worker",
+        "missingGoods": "To get missing goods tokens, Leon prefers to trade silver for goods markers. Only if they do not have enough silver for a needed goods token, they trade a worker.",
+        "tradeOnce": "Leon only trades at most once per delivery. Leon only closes the trade if they have enough resources to make the demanded action. Otherwise they completely pass on the trade and make no delivery."
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Simple",
+    "2": "Medium",
+    "3": "Ambitious",
+    "4": "Random"
+  },
+  "player": {
+    "player": "Player",
+    "bot": "Leon"
+  },
+  "action": {
+    "playGame": "Play Game",
+    "startGame": "Start Game",
+    "next": "Next",
+    "nextRound": "Next Round",
+    "abortGame": "Abort Game",
+    "abortGameConfirm": "Aborting the running game - are you sure?",
+    "endGame": "End Game",
+    "endGameConfirm": "End this game and return to home screen - are you sure?",
+    "cancel": "Cancel",
+    "backToHome": "Back to Home",
+    "back": "Back",
+    "close": "Close",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Refresh Application",
+    "notice": "The application was updated - do you want to refresh to use the latest version?"
+  }
+}
