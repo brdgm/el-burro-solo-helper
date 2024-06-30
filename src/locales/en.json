@@ -275,6 +275,7 @@
     },
     "donkeyDelivery": {
       "title": "Donkey Delivery",
+      "deliveryTargets": "See how to score completely delivered delivery targets.",
       "delivery": {
         "title": "How does Leon deliver goods with their donkey?",
         "startedDelivery": "If Leon has already started a delivery of a market barrow or local market (or you made a goat delivery to one of them), they continue to deliver that current delivery target, until they have completely delivered it.",

@@ -27,6 +27,9 @@
         <li v-html="t('rules.donkeyDelivery.localMarket.markingOrder')"></li>
         <li v-html="t('rules.donkeyDelivery.localMarket.fallback')"></li>
       </ol>
+      <p>
+        <a data-bs-toggle="modal" href="#deliveryTargetScoringModal" class="rule"><span v-html="t('rules.donkeyDelivery.deliveryTargets')"></span></a>
+      </p>
     </template>
   </ModalDialog>
 </template>

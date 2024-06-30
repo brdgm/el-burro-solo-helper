@@ -5,7 +5,18 @@
       <span v-if="turn > 0">{{t('sideBar.turn')}} {{turn}}</span>
     </p>
     <ul class="rules">
-      <li><a data-bs-toggle="modal" href="#roundCardModal" class="rule">{{t('gameRoundCard.title')}}</a></li>
+      <li>
+        <a data-bs-toggle="modal" href="#roundCardModal" class="rule">
+          {{t('gameRoundCard.title')}}<br/>
+          <AppIcon type="dice-value" :name="roundCard.diceValue.toString()" class="icon"/>
+          <AppIcon type="dice-modification" :name="roundCard.diceModification" class="icon"/>
+          <AppIcon type="donkey-selection" :name="roundCard.donkeySelection" class="icon"/>
+          <AppIcon type="junction-selection" :name="roundCard.junctionSelection" class="icon"/><br/>
+          <AppIcon type="action" :name="roundCard.deliveryAction" class="icon"/>
+          <AppIcon type="delivery-target" :name="roundCard.deliveryTarget" class="icon"/>
+          <AppIcon v-for="good of goodTokens.used"  type="good" :name="good.toString()" class="icon"/>
+        </a>
+      </li>
       <li><a data-bs-toggle="modal" href="#deliveryTargetScoringModal" class="rule">{{t('rules.deliveryTargetScoring.title')}}</a></li>
     </ul>
     <GameRoundTile :navigationState="navigationState"/>
@@ -35,10 +46,14 @@ import GoatDeliveryModal from '../rules/GoatDeliveryModal.vue'
 import CommunityDeliveryModal from '../rules/CommunityDeliveryModal.vue'
 import DeliveryTargetScoringModal from '../rules/DeliveryTargetScoringModal.vue'
 import RewardTracksModal from '../rules/RewardTracksModal.vue'
+import Card from '@/services/Card'
+import AppIcon from '../structure/AppIcon.vue'
+import GoodTokens from '@/services/GoodTokens'
 
 export default defineComponent({
   name: 'SideBar',
   components: {
+    AppIcon,
     GameRoundTile,
     GameRoundCardModal,
     PlayCardModal,
@@ -66,6 +81,12 @@ export default defineComponent({
     },
     turn() : number {
       return this.navigationState.turn
+    },
+    roundCard() : Card {
+      return this.navigationState.roundCard
+    },
+    goodTokens() : GoodTokens {
+      return this.navigationState.goodTokens
     }
   }
 })
@@ -94,6 +115,15 @@ export default defineComponent({
         font-size: 0.8rem;
       }
     }
+  }
+}
+.icon {
+  height: 1.5rem !important;
+  margin-right: 0.2rem;
+  filter: grayscale(0.8);
+  @media (max-width: 600px) {
+    height: 1.1rem !important;
+    margin-right: 0.1rem;
   }
 }
 </style>

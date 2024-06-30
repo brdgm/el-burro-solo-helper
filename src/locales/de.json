@@ -273,6 +273,7 @@
     },
     "donkeyDelivery": {
       "title": "Esellieferung",
+      "deliveryTargets": "Siehe Wertung komplett belieferter Lieferziele.",
       "delivery": {
         "title": "Wie liefert Leon per Esel?",
         "startedDelivery": "Hat Leon bereits mit der Lieferung eines Marktkarrens oder lokalen Markts begonnen (oder hast du per Ziegenlieferung einen beliefert), führt er Esellieferungen an dieses aktuelle Lieferziel aus, bis er es komplett beliefert hat.",
