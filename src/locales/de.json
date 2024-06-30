@@ -31,7 +31,7 @@
     "title": "Leon vorbereiten",
     "soloFarmBoard": "Lege Leons <b>Solo-Hoftableau</b> in deiner Reichweite bereit. Lass wie üblich rundherum ein wenig Platz, um Hofkarten anlegen zu können. Lege Leons <b>Gütermarker</b> als seinen persönlichen Vorrat neben dessen Hof.",
     "goodsTokenSilver": "Lege 1 <b>Gütermarker</b> und 2 <b>Silber</b> auf die entsprechenden Lagerfelder auf Leons Hof.",
-    "farmCards": "Ziehe <b>Hofkarten</b>, um Leons Startauslage zu bilden. Ziehe die Karten einzeln und lege sie folgendermaßen an seinen Hof an:",
+    "farmCards": "Ziehe 4 <b>Hofkarten</b>, um Leons Startauslage zu bilden. Ziehe die Karten einzeln und lege sie folgendermaßen an seinen Hof an:",
     "farmCard1": "1. Karte als Acker (stelle 1 Gütermarker auf das Lagerfeld für Gütermarker).",
     "farmCard23": "2. und 3. Karte als Marktkarren (in den linken und den mittleren Kartenslot).",
     "farmCard4": "4. Karte als Hofverwaltung.",
@@ -66,7 +66,8 @@
       "appliesBot": "Auch von Leon verwendet."
     },
     "expandFarm": {
-      "title": "Hoferweiterung"
+      "title": "Hoferweiterung",
+      "firstRoundNote": "<i>Hinweis</i>: Während der ersten Runde spielst du 4 Karten in diesem Schritt. Leon spielt 1 Hofkarte zusätzlich zu den 4 Startkarten während der Spielvorbereitung."
     },
     "increaseFarm": {
       "title": "Hofwachstum",
@@ -233,8 +234,12 @@
         "title": "Normale Hofkarte spielen",
         "intro": "Runde 1 und 2 - Leon spielt eine normale Hofkarte (vom Stapel):",
         "marketBarrowSlotEmpty": "Ist eine der beiden Aussparungen für Marktkarren frei, spielt er die Karte automatisch als Marktkarren (der rechte Slot ist  für eine „Spielende“-Hofkarte reserviert).",
-        "marketBarrowSlotsFilled": "Sind alle relevanten Slots für Marktkarren belegt, folgt Leon der Anweisung der aktuellen Rundenkarte. Dort ist angegeben, wohin Leon die Hofkarte spielt:",
+        "marketBarrowSlotsFilled": "Sind alle relevanten Slots für Marktkarren belegt, folgt Leon den Anweisungen:",
         "sameNumber": "Am wichtigsten ist für Leon dieselbe Anzahl an Hofkarten links und rechts an seinem Hof. Hat er mehr Äcker als Karten in der Hofverwaltung, legt er die Karte in die Hofverwaltung und umgekehrt.",
+        "cardPlacement": {
+          "left": "Ist die Anzahl links und rechts am Hof gleich, spielt Leon einen <b>Acker</b> aus. Er stellt sofort 1 Gütermarker auf das Lager.",
+          "right": "Ist die Anzahl links und rechts am Hof gleich, spielt Leon eine Karte in die <b>Hofverwaltung</b>."
+        },        
         "leftOrRight": "Ist die Anzahl links und rechts am Hof gleich, folgt Leon dem Pfeil: Zeigt der Pfeil von links auf das Hoftableau, spielt Leon einen Acker aus. Er stellt sofort 1 Gütermarker auf das Lager. Zeigt der Pfeil von rechts auf das Hoftableau, legt Leon eine Karte in die Hofverwaltung.",
         "noAcquisitions": "Wichtig: Leon spielt keine Anschaffungen!"
       },

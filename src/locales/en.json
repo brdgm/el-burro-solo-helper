@@ -34,7 +34,7 @@
     "title": "Setup Leon",
     "soloFarmBoard": "Place Leon’s <b>solo farm board</b> next to your play area. As usual, leave some space around it to place farm cards at the farm. Place Leon’s <b>goods tokens</b> as their supply next to their farm.",
     "goodsTokenSilver": "Place 1 <b>goods token</b> and 2 <b>silver</b> on the matching storage spaces of Leon’s farm.",
-    "farmCards": "Draw <b>farm cards</b> to create Leon’s starting display. Draw cards one by one and place them as follows at their farm:",
+    "farmCards": "Draw 4 <b>farm cards</b> to create Leon’s starting display. Draw cards one by one and place them as follows at their farm:",
     "farmCard1": "Place the 1<sup>st</sup> card as a field (place 1 goods token on the storage space for goods tokens).",
     "farmCard23": "Place the 2<sup>nd</sup> and 3<sup>rd</sup> cards as market barrows (in the left and center card slots).",
     "farmCard4": "Place the 4<sup>th</sup> card as farm administration.",
@@ -69,7 +69,8 @@
       "appliesBot": "Also used by Leon."
     },
     "expandFarm": {
-      "title": "Expand the farm"
+      "title": "Expand the farm",
+      "firstRoundNote": "<i>Note</i>: During the first round, you play 4 cards in this step. Leon plays 1 additional farm card besides the 4 starting cards during setup."
     },
     "increaseFarm": {
       "title": "Increase the farm",

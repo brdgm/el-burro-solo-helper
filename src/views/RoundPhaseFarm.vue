@@ -24,6 +24,12 @@
     </li>
   </ul>
 
+  <div class="row" v-if="round == 1">
+    <div class="col">
+      <div class="alert alert-info" v-html="t('roundPhaseFarm.expandFarm.firstRoundNote')"></div>
+    </div>
+  </div>
+
   <h4>
     <AppIcon type="phase-step" name="3" class="phase-step"/>
     {{t('roundPhaseFarm.increaseFarm.title')}}
