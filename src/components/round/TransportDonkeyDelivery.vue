@@ -40,6 +40,11 @@
         </div>
       </li>
     </ul>
+    <div class="row" v-if="round==4">
+      <div class="col">
+        <div class="alert alert-info" v-html="t('roundPhaseTransport.donkeyDelivery.fourthRoundNotice')"></div>
+      </div>
+    </div>
   </template>
 </template>
 

@@ -83,13 +83,13 @@
     "title": "Revenue",
     "rollDice": "Roll the revenue dice.",
     "player": {
-      "revenueDie": "Take 1 die, execute the revenue action and bonus action.",
-      "communityDie": "Execute the revenue action from the community die."
+      "revenueDie": "Take 1 <b>revenue die</b>, execute the action and bonus action.",
+      "communityDie": "Execute the revenue action from the <b>community die</b>."
     },
     "bot": {
-      "revenueDie": "Leon takes 1 die and executes the revenue action (see solo farm board).",
+      "revenueDie": "Leon takes 1 <b>revenue die</b> and executes the action (see solo farm board).",
       "bonusAction": "Leon executes the bonus action.",
-      "communityDie": "Leon executes the revenue action from the community die (see solo farm board).",
+      "communityDie": "Leon executes the revenue action from the <b>community die</b> (see solo farm board).",
       "gameRoundTileCommunityDieBonus": "<i>Game Round Tile</i>: Leon executes the bonus action of the community die."
     },
     "actionDetails": {
@@ -119,13 +119,14 @@
     "goatDelivery": {
       "title": "Goat delivery",
       "makeDelivery": "Make goat delivery.",
-      "additionalDelivery": "If Leon can spend a worker from their farmhouse, make a second goat delivery. Otherwise hire one worker."
+      "additionalDelivery": "If Leon can spend a worker from their farmhouse, make a second goat delivery.<br/>Otherwise hire one worker."
     },
     "donkeyDelivery": {
       "title": "Donkey delivery",
       "deliver": "Make <b>{value} donkey delivery</b>. | Make <b>{value} donkey deliveries</b>.",
       "plusTile": "If possible, move back the through marker to make {value} additional delivery. | If possible, move back the through marker to make {value} additional deliveries.",
-      "transportBonus": "Gain transport bonus."
+      "transportBonus": "Gain transport bonus.",
+      "fourthRoundNotice": "<i>Special situation in the fourth game round</i>: During their final transport phase, when Leon has completely delivered a delivery target, but cannot completely deliver another delivery target with their remaining donkey deliveries, they skip them. This way, Leon may have enough goods tokens left to completely deliver their “game end” market barrow and possible boats at the harbor."
     }
   },
   "roundPhaseScoring": {

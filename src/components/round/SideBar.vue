@@ -14,7 +14,7 @@
           <AppIcon type="junction-selection" :name="roundCard.junctionSelection" class="icon"/><br/>
           <AppIcon type="action" :name="roundCard.deliveryAction" class="icon"/>
           <AppIcon type="delivery-target" :name="roundCard.deliveryTarget" class="icon"/>
-          <AppIcon v-for="good of goodTokens.used"  type="good" :name="good.toString()" class="icon"/>
+          <AppIcon v-for="good of goodTokens.used" :key="good" type="good" :name="good.toString()" class="icon"/>
         </a>
       </li>
       <li><a data-bs-toggle="modal" href="#deliveryTargetScoringModal" class="rule">{{t('rules.deliveryTargetScoring.title')}}</a></li>
@@ -120,7 +120,7 @@ export default defineComponent({
 .icon {
   height: 1.5rem !important;
   margin-right: 0.2rem;
-  filter: grayscale(0.8);
+  filter: grayscale(0.7);
   @media (max-width: 600px) {
     height: 1.1rem !important;
     margin-right: 0.1rem;

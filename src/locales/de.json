@@ -80,13 +80,13 @@
     "title": "Ertrag",
     "rollDice": "Würfel die Ertragswürfel.",
     "player": {
-      "revenueDie": "Nimm 1 Würfel, führe die Ertragsaktion und die Bonusaktion aus.",
-      "communityDie": "Führe die Ertragsaktion des Gemeinschaftswürfel aus."
+      "revenueDie": "Nimm 1 <b>Ertragswürfel</b>, führe die Aktion und die Bonusaktion aus.",
+      "communityDie": "Führe die Ertragsaktion des <b>Gemeinschaftswürfel</b> aus."
     },
     "bot": {
-      "revenueDie": "Leon nimmt 1 Würfel und führt die Ertragsaktion aus (siehe Solo-Hoftableau).",
+      "revenueDie": "Leon nimmt 1 <b>Ertragswürfel</b> und führt die Aktion aus (siehe Solo-Hoftableau).",
       "bonusAction": "Leon führt die Bonusaktion aus.",
-      "communityDie": "Leon führt die Ertragsaktion des Gemeinschaftswürfel aus (siehe Solo-Hoftableau).",
+      "communityDie": "Leon führt die Ertragsaktion des <b>Gemeinschaftswürfel</b> aus (siehe Solo-Hoftableau).",
       "gameRoundTileCommunityDieBonus": "<i>Rundenplättchen</i>: Leon führt die Bonusaktion des Gemeinschaftswürfel aus."
     },
     "actionDetails": {
@@ -116,13 +116,14 @@
     "goatDelivery": {
       "title": "Mit Ziege liefern",
       "makeDelivery": "Ziegenlieferung ausführen.",
-      "additionalDelivery": "Wenn Leon eine Arbeitskraft abgeben kann, führt er eine weitere Ziegenlieferung aus. Anderenfalls nimmt er 1 Arbeitskraft."
+      "additionalDelivery": "Wenn Leon eine Arbeitskraft abgeben kann, führt er eine weitere Ziegenlieferung aus.<br/>Anderenfalls nimmt er 1 Arbeitskraft."
     },
     "donkeyDelivery": {
       "title": "Mit Esel liefern",
       "deliver": "Führe <b>{value} Esellieferung</b> aus. | Führe <b>{value} Esellieferungen</b> aus.",
       "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferung auszuführen. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferungen auszuführen.",
-      "transportBonus": "Erhalte den Transportbonus."
+      "transportBonus": "Erhalte den Transportbonus.",
+      "fourthRoundNotice": "<i>Sonderfall in der vierten Runde</i>: Hat Leon in seiner letzten Transportphase gerade ein Lieferziel erfüllt und noch weitere Esellieferungen, mit denen er sein nächstes Lieferziel nicht mehr erfüllen kann, verzichtet er auf diese Lieferungen. Damit hat er ggf. genug Hofgüter übrig um seine „Spielende“-Marktkarren und Schiffe zu beliefern."
     }
   },
   "roundPhaseScoring": {
