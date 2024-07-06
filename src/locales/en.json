@@ -51,7 +51,7 @@
     "startingSpaceOption": {
       "1": "<b>Place 1</b>: Leon places 1 goods token and 1 silver on their storage spaces.",
       "2": "<b>Place 2</b>: Leon places 2 goods tokens on their storage space.",
-      "3": "<b>Place 3</b>: Leon takes 3 silver from the supply.",
+      "3": "<b>Place 3</b>: Leon takes 4 silver from the supply.",
       "4": "<b>Place 4</b>: Leon moves their siesta marker 2 space forward on the siesta track.",
       "5": "<b>Place 5</b>: Leon moves one of their donkeys 2 spaces forward on the road."
     },
@@ -364,7 +364,7 @@
         "space1": "<b>1<sup>st</sup> space</b>: Leon takes the farm extension from the space.They place the tile on the farm space displaying the same farm good as the track.",
         "space2": "<b>2<sup>nd</sup> space</b>: Leon moves their trough marker 1 space forward on the trough track.",
         "space3": "<b>3<sup>rd</sup> space</b>: Leon updates the farm extension on the farm space matching the farm good of the reward track by turning the tile to the tiled roof side.",
-        "space4": "<b>4<sup>th</sup> space</b>: When Leon reaches the top space, if you have not already chosen the scoring option, Leon moves their marker on that space and blocks it. If you already chose the scoring option, Leon places their marker in the lower section. In both cases, they play 1 special solo farm card for free! Afterward, remove the corresponding farm goods from the list of delivery goods (by clicking on it), and ignore it for further goat deliveries.",
+        "space4": "<b>4<sup>th</sup> space</b>: When Leon reaches the top space, if you have not already chosen the scoring option, Leon moves their marker on that space and blocks it. If you already chose the scoring option, Leon places their marker in the lower section. In both cases, they <a data-bs-toggle=\"modal\" href=\"#playCardModal\" class=\"rule\">play 1 farm card</a> following the usual rules. If the play a special farm card, the do not have to pay the costs. Afterward, remove the corresponding farm goods from the list of delivery goods (by clicking on it), and ignore it for further goat deliveries.",
         "gainPrestige": "Leon gains <b>{prestige} prestige</b>."
       },
       "extensions": {
@@ -395,7 +395,7 @@
           "play-a-farm-card": {
             "title": "Play a farm card",
             "thatchedRoof": "Leon plays 1 farm card at their farm.",
-            "tiledRoof": "Leon gains 1 prestige and plays 1 farm card at their farm."
+            "tiledRoof": "Leon gains 1 prestige and plays a special solo farm card. All rules for playing farm cards must be considered (cost, limit). If Leon cannot use the bonus he takes a worker."
           },
           "goat-delivery-with-costs": {
             "title": "Goat delivery with costs",

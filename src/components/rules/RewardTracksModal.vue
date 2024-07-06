@@ -52,6 +52,7 @@
           <span v-html="t(`rules.rewardTracks.extensions.farmExtension.${farmExtension}.thatchedRoof`)"></span>
         </div>
         <div>
+          <AppIcon v-if="isFarmExtensionPlayFarmCard(farmExtension)" type="special-farm-card-selection" :name="roundCard.specialFarmCardSelection" class="icon"/>
           <i><span v-html="t('rules.rewardTracks.extensions.tiledRoof')"></span>: </i>
           <span v-html="t(`rules.rewardTracks.extensions.farmExtension.${farmExtension}.tiledRoof`)"></span>
         </div>
@@ -118,6 +119,9 @@ export default defineComponent({
         default:
           return undefined
       }
+    },
+    isFarmExtensionPlayFarmCard(farmExtension: FarmExtension) : boolean {
+      return farmExtension == FarmExtension.PLAY_A_FARM_CARD
     }
   }
 })
