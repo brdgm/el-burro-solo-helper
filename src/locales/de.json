@@ -48,7 +48,7 @@
     "startingSpaceOption": {
       "1": "<b>1. Feld</b>: Leon erhält 1 Gütermarker und 1 Silber.",
       "2": "<b>2. Feld</b>: Leon erhält 2 Gütermarker.",
-      "3": "<b>3. Feld</b>: Leon erhält 3 Silber.",
+      "3": "<b>3. Feld</b>: Leon erhält 4 Silber.",
       "4": "<b>4. Feld</b>: Leon zieht mit dem Siestamarker 2 Felder auf der Siestaleiste weiter.",
       "5": "<b>5. Feld</b>: Leon zieht einen seiner Esel 2 Felder auf der Straße vor."
     },
@@ -362,7 +362,7 @@
         "space1": "<b>1. Feld</b>: Leon bekommt den Hofausbau, der auf dem jeweiligen Feld liegt. Er legt diesen Hofausbau auf das Hoffeld, das demselben Hofgut zugeordnet ist.",
         "space2": "<b>2. Feld</b>: Leon zieht seinen Tränkenmarker 1 Feld auf der Tränkenleiste weiter.",
         "space3": "<b>3. Feld</b>: Leon wertet den Hofausbau auf dem Hoffeld auf, das demselben Hofgut zugeordnet ist, indem er ihn auf die Seite mit Ziegeldach dreht.",
-        "space4": "<b>4. Feld</b>: Kommt Leon auf dem obersten Feld einer Leiste an und du hast die Wertungsoption noch nicht besetzt, zieht Leon seinen Marker auf das Feld und blockiert es somit. Hast du das Feld bereits besetzt, zieht Leon seinen Marker in den unteren Bereich. Er spielt in beiden Fällen 1 spezielle Solo-Hofkarte kostenfrei aus! Danach dreht er das entsprechende Hofgutplättchen im Ziegenbereich um und ignoriert es zukünftig bei Ziegenlieferungen.",
+        "space4": "<b>4. Feld</b>: Kommt Leon auf dem obersten Feld einer Leiste an und du hast die Wertungsoption noch nicht besetzt, zieht Leon seinen Marker auf das Feld und blockiert es somit. Hast du das Feld bereits besetzt, zieht Leon seinen Marker in den unteren Bereich. Er <a data-bs-toggle=\"modal\" href=\"#playCardModal\" class=\"rule\">spielt in beiden Fällen 1 Solo-Hofkarte</a> nach den üblichen Regeln aus. Spielt er eine spezielle Solo-Hofkarte aus, muss er die Kosten nicht bezahlen. Danach dreht er das entsprechende Hofgutplättchen im Ziegenbereich um und ignoriert es zukünftig bei Ziegenlieferungen.",
         "gainPrestige": "Leon erhält <b>{prestige} Ansehen</b>."
       },
       "extensions": {
@@ -393,7 +393,7 @@
           "play-a-farm-card": {
             "title": "Hofkarte spielen",
             "thatchedRoof": "Leon spielt 1 Hofkarte an seinen Hof.",
-            "tiledRoof": "Leon erhält 1 Ansehen und spielt 1 Hofkarte an seinen Hof."
+            "tiledRoof": "Leon erhält 1 Ansehen und spielt 1 spezielle Solo-Hofkarte. Alle Regeln für das Ausspielen von speziellen Hofkarten gelten (Kosten, Limit). Wenn Leon keine spezielle Hofkarte spielen kann, nimmt er eine Arbeitskraft."
           },
           "goat-delivery-with-costs": {
             "title": "Kostenpflichtig mit der Ziege liefern",
