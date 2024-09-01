@@ -441,6 +441,9 @@
     "player": "Spieler",
     "bot": "Leon"
   },
+  "notfound": {
+    "title": "Nicht Gefunden"
+  },
   "action": {
     "playGame": "Spielen",
     "startGame": "Spiel starten",
