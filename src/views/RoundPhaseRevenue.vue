@@ -34,27 +34,29 @@
     <h5 v-html="t('roundPhaseRevenue.actionDetails.title')"></h5>
     <p v-html="t('roundPhaseRevenue.actionDetails.intro')"></p>
     <table>
-      <tr>
-        <td><AppIcon type="dice-value" name="2" class="dice"/></td>
-        <td><AppIcon type="action" name="play-farm-card" class="action"/></td>
-        <td><PlayFarmCard :navigationState="navigationState"/></td>
-      </tr>
-      <tr>
-        <td><AppIcon type="dice-value" name="5" class="dice"/></td>
-        <td><AppIcon type="action" name="travel-road-2" class="action travel"/></td>
-        <td><TravelRoad :navigationState="navigationState"/></td>
-      </tr>
-      <tr>
-        <td><AppIcon type="dice-value" name="6" class="dice"/></td>
-        <td><AppIcon type="action" :name="roundCard.deliveryAction" class="action"/></td>
-        <td v-if="isDonkeyDelivery"><DonkeyDelivery :navigationState="navigationState"/></td>
-        <td v-else><GoatDelivery :navigationState="navigationState"/></td>
-      </tr>
-      <tr v-if="isRevenueDie">
-        <td></td>
-        <td><AppIcon type="action" name="community-delivery" class="action"/></td>
-        <td><CommunityDelivery :navigationState="navigationState"/></td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><AppIcon type="dice-value" name="2" class="dice"/></td>
+          <td><AppIcon type="action" name="play-farm-card" class="action"/></td>
+          <td><PlayFarmCard :navigationState="navigationState"/></td>
+        </tr>
+        <tr>
+          <td><AppIcon type="dice-value" name="5" class="dice"/></td>
+          <td><AppIcon type="action" name="travel-road-2" class="action travel"/></td>
+          <td><TravelRoad :navigationState="navigationState"/></td>
+        </tr>
+        <tr>
+          <td><AppIcon type="dice-value" name="6" class="dice"/></td>
+          <td><AppIcon type="action" :name="roundCard.deliveryAction" class="action"/></td>
+          <td v-if="isDonkeyDelivery"><DonkeyDelivery :navigationState="navigationState"/></td>
+          <td v-else><GoatDelivery :navigationState="navigationState"/></td>
+        </tr>
+        <tr v-if="isRevenueDie">
+          <td></td>
+          <td><AppIcon type="action" name="community-delivery" class="action"/></td>
+          <td><CommunityDelivery :navigationState="navigationState"/></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 

@@ -4,77 +4,79 @@
     <template #body>
       <AppIcon type="difficulty-level" :name="roundCard.difficultyLevel.toString()" class="difficultyLevel"/>
       <table>
-        <tr>
-          <td><a data-bs-toggle="modal" href="#playCardModal" class="rule"><span v-html="t('gameRoundCard.farmCard')"></span></a></td>
-          <td>
-            <a data-bs-toggle="modal" href="#playCardModal">
-              <AppIcon type="card-placement" name="same-number" class="icon"/>
-              <AppIcon type="card-placement" :name="roundCard.cardPlacement" class="icon"/>
-              <AppIcon type="special-farm-card-selection" :name="roundCard.specialFarmCardSelection" class="icon"/>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td v-html="t('gameRoundCard.dice')"></td>
-          <td>
-            <AppIcon type="dice-value" :name="roundCard.diceValue.toString()" class="icon"/>
-            <AppIcon type="dice-modification" :name="roundCard.diceModification" class="icon"/>
-          </td>
-        </tr>
-        <tr>
-          <td><a data-bs-toggle="modal" :href="deliveryModal" class="rule"><span v-html="t('gameRoundCard.delivery')"></span></a></td>
-          <td>
-            <a data-bs-toggle="modal" :href="deliveryModal">
-              <AppIcon type="action" :name="roundCard.deliveryAction" class="icon"/>
-              <AppIcon type="delivery-target" :name="roundCard.deliveryTarget" class="icon"/>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td><a data-bs-toggle="modal" href="#travelRoadModal" class="rule"><span v-html="t('gameRoundCard.road')"></span></a></td>
-          <td>
-            <a data-bs-toggle="modal" href="#travelRoadModal">
-              <AppIcon type="donkey-selection" :name="roundCard.donkeySelection" class="icon"/>
-              <AppIcon type="junction-selection" :name="roundCard.junctionSelection" class="icon"/>
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <h5 v-html="t('gameRoundCard.transport')"></h5>
-          </td>
-        </tr>
-        <tr>
-          <td v-html="t('gameRoundCard.siesta')"></td>
-          <td>
-            <b>{{roundCard.siestaValue}}</b>
-            <AppIcon v-if="roundCard.siestaPlusTile" type="plus-tile" :name="roundCard.siestaPlusTile.toString()" class="plusTile"/>
-            <AppIcon v-if="siestaTransportBonus" type="action" :name="siestaTransportBonus" class="icon"/>
-          </td>
-        </tr>
-        <tr>
-          <td v-html="t('gameRoundCard.goatDelivery')"></td>
-          <td>
-            <b>{{roundCard.additionalGoatDelivery ? t('gameRoundCard.yes') : t('gameRoundCard.no')}}</b>
-          </td>
-        </tr>
-        <tr>
-          <td v-html="t('gameRoundCard.donkey')"></td>
-          <td>
-            <b>{{roundCard.donkeyValue}}</b>
-            <AppIcon v-if="roundCard.donkeyPlusTile" type="plus-tile" :name="roundCard.donkeyPlusTile.toString()" class="plusTile"/>
-            <AppIcon v-if="donkeyTransportBonus" type="action" :name="donkeyTransportBonus" class="icon"/>
-          </td>
-        </tr>
-        <tr>
-          <td v-html="t('gameRoundCard.stable')"></td>
-          <td>
-            <b>{{roundCard.stableScoringValue}}</b>
-            <span v-for="previousCard of previousGameRoundCards" :key="previousCard.id">
-              + {{previousCard.stableScoringValue}}
-            </span>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td><a data-bs-toggle="modal" href="#playCardModal" class="rule"><span v-html="t('gameRoundCard.farmCard')"></span></a></td>
+            <td>
+              <a data-bs-toggle="modal" href="#playCardModal">
+                <AppIcon type="card-placement" name="same-number" class="icon"/>
+                <AppIcon type="card-placement" :name="roundCard.cardPlacement" class="icon"/>
+                <AppIcon type="special-farm-card-selection" :name="roundCard.specialFarmCardSelection" class="icon"/>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td v-html="t('gameRoundCard.dice')"></td>
+            <td>
+              <AppIcon type="dice-value" :name="roundCard.diceValue.toString()" class="icon"/>
+              <AppIcon type="dice-modification" :name="roundCard.diceModification" class="icon"/>
+            </td>
+          </tr>
+          <tr>
+            <td><a data-bs-toggle="modal" :href="deliveryModal" class="rule"><span v-html="t('gameRoundCard.delivery')"></span></a></td>
+            <td>
+              <a data-bs-toggle="modal" :href="deliveryModal">
+                <AppIcon type="action" :name="roundCard.deliveryAction" class="icon"/>
+                <AppIcon type="delivery-target" :name="roundCard.deliveryTarget" class="icon"/>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><a data-bs-toggle="modal" href="#travelRoadModal" class="rule"><span v-html="t('gameRoundCard.road')"></span></a></td>
+            <td>
+              <a data-bs-toggle="modal" href="#travelRoadModal">
+                <AppIcon type="donkey-selection" :name="roundCard.donkeySelection" class="icon"/>
+                <AppIcon type="junction-selection" :name="roundCard.junctionSelection" class="icon"/>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <h5 v-html="t('gameRoundCard.transport')"></h5>
+            </td>
+          </tr>
+          <tr>
+            <td v-html="t('gameRoundCard.siesta')"></td>
+            <td>
+              <b>{{roundCard.siestaValue}}</b>
+              <AppIcon v-if="roundCard.siestaPlusTile" type="plus-tile" :name="roundCard.siestaPlusTile.toString()" class="plusTile"/>
+              <AppIcon v-if="siestaTransportBonus" type="action" :name="siestaTransportBonus" class="icon"/>
+            </td>
+          </tr>
+          <tr>
+            <td v-html="t('gameRoundCard.goatDelivery')"></td>
+            <td>
+              <b>{{roundCard.additionalGoatDelivery ? t('gameRoundCard.yes') : t('gameRoundCard.no')}}</b>
+            </td>
+          </tr>
+          <tr>
+            <td v-html="t('gameRoundCard.donkey')"></td>
+            <td>
+              <b>{{roundCard.donkeyValue}}</b>
+              <AppIcon v-if="roundCard.donkeyPlusTile" type="plus-tile" :name="roundCard.donkeyPlusTile.toString()" class="plusTile"/>
+              <AppIcon v-if="donkeyTransportBonus" type="action" :name="donkeyTransportBonus" class="icon"/>
+            </td>
+          </tr>
+          <tr>
+            <td v-html="t('gameRoundCard.stable')"></td>
+            <td>
+              <b>{{roundCard.stableScoringValue}}</b>
+              <span v-for="previousCard of previousGameRoundCards" :key="previousCard.id">
+                + {{previousCard.stableScoringValue}}
+              </span>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </template>
   </ModalDialog>
