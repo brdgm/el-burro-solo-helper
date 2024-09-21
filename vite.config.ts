@@ -11,7 +11,8 @@ import browserslistToEsbuild from 'browserslist-to-esbuild'
 export default defineConfig({
   base: `/${appDeployName}/`,
   build: {
-    target: browserslistToEsbuild()
+    target: browserslistToEsbuild(),
+    chunkSizeWarningLimit: 5242880
   },
   plugins: [
     vue(),
