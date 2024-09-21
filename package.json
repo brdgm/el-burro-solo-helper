@@ -1,6 +1,6 @@
 {
   "name": "@brdgm/el-burro-test-solo-helper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "El Burro Solo Helper (TEST)",
   "appDeployName": "el-burro-test",
