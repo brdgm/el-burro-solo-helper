@@ -5,13 +5,12 @@ import { VitePWA } from 'vite-plugin-pwa'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import path from 'path'
 import { description, appDeployName } from './package.json'
-import browserslistToEsbuild from 'browserslist-to-esbuild'
+import legacy from '@vitejs/plugin-legacy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: `/${appDeployName}/`,
   build: {
-    target: browserslistToEsbuild(),
     chunkSizeWarningLimit: 5242880
   },
   plugins: [
@@ -61,7 +60,9 @@ export default defineConfig({
     VueI18nPlugin({
       include: [path.resolve(__dirname, './src/locales/**')],
       strictMessage: false
-    })
+    }),
+    // support older browsers
+    legacy()
   ],
   resolve: {
     alias: {
