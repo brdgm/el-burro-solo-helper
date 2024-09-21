@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "private": true,
   "description": "El Burro Solo Helper",
-  "appDeployName": "el-burro",
+  "appDeployName": "el-burro-test",
   "type": "module",
   "scripts": {
     "dev": "vite",
