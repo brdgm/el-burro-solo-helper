@@ -62,7 +62,9 @@ export default defineConfig({
       strictMessage: false
     }),
     // support older browsers
-    legacy()
+    legacy({
+      modernTargets: 'iOS >= 12, Safari >= 12'
+    })
   ],
   resolve: {
     alias: {
