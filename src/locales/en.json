@@ -443,6 +443,9 @@
     "player": "Player",
     "bot": "Leon"
   },
+  "notfound": {
+    "title": "Not Found"
+  },
   "action": {
     "playGame": "Play Game",
     "startGame": "Start Game",

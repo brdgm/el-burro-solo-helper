@@ -45,7 +45,6 @@ export default defineComponent({
   watch: {
     farmExtensionTiles(newValue) {
       this.$emit('update:modelValue', newValue)
-      console.log(newValue)
     }
   }
 })
