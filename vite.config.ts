@@ -63,7 +63,7 @@ export default defineConfig({
     }),
     // support older browsers
     legacy({
-      modernTargets: 'iOS >= 12, Safari >= 12',
+      modernTargets: 'iOS >= 15, Safari >= 15',
       modernPolyfills: true
     })
   ],

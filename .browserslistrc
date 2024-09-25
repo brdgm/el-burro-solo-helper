@@ -4,6 +4,6 @@ not dead
 Chrome >= 90
 Firefox >= 91
 Firefox ESR
-iOS >= 12
-Safari >= 12
+iOS >= 15
+Safari >= 15
 not Explorer <= 11
