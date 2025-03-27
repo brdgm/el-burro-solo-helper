@@ -15,6 +15,9 @@
       "hard": "Schwer",
       "cardsWith": "Karten mit"
     },
+    "rewardDifficultyLevel": {
+      "title": "Solo-Belohnungsübersicht"
+    },
     "gameRoundTiles": {
       "title": "Spielplan",
       "setupGameBoard": "Bereite den Spielplan wie üblich für 2 Spieler vor. Verwende diese Rundenplättchen:"
@@ -242,7 +245,6 @@
           "left": "Ist die Anzahl links und rechts am Hof gleich, spielt Leon einen <b>Acker</b> aus. Er stellt sofort 1 Gütermarker auf das Lager.",
           "right": "Ist die Anzahl links und rechts am Hof gleich, spielt Leon eine Karte in die <b>Hofverwaltung</b>."
         },        
-        "leftOrRight": "Ist die Anzahl links und rechts am Hof gleich, folgt Leon dem Pfeil: Zeigt der Pfeil von links auf das Hoftableau, spielt Leon einen Acker aus. Er stellt sofort 1 Gütermarker auf das Lager. Zeigt der Pfeil von rechts auf das Hoftableau, legt Leon eine Karte in die Hofverwaltung.",
         "noAcquisitions": "Wichtig: Leon spielt keine Anschaffungen!"
       },
       "special": {
