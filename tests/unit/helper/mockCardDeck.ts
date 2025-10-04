@@ -1,6 +1,6 @@
 import { CardDeckPersistence } from '@/store/state'
 
-export default function (params?: MockCardDeckParams) : CardDeckPersistence {
+export default function mockCardDeck(params?: MockCardDeckParams) : CardDeckPersistence {
   return {
     roundPile: params?.roundPile ?? [],
     roundDiscard: params?.roundDiscard ?? [],

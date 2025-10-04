@@ -4,7 +4,7 @@ import mockCardDeck from './mockCardDeck'
 import mockGoodTokens from './mockGoodTokens'
 import Player from '@/services/enum/Player'
 
-export default function (params?: MockPhaseParams) : PhasePersistence {
+export default function mockPhase(params?: MockPhaseParams) : PhasePersistence {
   return {
     round: params?.round ?? 1,
     phase: params?.phase ?? Phase.I_FARM,
