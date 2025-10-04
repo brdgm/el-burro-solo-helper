@@ -11,8 +11,8 @@ describe('services/FarmExtensionTiles', () => {
   })
 
   it('getByShape', () => {
-    Object.values(FarmExtensionShape).forEach(shape => {
+    for (const shape of Object.values(FarmExtensionShape)) {
       expect(FarmExtensionTiles.getByShape(shape).length).to.eq(3)
-    })
+    }
   })
 })

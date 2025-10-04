@@ -86,7 +86,9 @@ const gameRoundTiles : GameRoundTile[] = [
 ]
 
 const gameRoundTilesMap = new Map<string,GameRoundTile>()
-gameRoundTiles.forEach(item => gameRoundTilesMap.set(item.id, item))
+for (const item of gameRoundTiles) {
+  gameRoundTilesMap.set(item.id, item)
+}
 
 export default {
 

@@ -1,6 +1,6 @@
 import { Round, PhasePersistence } from '@/store/state'
 
-export default function (params?: MockRoundParams) : Round {
+export default function mockRound(params?: MockRoundParams) : Round {
   return {
     round: params?.round ?? 1,
     phases: params?.phases ?? []

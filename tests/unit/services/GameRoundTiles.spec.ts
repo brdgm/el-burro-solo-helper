@@ -10,8 +10,8 @@ describe('services/GameRoundTiles', () => {
   })
 
   it('getByShape', () => {
-    [1,2,3,4].forEach(round => {
+    for (const round of [1,2,3,4]) {
       expect(GameRoundTiles.getByRound(round).length).to.eq(4)
-    })
+    }
   })
 })
