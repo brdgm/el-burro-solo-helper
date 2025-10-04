@@ -46,7 +46,9 @@ const farmExtensionTiles : FarmExtensionTile[] = [
 ]
 
 const farmExtensionTilesMap = new Map<string,FarmExtensionTile>()
-farmExtensionTiles.forEach(item => farmExtensionTilesMap.set(item.id, item))
+for (const item of farmExtensionTiles) {
+  farmExtensionTilesMap.set(item.id, item)
+}
 
 export default {
 
