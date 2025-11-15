@@ -146,7 +146,7 @@
     },
     "supportMarkers": {
       "title": "Unterstützungsmarker",
-      "gainPrestige": "Liegt Leons Unterstützungsmarker mit der Ansehensseite nach oben neben seinem Hof, erhält er 1 Ansehen. Andernfalls dreht den Marker wieder von der Korb- auf die Ansehensseite um.."
+      "gainPrestige": "Liegt Leons Unterstützungsmarker mit der Ansehensseite nach oben neben seinem Hof, erhält er 1 Ansehen. Andernfalls dreht den Marker wieder von der Korb- auf die Ansehensseite um."
     },
     "payWorkers": {
       "title": "Arbeitskräfte bezahlen",
@@ -324,7 +324,7 @@
       "deliveryGoods": {
         "title": "Liefergüter",
         "preferredGoods": "Leon liefert Güterarten priorisiert nach dieser Reihenfolge:",
-        "trackTopSpace": "Kommt Leon auf dem obersten Feld eine Belohnungsleiste an, entferne das entsprechende Gut aus dieser List (durch anklicken)."
+        "trackTopSpace": "Kommt Leon auf dem obersten Feld eine Belohnungsleiste an, entferne das entsprechende Gut aus dieser Liste (durch anklicken)."
       },
       "firstFarmGood": "Leon liefert er immer das erste Liefergut aus der Liste. Er legt den Gütermarker in seinen Vorrat und zieht auf der entsprechenden Belohnungsleiste vor.",
       "rewardTracks": "Siehe Leons Aktionen auf den Belohnungsleisten."
