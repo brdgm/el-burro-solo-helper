@@ -6,7 +6,7 @@ import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValue
 
 describe('services/CardDeck', () => {
   it('new', () => {
-    getAllEnumValues(DifficultyLevel).forEach(difficultyLevel => {
+    for (const difficultyLevel of getAllEnumValues(DifficultyLevel)) {
       const deck = CardDeck.new(difficultyLevel)
 
       expect(deck.currentRoundCard, 'currentRoundCard').to.undefined
@@ -26,7 +26,7 @@ describe('services/CardDeck', () => {
       expect(persistence.roundDiscard.length, 'roundPile size').to.eq(0)
       expect(persistence.auxiliaryPile.length, 'auxiliaryPile size').to.eq(8)
       expect(persistence.auxiliaryDiscard.length, 'auxiliaryDiscard size').to.eq(0)  
-    })
+    }
   })
 
   it('drawRound', () => {

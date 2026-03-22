@@ -33,7 +33,9 @@ const transportBonusTiles : TransportBonusTile[] = [
 ]
 
 const transportBonusTilesMap = new Map<number,TransportBonusTile>()
-transportBonusTiles.forEach(item => transportBonusTilesMap.set(item.id, item))
+for (const item of transportBonusTiles) {
+  transportBonusTilesMap.set(item.id, item)
+}
 
 export default {
 

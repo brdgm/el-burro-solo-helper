@@ -1,7 +1,7 @@
 import Good from '@/services/enum/Good'
 import { GoodTokensPersistence } from '@/store/state'
 
-export default function (params?: MockGoodTokensParams) : GoodTokensPersistence {
+export default function mockGoodTokens(params?: MockGoodTokensParams) : GoodTokensPersistence {
   return {
     reserve: params?.reserve ?? [],
     used: params?.used ?? []
