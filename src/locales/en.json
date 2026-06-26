@@ -61,7 +61,7 @@
       "soloTransportBonusTiles": "Solo transport bonus tiles",
       "soloFarmGoods": "Solo farm goods"
     },
-    "rulesNotice": "<i>Leons rules</i>: Familiarize yourself with how to use <a data-bs-toggle='modal' href='#goodsModal' class='rule'>Leon's Goods</a> - they are the only <i>anytime actions</i> that Leon makes us of. All other rules will be introduced in the course of the game as required."
+    "rulesNotice": "<i>Leons rules</i>: Familiarize yourself with how to use <a data-bs-toggle='modal' href='#goodsModal' class='rule'>Leon's Goods</a> - they are the only <i>anytime actions</i> that Leon makes use of. All other rules will be introduced in the course of the game as required."
   },
   "roundPhaseFarm": {
     "title": "Farm",
@@ -95,7 +95,7 @@
     },
     "actionDetails": {
       "title": "Actions",
-      "intro": "If Leon executes any these actions:"
+      "intro": "If Leon executes any of these actions:"
     }
   },
   "roundPhaseTransport": {
@@ -109,7 +109,7 @@
     "siesta": {
       "title": "Have a siesta",
       "moveSiesta": "Move Leon's siesta marker by <b>{value} step</b>. | Move Leon's siesta marker by <b>{value} steps</b>.",
-      "plusTile": "If possible, move back the through marker to move {value} additional step. | If possible, move back the through marker to move {value} additional steps.",
+      "plusTile": "If possible, move back the trough marker to move {value} additional step. | If possible, move back the trough marker to move {value} additional steps.",
       "travelGainPrestige": "Travel on the road and gain prestige from the siesta track.",
       "transportBonus": "Gain transport bonus.",
       "updateTurnOrder": {
@@ -125,7 +125,7 @@
     "donkeyDelivery": {
       "title": "Donkey delivery",
       "deliver": "Make <b>{value} donkey delivery</b>. | Make <b>{value} donkey deliveries</b>.",
-      "plusTile": "If possible, move back the through marker to make {value} additional delivery. | If possible, move back the through marker to make {value} additional deliveries.",
+      "plusTile": "If possible, move back the trough marker to make {value} additional delivery. | If possible, move back the trough marker to make {value} additional deliveries.",
       "transportBonus": "Gain transport bonus.",
       "fourthRoundNotice": "<i>Special situation in the fourth game round</i>: During their final transport phase, when Leon has completely delivered a delivery target, but cannot completely deliver another delivery target with their remaining donkey deliveries, they skip them. This way, Leon may have enough goods tokens left to completely deliver their “game end” market barrow and possible boats at the harbor."
     }
@@ -178,7 +178,7 @@
       "remainingGoods": "If Leon still has remaining goods tokens on their storage space to completely deliver a boat for one or both claimed harbor spaces, they choose the remaining boat(s) offering the most prestige. If Leon does not have enough goods tokens but enough silver and workers to deliver the boat(s), they make all necessary trades to do so."
     },
     "throughTrack": {
-      "title": "Through Track",
+      "title": "Trough Track",
       "exchangeSteps": "Leon exchanges their remaining trough points for prestige, gaining 1 prestige for every 2 trough points as usual."
     },
     "strikingWorkers": {
@@ -314,7 +314,7 @@
       "subsequentDelivery": {
         "title": "Subsequent deliveries",
         "intro": "For each further goat delivery, Leon follows these steps in the given order:",
-        "goodPriority": "Leon tries to deliver the farm good displayed fist in the list of delivery goods. If there is no demand for that farm good, and there are additional farm goods in the list, Leon checks them as well one after another.",
+        "goodPriority": "Leon tries to deliver the farm good displayed first in the list of delivery goods. If there is no demand for that farm good, and there are additional farm goods in the list, Leon checks them as well one after another.",
         "goodSelection": "If Leon still does not find a delivery target, they choose another farm good. Then they try to deliver that farm good. If that fails again, they make a community delivery.",
         "selectionPriority": "If there are several farm goods in the list, Leon always starts the search with the first good. They only look for a new farm goods tile if all listed goods turn out to be not deliverable."
       }
@@ -364,7 +364,7 @@
         "space1": "<b>1<sup>st</sup> space</b>: Leon takes the farm extension from the space.They place the tile on the farm space displaying the same farm good as the track.",
         "space2": "<b>2<sup>nd</sup> space</b>: Leon moves their trough marker 1 space forward on the trough track.",
         "space3": "<b>3<sup>rd</sup> space</b>: Leon updates the farm extension on the farm space matching the farm good of the reward track by turning the tile to the tiled roof side.",
-        "space4": "<b>4<sup>th</sup> space</b>: When Leon reaches the top space, if you have not already chosen the scoring option, Leon moves their marker on that space and blocks it. If you already chose the scoring option, Leon places their marker in the lower section. In both cases, they <a data-bs-toggle=\"modal\" href=\"#playCardModal\" class=\"rule\">play 1 farm card</a> following the usual rules. If the play a special farm card, the do not have to pay the costs. Afterward, remove the corresponding farm goods from the list of delivery goods (by clicking on it), and ignore it for further goat deliveries.",
+        "space4": "<b>4<sup>th</sup> space</b>: When Leon reaches the top space, if you have not already chosen the scoring option, Leon moves their marker on that space and blocks it. If you already chose the scoring option, Leon places their marker in the lower section. In both cases, they <a data-bs-toggle=\"modal\" href=\"#playCardModal\" class=\"rule\">play 1 farm card</a> following the usual rules. If they play a special farm card, they do not have to pay the costs. Afterward, remove the corresponding farm goods from the list of delivery goods (by clicking on it), and ignore it for further goat deliveries.",
         "gainPrestige": "Leon gains <b>{prestige} prestige</b>."
       },
       "extensions": {

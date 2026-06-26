@@ -3,7 +3,7 @@
   "home": {
     "title": "El Burro Solo Helper",
     "play1": "Spiele <a href='https://boardgamegeek.com/boardgame/368386/el-burro-a-la-granja-game' target='_blank' rel='noopener'><b>El Burro</b></a> gegen Leon, den Solo-Gegner.",
-    "play2": "Diese Applikation ersetzt die Solo-Rundenkarten, verwaltet die Schwierigkeitsgrade und führt dich durch das Spielablauf und die Solo-Regeln.",
+    "play2": "Diese Applikation ersetzt die Solo-Rundenkarten, verwaltet die Schwierigkeitsgrade und führt dich durch den Spielablauf und die Solo-Regeln.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
@@ -39,7 +39,7 @@
     "farmCard23": "2. und 3. Karte als Marktkarren (in den linken und den mittleren Kartenslot).",
     "farmCard4": "4. Karte als Hofverwaltung.",
     "supportMarker": "Lege 1 <b>Unterstützungsmarker</b> mit der Ansehensseite nach oben neben Leons Hof.",
-    "stableBoard": "Lege Leons <b>Solo-Stalltableau</b> bereit. Lege neben <b>Tränken</b>- und <b>Meilensteinmarker</b> auf die entsprechenden Ablagefelder. Leon startet mit dem Tränkenmarker auf Feld „1“.",
+    "stableBoard": "Lege Leons <b>Solo-Stalltableau</b> bereit. Lege die <b>Tränken</b>- und <b>Meilensteinmarker</b> auf die entsprechenden Ablagefelder. Leon startet mit dem Tränkenmarker auf Feld „1“.",
     "specialSoloFarmCards": "Mische die speziellen <b>Solo-Hofkarten</b> und lege sie als verdeckten Stapel neben den Hof. Ziehe 3 Karten und lege sie offen in eine Reihe.",
     "soloRewardOverview": {
       "1": "Lege die <b>Solo-Belohnungsübersicht</b> neben das Belohnungstableau (mit der leichten Seite).",
@@ -101,7 +101,7 @@
   "roundPhaseTransport": {
     "title": "Transport",
     "takeYourTurn": "Führe deinen Zug aus.",
-    "selectNewStartPlayer": "Bitte wählen den neuen Startspieler aus.",
+    "selectNewStartPlayer": "Bitte wähle den neuen Startspieler aus.",
     "donkeyCards": {
       "title": "Eselkarten auswählen",
       "botNoCards": "Leon spielt keine Eselkarten."
@@ -109,7 +109,7 @@
     "siesta": {
       "title": "Siesta halten",
       "moveSiesta": "Setze Leons Siestamarker um <b>{value} Schritt</b> vor. | Setze Leons Siestamarker um <b>{value} Schritte</b> vor.",
-      "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weiteren Schritt vorzurücken. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Schritte vorzurücken.",
+      "plusTile": "Wenn möglich, setze den Tränkenmarker zurück, um {value} weiteren Schritt vorzurücken. | Wenn möglich, setze den Tränkenmarker zurück, um {value} weitere Schritte vorzurücken.",
       "travelGainPrestige": "Reise auf der Straße und erhalte Ansehen von der Siestaleiste.",
       "transportBonus": "Erhalte den Transportbonus.",
       "updateTurnOrder": {
@@ -125,7 +125,7 @@
     "donkeyDelivery": {
       "title": "Mit Esel liefern",
       "deliver": "Führe <b>{value} Esellieferung</b> aus. | Führe <b>{value} Esellieferungen</b> aus.",
-      "plusTile": "Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferung auszuführen. | Wenn möglich, setzte den Tränkenmarker zurück um {value} weitere Lieferungen auszuführen.",
+      "plusTile": "Wenn möglich, setze den Tränkenmarker zurück, um {value} weitere Lieferung auszuführen. | Wenn möglich, setze den Tränkenmarker zurück, um {value} weitere Lieferungen auszuführen.",
       "transportBonus": "Erhalte den Transportbonus.",
       "fourthRoundNotice": "<i>Sonderfall in der vierten Runde</i>: Hat Leon in seiner letzten Transportphase gerade ein Lieferziel erfüllt und noch weitere Esellieferungen, mit denen er sein nächstes Lieferziel nicht mehr erfüllen kann, verzichtet er auf diese Lieferungen. Damit hat er ggf. genug Hofgüter übrig um seine „Spielende“-Marktkarren und Schiffe zu beliefern."
     }
@@ -154,7 +154,7 @@
       "losePrestige": "Bleiben Arbeitskräfte auf den Hofausbauten stehen, legt Leon diese übrigen Arbeitskräfte ersatzlos in den Vorrat zurück und verliert 1 Ansehen pro unbezahlt zurückgelegter Arbeitskraft."
     },
     "prepareNextRound": {
-      "title": "Nächsten Runde vorbereiten",
+      "title": "Nächste Runde vorbereiten",
       "performSteps": "Bereite die nächste Spielrunde wie gewohnt vor."
     }
   },
@@ -174,7 +174,7 @@
     "harbor": {
       "title": "Schiffe im Hafen",
       "claimHarbor": "Sollte Leon mit einem oder beiden Eseln ein Hafenfeld erreicht haben, beansprucht Leon es nun und erhält das auf dem Anlegeplatz angegebene Ansehen.",
-      "claimHarborException": "<b>Ausnahme</b>: Steht er auf einem Hafenfeld, dass du bereits während der Partie beansprucht hast, zieht er auf den Hafenfeldern Richtung Straße zurück, bis er ein leeres Hafenfeld erreicht. Zieht er auf diese Weise auf die Straße zurück, hat er Pech gehabt. Das gilt auch, wenn Leons Esel beide auf demselben Hafenfeld stehen. Einer beansprucht das Feld und der andere zieht entsprechend zurück.",
+      "claimHarborException": "<b>Ausnahme</b>: Steht er auf einem Hafenfeld, das du bereits während der Partie beansprucht hast, zieht er auf den Hafenfeldern Richtung Straße zurück, bis er ein leeres Hafenfeld erreicht. Zieht er auf diese Weise auf die Straße zurück, hat er Pech gehabt. Das gilt auch, wenn Leons Esel beide auf demselben Hafenfeld stehen. Einer beansprucht das Feld und der andere zieht entsprechend zurück.",
       "remainingGoods": "Hat Leon noch übrige Gütermarker auf dem Hof, um ein Schiff auf einem oder beiden beanspruchten Hafenfeldern komplett zu beliefern, wählt er je ein ausliegendes Schiff, das ihm das meiste Ansehen gibt. Sollte Leon keine weiteren Gütermarker haben, aber noch ausreichend Silber und Arbeitskräfte, um das Schiff zu beliefern, führt er ausreichend viele Täusche durch."
     },
     "throughTrack": {
@@ -238,7 +238,7 @@
       "normal": {
         "title": "Normale Hofkarte spielen",
         "intro": "Runde 1 und 2 - Leon spielt eine normale Hofkarte (vom Stapel):",
-        "marketBarrowSlotEmpty": "Ist eine der beiden Aussparungen für Marktkarren frei, spielt er die Karte automatisch als Marktkarren (der rechte Slot ist  für eine „Spielende“-Hofkarte reserviert).",
+        "marketBarrowSlotEmpty": "Ist eine der beiden Aussparungen für Marktkarren frei, spielt er die Karte automatisch als Marktkarren (der rechte Slot ist für eine „Spielende“-Hofkarte reserviert).",
         "marketBarrowSlotsFilled": "Sind alle relevanten Slots für Marktkarren belegt, folgt Leon den Anweisungen:",
         "sameNumber": "Am wichtigsten ist für Leon dieselbe Anzahl an Hofkarten links und rechts an seinem Hof. Hat er mehr Äcker als Karten in der Hofverwaltung, legt er die Karte in die Hofverwaltung und umgekehrt.",
         "cardPlacement": {
@@ -324,9 +324,9 @@
       "deliveryGoods": {
         "title": "Liefergüter",
         "preferredGoods": "Leon liefert Güterarten priorisiert nach dieser Reihenfolge:",
-        "trackTopSpace": "Kommt Leon auf dem obersten Feld eine Belohnungsleiste an, entferne das entsprechende Gut aus dieser Liste (durch anklicken)."
+        "trackTopSpace": "Kommt Leon auf dem obersten Feld einer Belohnungsleiste an, entferne das entsprechende Gut aus dieser Liste (durch Anklicken)."
       },
-      "firstFarmGood": "Leon liefert er immer das erste Liefergut aus der Liste. Er legt den Gütermarker in seinen Vorrat und zieht auf der entsprechenden Belohnungsleiste vor.",
+      "firstFarmGood": "Leon liefert immer das erste Liefergut aus der Liste. Er legt den Gütermarker in seinen Vorrat und zieht auf der entsprechenden Belohnungsleiste vor.",
       "rewardTracks": "Siehe Leons Aktionen auf den Belohnungsleisten."
     },
     "deliveryTargetScoring": {
