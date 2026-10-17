@@ -16,16 +16,17 @@ enum Action {
   GOAT_DELIVERY = 'goat-delivery',
   COMMUNITY_DELIVERY = 'community-delivery',
   PAY_SILVER_1_DONKEY_DELIVERY_1 = 'pay-silver-1-donkey-delivery-1',
-  /*
+  // no icon available - currently only used for farm extension tile roof actions which are not displayed
   PAY_SILVER_1_DONKEY_DELIVERY_2 = 'pay-silver-1-donkey-delivery-2',
+  // no icon available - currently only used for farm extension tile roof actions which are not displayed
   PAY_SILVER_1_GOAT_DELIVERY_1 = 'pay-silver-1-goat-delivery-1',
+  // no icon available - currently only used for farm extension tile roof actions which are not displayed
   PAY_SILVER_1_GOAT_DELIVERY_2 = 'pay-silver-1-goat-delivery-2',
-  */
   HIRE_WORKER = 'hire-worker',
   FILL_TROUGH_1 = 'fill-trough-1',
-  /*
-  FILL_TROUGH_2 = 'fill-trough-2',  
+  // no icon available - currently only used for farm extension tile roof actions which are not displayed
+  FILL_TROUGH_2 = 'fill-trough-2',
+  // no icon available - currently only used for farm extension tile roof actions which are not displayed
   REWARD_MARKER_MOVE_1 = 'reward-marker-move-1'
-  */
 }
 export default Action
